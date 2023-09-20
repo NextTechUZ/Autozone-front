@@ -1,8 +1,11 @@
 import React from 'react'
+import Advantages from '../../layouts/components/Advantages'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <>
+    <Advantages/>
+    </>
   )
 }
 

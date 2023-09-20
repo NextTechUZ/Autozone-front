@@ -8,7 +8,6 @@ import CategoryPage from "../../pages/CategoryPage";
 import { routes } from "../../pages/routeConfig";
 
 function AppLayout() {
-  console.log({ routes });
   return (
     <>
       <Navbar />

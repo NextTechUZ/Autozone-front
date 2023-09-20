@@ -1,0 +1,52 @@
+.header {
+    background-color: #0E0E0E;
+    padding: 20px 0px;
+    color: #fff
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__nav {
+    margin-left: 30px;
+
+}
+
+.header__list {
+    display: flex;
+    margin-right: 10px;
+
+}
+
+.header__item {
+    margin-right: 15px;
+}
+
+.header__item__link {
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+
+}
+
+.header__search__button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+
+.header__shop__button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}

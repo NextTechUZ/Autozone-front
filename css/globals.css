@@ -1,5 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/geometria');
-
+@import url("https://fonts.cdnfonts.com/css/geometria");
 *,
 *::before,
 *::after {
@@ -20,7 +19,8 @@ ol {
 
 .visually-hidden {
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -30,14 +30,15 @@ ol {
 
 body {
   max-width: 1640px;
-  font-family: 'Geometria';
+  font-family: "Geometria";
   margin: 0 auto;
-  ;
 }
-a{
+
+a {
   text-decoration: none;
 }
-h1,h2,h3{
+
+h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
