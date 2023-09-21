@@ -1,79 +1,52 @@
-.services {
-  background: url(../../../img/servbg.png) no-repeat center center;
+.info {
+  background: url(../../../img/infobg.png) no-repeat center center;
   background-size: cover;
   color: #fff;
 }
 
-.services__gradient {
-  background: url(../../../img/servgr.png) no-repeat center center;
-  background-size: cover;
-  padding: 70px 0px;
+.info__gradient {
+  background: url(../../../img/infogr.png) no-repeat center center;
+  padding: 80px 0px;
 }
 
-.services__list {
-  margin-top: 70px;
-  background: url(../../../img/servicebg.png) no-repeat center right;
+.info__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.info__img__wrapper {
+  width: 360px;
+  height: 347px;
   position: relative;
 }
-.services__list::after {
+.info__img__wrapper::after {
   position: absolute;
-  width: 146px;
-  height: 146px;
+  width: 100%;
+  height: 100%;
   content: "";
-  background: url(../../../img/servaft.png) no-repeat center center;
-  right: 30%;
-  bottom: 30px;
+  background: url(../../../img/info-rec.png);
+  z-index: 2;
 }
-.services__list::before {
+.info__img__wrapper::before {
   position: absolute;
-  width: 166px;
-  height: 166px;
+  width: 100%;
+  height: 100%;
   content: "";
-  background: url(../../../img/servbef.png) no-repeat center center;
-  background-size: contain;
-  right: -80px;
-  bottom: 40px;
+  background: url(../../../img/info-per.jpg);
+  z-index: 0;
+  -webkit-clip-path: polygon(0 27%, 27% 0, 100% 0, 100% 100%, 100% 73%, 73% 100%, 10% 100%, 0% 100%, 0% 0%);
+          clip-path: polygon(0 27%, 27% 0, 100% 0, 100% 100%, 100% 73%, 73% 100%, 10% 100%, 0% 100%, 0% 0%);
 }
 
-.services__item {
-  padding: 40px;
-  padding-left: 200px;
-  position: relative;
-}
-.services__item:first-child {
-  background: url(../../../img/servitem.png) no-repeat;
-}
-.services__item::after {
-  width: 124px;
-  height: 120px;
-  position: absolute;
-  content: "";
-  background: url(../../../img/servitembefbg.png);
-  top: 40px;
-  left: 50px;
-}
-.services__item::before {
-  width: 78px;
-  height: 92px;
-  position: absolute;
-  content: "";
-  background: url(../../../img/adv2.png);
-  left: 70px;
-  top: 50px;
-  z-index: 1;
+.info__text__wrapper {
+  width: 744px;
 }
 
-.services__item__title {
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0em;
-  width: 286px;
-  margin-bottom: 12px;
+.info__text__wrapper {
+  background: url(../../../img//info-text-wr.png) no-repeat;
 }
 
-.services__item__text {
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0em;
-  width: 352px;
+.info__text {
+  padding: 30px;
 }

@@ -6,6 +6,7 @@ import Image from "../../../img/car-footer.jpg"
 function Footer() {
   return (
     <footer style={{ backgroundImage: 'url(' + Image + ')', backgroundSize: 'cover',  }}  className={styles.footer}>
+      <div className={styles.footer__gradient}>
       <div className='container'>
         <div className={styles.footer__container}>
          <div className={styles.footer__logo__column}>
@@ -89,6 +90,8 @@ function Footer() {
         </div>
         </div>
       </div>
+      </div>
+     
     </footer>
   )
 }
