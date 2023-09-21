@@ -1,52 +1,60 @@
-.info {
-  background: url(../../../img/infobg.png) no-repeat center center;
-  background-size: cover;
-  color: #fff;
+.news {
+  margin: 80px 0;
 }
 
-.info__gradient {
-  background: url(../../../img/infogr.png) no-repeat center center;
-  padding: 80px 0px;
-}
-
-.info__wrapper {
+.news__list {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
-.info__img__wrapper {
+.news__item {
   width: 360px;
-  height: 347px;
+  margin-top: 40px;
+  background: #1D1D1D;
+  color: #fff;
   position: relative;
 }
-.info__img__wrapper::after {
+.news__item:hover::before, .news__item:first-child::before {
+  width: 360px;
+  height: 284px;
   position: absolute;
-  width: 100%;
-  height: 100%;
   content: "";
-  background: url(../../../img/info-rec.png);
-  z-index: 2;
+  background: url(../../../img/newsrec.png);
+  top: 0;
 }
-.info__img__wrapper::before {
+.news__item:hover::after, .news__item:first-child::after {
+  width: 168px;
+  height: 74px;
   position: absolute;
-  width: 100%;
-  height: 100%;
   content: "";
-  background: url(../../../img/info-per.jpg);
-  z-index: 0;
-  -webkit-clip-path: polygon(0 27%, 27% 0, 100% 0, 100% 100%, 100% 73%, 73% 100%, 10% 100%, 0% 100%, 0% 0%);
-          clip-path: polygon(0 27%, 27% 0, 100% 0, 100% 100%, 100% 73%, 73% 100%, 10% 100%, 0% 100%, 0% 0%);
+  background: url(../../../img/logo.png) no-repeat center center;
+  top: 100px;
+  left: 100px;
 }
 
-.info__text__wrapper {
-  width: 744px;
+.news__date {
+  color: #C53720;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0em;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
-.info__text__wrapper {
-  background: url(../../../img//info-text-wr.png) no-repeat;
+.news__text {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  margin: 20px;
+  margin-bottom: 40px;
 }
 
-.info__text {
-  padding: 30px;
+.news__button {
+  background: transparent;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
 }
