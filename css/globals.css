@@ -42,3 +42,46 @@ h1, h2, h3, p {
   margin: 0;
   padding: 0;
 }
+
+.slick-next {
+  width: 52px;
+  height: 52px;
+  background: url(../img/partnext.png) !important;
+}
+.slick-next:hover {
+  background: url(../img/partnext.png);
+}
+
+.slick-prev {
+  width: 52px;
+  height: 52px;
+  background: url(../img/partnext.png) !important;
+  top: -10px;
+  rotate: 180deg;
+}
+.slick-prev:hover {
+  background: url(../img/partnext.png);
+}
+
+.slick-next::before, .slick-prev::before {
+  display: none;
+}
+
+.slick-arrow {
+  width: 52px;
+  height: 52px;
+}
+
+.slick-disabled {
+  opacity: 0.5;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-list {
+  width: 90%;
+  margin: 0 auto;
+}

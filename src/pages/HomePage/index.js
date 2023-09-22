@@ -1,8 +1,10 @@
 import React from 'react'
-import Advantages from '../../layouts/components/Advantages'
-import Services from '../../layouts/components/ServiceSection'
-import Info from '../../layouts/components/Info'
-import News from '../../layouts/components/News'
+
+import Advantages from '../../components/section/Advantages'
+import Services from '../../components/section/ServiceSection'
+import Info from '../../components/section/Info'
+import News from '../../components/section/News'
+import Partners from '../../components/section/Partners'
 
 function HomePage() {
   return (
@@ -11,6 +13,7 @@ function HomePage() {
     <Services/>
     <Info/>
     <News/>
+    <Partners />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './index.module.scss'
-import Title from './../Title/index'
+import Title from '../../Title'
+
 function Services() {
     return (
         <>
