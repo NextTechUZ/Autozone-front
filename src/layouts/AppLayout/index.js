@@ -9,6 +9,7 @@ function AppLayout() {
   return (
     <>
       <Navbar />
+
       <main>
         <Routes>
           {routes.map(({ id, ...route }) => (
