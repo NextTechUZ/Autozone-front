@@ -1,9 +1,5 @@
-import React from 'react'
-
 function Showcase() {
-  return (
-    <div>Showcase</div>
-  )
+  return <div>Showcase</div>;
 }
 
-export default Showcase
+export default Showcase;
