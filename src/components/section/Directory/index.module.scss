@@ -1,0 +1,10 @@
+.directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem 0;
+}

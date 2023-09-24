@@ -1,0 +1,52 @@
+.img-card {
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px black;
+  position: relative;
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover .intro {
+    opacity: 0.8;
+    background: #000;
+    bottom: 0;
+  }
+
+  &:hover .intro p {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &:hover .intro button {
+    visibility: visible;
+    opacity: 1;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .intro {
+    width: 100%;
+    height: 100%;
+    padding: 0.6rem;
+    transition: 0.5s;
+    position: absolute;
+    display: grid;
+    place-content: center;
+
+    p {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    button {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s;
+    }
+  }
+}
