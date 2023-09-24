@@ -3,19 +3,18 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import styles from './index.module.scss'
+function Partners() {
 
-export default class Partners extends Component {
-  render() {
     const settings = {
       dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 5,
       slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear"
+      // autoplay: true,
+      // speed: 2000,
+      // autoplaySpeed: 2000,
+      // cssEase: "linear"
 
     };
     return (
@@ -64,5 +63,6 @@ export default class Partners extends Component {
         </div>
       </section>
     );
-  }
+  
 }
+export default Partners
