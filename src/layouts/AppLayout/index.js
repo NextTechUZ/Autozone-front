@@ -5,11 +5,9 @@ import { Route, Routes } from "react-router-dom";
 import { routes } from "../../pages/routeConfig";
 
 function AppLayout() {
-  console.log({ routes });
   return (
     <>
       <Navbar />
-
       <main>
         <Routes>
           {routes.map(({ id, ...route }) => (

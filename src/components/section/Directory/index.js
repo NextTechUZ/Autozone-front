@@ -6,7 +6,7 @@ function Directory({ data, title, subtitle }) {
   return (
     <>
       <Title outline>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
+      <Subtitle align="left">{subtitle}</Subtitle>
       <div className={styles.directory}>
         {data?.map(({ id, imgUrl, title }) => (
           <ImgCard key={id} imgUrl={imgUrl} title={title} />

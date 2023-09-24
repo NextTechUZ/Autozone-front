@@ -1,0 +1,59 @@
+.advantages {
+  background: #0E0E0E;
+  color: #fff;
+}
+
+.advantages__list {
+  display: flex;
+}
+
+.advantages__item {
+  padding: 150px 25px 60px 25px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    width: 130px;
+    height: 79px;
+    left: calc(50% - 65px);
+    content: '';
+    top: 50px;
+  
+  }
+
+  &:first-child {
+    background: url(../../../img/advbg.png) no-repeat;
+    background-size: contain;
+    &::after{
+      background: url(../../../img/adv1.png) no-repeat;
+    }
+  }
+  &:nth-child(2){
+    &::after{
+      width: 84px;
+      height: 92px;
+      left: calc(50% - 42px);
+      background: url(../../../img/adv2.png) no-repeat center center;
+    }
+  }
+  &:nth-child(3){
+    &::after{
+      width: 84px;
+      height: 92px;
+      left: calc(50% - 42px);
+      background: url(../../../img/adv3.png) no-repeat center center;
+    }
+  }
+  &:nth-child(4){
+    &::after{
+      width: 106px;
+      height: 87px;
+      left: calc(50% - 53px);
+      background: url(../../../img/adv4.png) no-repeat center center;
+    }
+  }
+
+}
