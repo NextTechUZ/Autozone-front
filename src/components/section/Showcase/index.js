@@ -67,7 +67,7 @@ function Showcase() {
     ),
   };
   return (
-    <div className="carusel">
+    <div className="showcase-carusel carusel">
       <Slider {...settings}>
         <div>
           <img
