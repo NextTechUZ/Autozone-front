@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    margin-top: 30px;
     
 }
 
@@ -17,7 +18,7 @@
     background: #1D1D1D;
     color: #fff;
     position: relative;
-   &:hover,&:first-child{
+   &:hover{
     &::before{
         width: 360px;
         height: 284px;
@@ -49,7 +50,7 @@
 }
 
 .news__text {
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 20px;
     letter-spacing: 0em;
     margin: 20px;

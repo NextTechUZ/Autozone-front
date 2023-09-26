@@ -15,7 +15,7 @@ function CategoryPage() {
 
 export default CategoryPage;
 
-const data = [
+export const data = [
   {
     id: 1,
     imgUrl:

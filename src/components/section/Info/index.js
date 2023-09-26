@@ -8,7 +8,7 @@ function Info() {
             <div className={styles.info__gradient}>
                <div className='container'>
                <div className={styles.info__container}>
-                <Title title={"о компании"} color={"white"}/>
+                <Title outline children={"о компании"} color={"white"}/>
                 <div className={styles.info__wrapper}>
                     <div className={styles.info__img__wrapper}>
                       {/* <img className={styles.info__img} width={"360"} height={"347"} src={require("../../../img/info-per.jpg")}></img> */}

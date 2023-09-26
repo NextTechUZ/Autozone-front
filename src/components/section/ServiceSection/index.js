@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './index.module.scss'
 import Title from '../../Title'
+import Subtitle from '../../Subtitle'
+
 
 function Services() {
     return (
@@ -9,7 +11,8 @@ function Services() {
         <div className={styles.services__gradient}>
         <div className='container'>
         <div className={styles.services__container}>
-          <Title color={"white"} title={"услуги"} text={"Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции."}/>
+          <Title color={"white"} outline children={"услуги"} />
+          <Subtitle align={"center"} children="Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции." color='white' />
           <ul className={styles.services__list}>
             <li className={styles.services__item}>
                 <h3 className={styles.services__item__title}>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</h3>
