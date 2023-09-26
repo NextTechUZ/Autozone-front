@@ -1,14 +1,53 @@
 @import url("https://fonts.cdnfonts.com/css/geometria");
 
+:root {
+  --color-brand--1: #c53720;
+  --color-brand--2: #1d1d1d;
+  --color-white: #ffffff;
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "geometria", sans-serif;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1600px;
   margin: 0 auto;
+
+  // XX-Large devices (larger desktops, 1400px and up)
+  @media (max-width: 1400px) {
+    padding: 0 10rem;
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (max-width: 1200px) {
+    padding: 0 6rem;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (max-width: 992px) {
+    padding: 0 5rem;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px) {
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 2rem;
+  }
 }
 
 ul,
@@ -28,18 +67,6 @@ ol {
   width: 1px;
 }
 
-body {
-  max-width: 1640px;
-  font-family: "Geometria";
-  margin: 0 auto;
-}
 a {
   text-decoration: none;
-}
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
 }
