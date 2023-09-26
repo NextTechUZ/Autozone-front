@@ -1,16 +1,20 @@
 .advantages {
   background: #0E0E0E;
   color: #fff;
+  margin-bottom: 80px;
 }
 
 .advantages__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .advantages__item {
+  max-width: 282px;
   padding: 150px 25px 60px 25px;
   line-height: 20px;
   letter-spacing: 0em;
+  font-size: 1.6rem;
   text-align: center;
   position: relative;
 
@@ -26,8 +30,9 @@
 
   &:first-child {
     background: url(../../../img/advbg.png) no-repeat;
-    background-size: contain;
+    background-size: auto;
     &::after{
+     
       background: url(../../../img/adv1.png) no-repeat;
     }
   }
