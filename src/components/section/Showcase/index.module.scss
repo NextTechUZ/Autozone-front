@@ -1,0 +1,15 @@
+.showcase-item {
+  height: calc(100vh - 107.5px);
+  background-position: center;
+  background-size: cover;
+  padding: 50px 250px;
+  h1 {
+    color: #fff;
+
+    font-size: 4.8rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 570px;
+  }
+}

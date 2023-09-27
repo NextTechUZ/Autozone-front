@@ -5,10 +5,13 @@ function Title({
   children,
   outline,
   size = "3.6rem",
+  textAlign = "center",
 }) {
   return (
     <div className={styles.title}>
-      <h1 style={{ fontSize: size, color: color }}>{children}</h1>
+      <h1 style={{ fontSize: size, color: color, textAlign: textAlign }}>
+        {children}
+      </h1>
       {outline && <div className={styles.line}></div>}
     </div>
   );

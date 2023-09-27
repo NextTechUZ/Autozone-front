@@ -4,7 +4,7 @@ import Title from "../../Title";
 import styles from "./index.module.scss";
 function Directory({ data, title, subtitle }) {
   return (
-    <>
+    <div className={styles.wrapper}>
       <Title outline>{title}</Title>
       <Subtitle align="left">{subtitle}</Subtitle>
       <div className={styles.directory}>
@@ -12,7 +12,7 @@ function Directory({ data, title, subtitle }) {
           <ImgCard key={id} imgUrl={imgUrl} title={title} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -41,3 +41,21 @@
   width: 90%;
   margin: 0 auto;
 }
+
+// spiper js
+
+.swiper-pagination-bullet {
+  width: 112px;
+  height: 4px;
+  border-radius: 0;
+  opacity: 1;
+  background-color: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-brand--1);
+}
+
+.swiper-pagination {
+  margin-bottom: 5.8rem;
+}

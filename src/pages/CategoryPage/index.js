@@ -1,9 +1,11 @@
 import React from "react";
 
 import Directory from "../../components/section/Directory";
+import Showcase from "../../components/section/Showcase";
 function CategoryPage() {
   return (
     <div className="">
+      <Showcase />
       <Directory
         subtitle="Мы предлагаем лучшие цены на продукцию!"
         title="КАТАЛОГ"
