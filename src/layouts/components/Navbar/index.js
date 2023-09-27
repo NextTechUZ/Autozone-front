@@ -1,6 +1,27 @@
-import React from "react";
+import React, {
+  useState
+} from "react";
 import styles from "./index.module.scss";
-function Navbar() {
+import DropDown from "../../../components/DropDown";
+import {
+  dropData
+} from "../../../store/store";
+const Navbar = () => {
+  const [focus, setFocus] = useState(false);
+
+  function handleFocus(id) {
+    dropData.forEach(element => {
+      if (element.id == id) {
+        element.focus = !element.focus
+      } else {
+        element.focus = false
+      }
+    });
+
+    setFocus(!focus)
+
+  }
+
   return (
     <>
       <header className={styles.header}>
@@ -15,26 +36,11 @@ function Navbar() {
             </a>
             <nav className={styles.header__nav}>
               <ul className={styles.header__list}>
+                {dropData.map(el=>
                 <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    КОМПАНИЯ
-                  </a>
-                </li>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    КАТАЛОГ
-                  </a>
-                </li>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    УСЛУГИ
-                  </a>
-                </li>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    ИНФОРМАЦИЯ
-                  </a>
-                </li>
+                  <button onClick={()=>handleFocus(el.id)} className={styles.header__item__link} children={el.title}></button>
+                  <DropDown id={el.id}/>
+                </li>)}
                 <li className={styles.header__item}>
                   <a href="/" className={styles.header__item__link}>
                     КОНТАКТЫ
