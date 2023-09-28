@@ -5,8 +5,10 @@ import styles from "./index.module.scss";
 function Directory({ data, title, subtitle }) {
   return (
     <div className={styles.wrapper}>
-      <Title outline>{title}</Title>
-      <Subtitle align="left">{subtitle}</Subtitle>
+      <Title textAlign="center" size="4.8rem" outline>
+        {title}
+      </Title>
+      <Subtitle textAlign="right">{subtitle}</Subtitle>
       <div className={styles.directory}>
         {data?.map(({ id, imgUrl, title }) => (
           <ImgCard key={id} imgUrl={imgUrl} title={title} />

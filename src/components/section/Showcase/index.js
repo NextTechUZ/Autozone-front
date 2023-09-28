@@ -56,7 +56,12 @@ function Showcase() {
               }}
               className={styles["showcase-item"]}
             >
-              <Title textAlign="left" color="#fff">
+              <Title
+                maxWidth="550px"
+                margin="15rem 0 5rem"
+                textAlign="left"
+                color="#fff"
+              >
                 {title}
               </Title>
               <button>{buttonTitle}</button>
