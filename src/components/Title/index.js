@@ -7,6 +7,8 @@ function Title({
   size = "3.6rem",
   textAlign = "center",
   margin = "0",
+  fontStyle = "normal",
+  fontWeight = "400",
 }) {
   return (
     <div
@@ -25,6 +27,8 @@ function Title({
           borderBottom: outline ? "4px solid var(--color-brand--1)" : "",
           textAlign: textAlign,
           margin: margin,
+          fontStyle: fontStyle,
+          fontWeight: fontWeight,
         }}
       >
         {children}

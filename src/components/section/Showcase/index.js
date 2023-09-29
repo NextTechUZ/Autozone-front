@@ -6,33 +6,9 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 import styles from "./index.module.scss";
+import Subtitle from "../../Subtitle";
 
-import ShowcaseImg1 from "../../../img/showcaseBg1.png";
-import ShowcaseImg2 from "../../../img/showcaseBg2.png";
-import ShowcaseImg3 from "../../../img/showcaseBg3.png";
-
-const data = [
-  {
-    id: 1,
-    bgImg: ShowcaseImg1,
-    title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-  {
-    id: 2,
-    bgImg: ShowcaseImg2,
-    title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-  {
-    id: 3,
-    bgImg: ShowcaseImg3,
-    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-];
-
-function Showcase() {
+function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
   return (
     <div>
       <Swiper
@@ -49,21 +25,30 @@ function Showcase() {
         effect="fade"
       >
         {data.map(({ id, title, buttonTitle, bgImg }) => (
-          <SwiperSlide key={id}>
-            <div
-              style={{
-                backgroundImage: `url(${bgImg})`,
-              }}
-              className={styles["showcase-item"]}
-            >
+          <SwiperSlide
+            style={{
+              padding: "0 250px",
+              backgroundImage: `url(${bgImg})`,
+            }}
+            key={id}
+          >
+            <div className={styles["showcase-item"]}>
+              <img src={notFoundImg} alt="" />
               <Title
+                fontStyle="italic"
                 maxWidth="550px"
-                margin="15rem 0 5rem"
+                size="4.8rem"
+                margin={titleMargin}
                 textAlign="left"
                 color="#fff"
               >
                 {title}
               </Title>
+              {subtitle && (
+                <Subtitle maxWidth="60rem" textAlign="left" color="#fff">
+                  {subtitle}
+                </Subtitle>
+              )}
               <button>{buttonTitle}</button>
             </div>
           </SwiperSlide>
