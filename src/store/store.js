@@ -187,3 +187,58 @@ export let dropData=[
         ]
     }
 ]
+
+export let searchControl = false
+export function handleSearchOpen() {
+  searchControl=true
+}
+export function handleSearchClose() {
+  searchControl=false
+}
+export const products=[
+  {
+    id:1,
+    name:'Гелиевые Аккумуляторы OPTIMA',
+    to:"/"
+  },
+  {
+    id:2,
+    name:'Оригинальные Аккумуляторы',
+    to:"/"
+  },
+  {
+    id:3,
+    name:'АКБ MAGNUM',
+    to:"/"
+  },
+  {
+    id:4,
+    name:"АКБ EDCON",
+    to:'/'
+  },
+  {
+    id:5,
+    name:"АКБ AFA",
+    to:'/'
+  },
+  {
+    id:6,
+    name:"АКБ BOSCH",
+    to:'/'
+  },
+  {
+    id:7,
+    name:"АКБ MUTLU",
+    to:'/'
+  },
+  {
+    id:8,
+    name:"ОРИГИНАЛЬНЫЕ АКБ",
+    to:'/'
+  },
+  {
+    id:9,
+    name:"ГЕЛИЕВЫЕ АКБ OPTIMA",
+    to:'/'
+  }
+]

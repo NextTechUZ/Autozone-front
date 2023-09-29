@@ -1,13 +1,16 @@
 import React, {
+  useEffect,
   useState
 } from "react";
 import styles from "./index.module.scss";
 import DropDown from "../../../components/DropDown";
 import {
-  dropData
+  dropData, handleSearchOpen, searchControl
 } from "../../../store/store";
+import Search from "../../../components/Search";
 const Navbar = () => {
   const [focus, setFocus] = useState(false);
+  const [search,setSearch] =useState(false)
 
   function handleFocus(id) {
     dropData.forEach(element => {
@@ -21,6 +24,10 @@ const Navbar = () => {
     setFocus(!focus)
 
   }
+function handleOpen() {
+  setSearch(!search)
+  handleSearchOpen()
+}
 
   return (
     <>
@@ -37,7 +44,7 @@ const Navbar = () => {
             <nav className={styles.header__nav}>
               <ul className={styles.header__list}>
                 {dropData.map(el=>
-                <li className={styles.header__item}>
+                <li key={el.id} className={styles.header__item}>
                   <button onClick={()=>handleFocus(el.id)} className={styles.header__item__link} children={el.title}></button>
                   <DropDown id={el.id}/>
                 </li>)}
@@ -49,8 +56,9 @@ const Navbar = () => {
               </ul>
             </nav>
             <button>ЗАКАЗАТЬ ЗВОНОК</button>
+          <Search />
             <div className={styles.header__manage}>
-              <button className={styles.header__search__button}>
+              <button onClick={handleOpen} className={styles.header__search__button}>
                 <svg
                   width="40"
                   height="40"
