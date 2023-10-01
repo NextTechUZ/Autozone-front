@@ -1,23 +1,36 @@
 import styles from "./index.module.scss";
 
 function Subtitle({
-  align,
+  textAlign = "center",
   children,
   color = "var(--color-brand--2)",
   size = "2.6rem",
-  capitalize,
+  margin = "0",
+  maxWidth = "",
 }) {
   return (
-    <p
+    <div
       style={{
-        color: color,
-        size: size,
-        textAlign: align === "center" ? "center" : "left",
+        justifyContent:
+          (textAlign === "center" && "center") ||
+          (textAlign === "left" && "left") ||
+          (textAlign === "right" && "right"),
       }}
-      className={styles.subtitle}
+      className={styles.wrapper}
     >
-      {children}
-    </p>
+      <p
+        style={{
+          color: color,
+          fontSize: size,
+          textAlign: textAlign,
+          margin: margin,
+          maxWidth: maxWidth,
+        }}
+        className={styles.subtitle}
+      >
+        {children}
+      </p>
+    </div>
   );
 }
 

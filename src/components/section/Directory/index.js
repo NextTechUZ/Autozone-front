@@ -4,15 +4,17 @@ import Title from "../../Title";
 import styles from "./index.module.scss";
 function Directory({ data, title, subtitle }) {
   return (
-    <>
-      <Title outline>{title}</Title>
-      <Subtitle align="left">{subtitle}</Subtitle>
+    <div className={styles.wrapper}>
+      <Title textAlign="center" outline>
+        {title}
+      </Title>
+      <Subtitle uppercase={true}>{subtitle}</Subtitle>
       <div className={styles.directory}>
         {data?.map(({ id, imgUrl, title }) => (
           <ImgCard key={id} imgUrl={imgUrl} title={title} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

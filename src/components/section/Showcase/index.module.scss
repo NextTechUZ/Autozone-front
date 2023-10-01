@@ -1,0 +1,14 @@
+.showcase-item {
+  height: calc(100vh - 100.5px);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 500px;
+
+  img {
+    width: 26rem;
+  }
+}
