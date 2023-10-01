@@ -1,6 +1,34 @@
-import React from "react";
+import React, {
+  useEffect,
+  useState
+} from "react";
 import styles from "./index.module.scss";
-function Navbar() {
+import DropDown from "../../../components/DropDown";
+import {
+  dropData, handleSearchOpen, searchControl
+} from "../../../store/store";
+import Search from "../../../components/Search";
+const Navbar = () => {
+  const [focus, setFocus] = useState(false);
+  const [search,setSearch] =useState(false)
+
+  function handleFocus(id) {
+    dropData.forEach(element => {
+      if (element.id == id) {
+        element.focus = !element.focus
+      } else {
+        element.focus = false
+      }
+    });
+
+    setFocus(!focus)
+
+  }
+function handleOpen() {
+  setSearch(!search)
+  handleSearchOpen()
+}
+
   return (
     <>
       <header className={styles.header}>
@@ -15,26 +43,11 @@ function Navbar() {
             </a>
             <nav className={styles.header__nav}>
               <ul className={styles.header__list}>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    КОМПАНИЯ
-                  </a>
-                </li>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    КАТАЛОГ
-                  </a>
-                </li>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    УСЛУГИ
-                  </a>
-                </li>
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    ИНФОРМАЦИЯ
-                  </a>
-                </li>
+                {dropData.map(el=>
+                <li key={el.id} className={styles.header__item}>
+                  <button onClick={()=>handleFocus(el.id)} className={styles.header__item__link} children={el.title}></button>
+                  <DropDown id={el.id}/>
+                </li>)}
                 <li className={styles.header__item}>
                   <a href="/" className={styles.header__item__link}>
                     КОНТАКТЫ
@@ -43,8 +56,9 @@ function Navbar() {
               </ul>
             </nav>
             <button>ЗАКАЗАТЬ ЗВОНОК</button>
+          <Search />
             <div className={styles.header__manage}>
-              <button className={styles.header__search__button}>
+              <button onClick={handleOpen} className={styles.header__search__button}>
                 <svg
                   width="40"
                   height="40"

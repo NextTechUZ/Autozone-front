@@ -1,0 +1,68 @@
+@import url('https://fonts.cdnfonts.com/css/ramabhadra');
+
+
+.dropdown__list {
+    position: absolute;
+    top: 40px;
+    z-index: 99;
+    background-color: rgb(0, 0, 0, 0.7);
+    min-width: 288px;
+    padding: 10px 0px;
+
+    &::after {
+        position: absolute;
+        width: 94px;
+        height: 4px;
+        left: 0;
+        background: #C53720;
+        content: '';
+        top: -5px;
+    }
+}
+
+.dropdown__item {
+
+    border-bottom: 1px solid black;
+
+}
+
+.dropdown__link,.dropdown__button {
+    display: block;
+    font-size: 1.2rem;
+    padding: 15px 10px;
+    color: #fff;
+    &:hover {
+        background: #C53720;
+
+    }
+
+    font-weight: 700;
+    line-height: 14px;
+
+}
+.dropdown__droplist{
+    position: absolute;
+    left: 100%;
+    top: 0px;
+    z-index: 99;
+    background-color: rgb(0, 0, 0, 0.7);
+    min-width: 288px;
+   
+}
+.dropdown__button{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        content: '';
+        background: url(../../img/dropaft.svg);
+        right: 12px;
+        top: 12px;
+    }
+}

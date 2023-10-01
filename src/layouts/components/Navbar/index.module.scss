@@ -1,7 +1,8 @@
 .header {
     background-color: #0E0E0E;
     padding: 20px 0px;
-    color: #fff
+    color: #fff;
+    position: relative;
 }
 
 .header__container {
@@ -23,6 +24,7 @@
 
 .header__item {
     margin-right: 15px;
+    position: relative;
 }
 
 .header__item__link {
@@ -30,7 +32,9 @@
     letter-spacing: 0em;
     color: #FFFFFF;
     font-size: 1.6rem;
-
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .header__search__button {
