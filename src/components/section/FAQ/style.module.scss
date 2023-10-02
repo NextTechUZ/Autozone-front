@@ -1,0 +1,41 @@
+.faq_section{
+    width: 100%;
+    padding: 6rem 0;
+    color: var(--color-white);
+    .section_title{
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    .section_desc{
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .reques_title{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 0.1rem solid var(--color-brand--2);
+        margin-bottom: 4rem;
+        font-size: 1.6rem;
+        .active{
+            border-bottom: 0.4rem solid var(--color-brand--1);
+            color: var(--color-brand--1);
+            font-weight: 800;
+        }
+        div{
+            width: 50%;
+            text-align: center;
+            padding: 0.5rem 0;
+            cursor: pointer;
+        }
+    }
+}
+.respon_card{
+    height: 5.6rem;
+    background-color: "transparent";
+    .respon_title{
+        font-size: 0.9rem;
+    }
+}
