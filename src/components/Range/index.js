@@ -5,16 +5,13 @@ export default function PriceRange(props) {
     let [state, setState] = useState({
         min: 0,
         max: 10000,
-        props: props
     })
     useEffect(()=>{
-        state.props?.get({
+        props?.get({
             min: state.min,
             max: state.max
         })
-        setState({...state,...state.props.set()})
-    },[props])
-
+    },[state])
     let minRef = useRef()
     let maxRef = useRef()
     let inputminRef = useRef()

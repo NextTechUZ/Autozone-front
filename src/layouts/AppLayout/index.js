@@ -7,7 +7,7 @@ import { routes } from "../../pages/routeConfig";
 function AppLayout() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <Routes>
           {routes.map(({ id, ...route }) => (
@@ -15,7 +15,7 @@ function AppLayout() {
           ))}
         </Routes>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
