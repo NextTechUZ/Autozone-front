@@ -8,6 +8,7 @@ import {
   dropData, handleSearchOpen, searchControl
 } from "../../../store/store";
 import Search from "../../../components/Search";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [focus, setFocus] = useState(false);
   const [search,setSearch] =useState(false)
@@ -20,10 +21,9 @@ const Navbar = () => {
         element.focus = false
       }
     });
-
     setFocus(!focus)
-
   }
+ 
 function handleOpen() {
   setSearch(!search)
   handleSearchOpen()
@@ -44,15 +44,11 @@ function handleOpen() {
             <nav className={styles.header__nav}>
               <ul className={styles.header__list}>
                 {dropData.map(el=>
-                <li key={el.id} className={styles.header__item}>
-                  <button onClick={()=>handleFocus(el.id)} className={styles.header__item__link} children={el.title}></button>
-                  <DropDown id={el.id}/>
+                <li key={el.id}  className={styles.header__item}>
+                   <Link to={el.to} onMouseEnter ={()=>handleFocus(el.id)}  className={styles.header__item__link} children={el.title}/>
+                  <DropDown active={focus} id={el.id}/>
                 </li>)}
-                <li className={styles.header__item}>
-                  <a href="/" className={styles.header__item__link}>
-                    КОНТАКТЫ
-                  </a>
-                </li>
+               
               </ul>
             </nav>
             <button>ЗАКАЗАТЬ ЗВОНОК</button>
@@ -67,8 +63,8 @@ function handleOpen() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M24 18C24 21.3137 21.3137 24 18 24C14.6863 24 12 21.3137 12 18C12 14.6863 14.6863 12 18 12C21.3137 12 24 14.6863 24 18ZM22.8941 26.7226C21.4474 27.536 19.7779 28 18 28C12.4772 28 8 23.5228 8 18C8 12.4772 12.4772 8 18 8C23.5228 8 28 12.4772 28 18C28 20.2954 27.2266 22.4101 25.9263 24.0979L33.4142 31.5858L30.5858 34.4142L22.8941 26.7226Z"
                     fill="white"
                   />
@@ -85,23 +81,23 @@ function handleOpen() {
                   <path
                     d="M14 11H33.3599L29.9849 23H14V11Z"
                     stroke="white"
-                    stroke-width="4"
+                    strokeWidth="4"
                   />
-                  <path d="M14 4L14 24.5" stroke="white" stroke-width="4" />
-                  <path d="M14 6H4" stroke="white" stroke-width="4" />
+                  <path d="M14 4L14 24.5" stroke="white" strokeWidth="4" />
+                  <path d="M14 6H4" stroke="white" strokeWidth="4" />
                   <circle
                     cx="17"
                     cy="31"
                     r="3"
                     stroke="white"
-                    stroke-width="4"
+                    strokeWidth="4"
                   />
                   <circle
                     cx="28"
                     cy="31"
                     r="3"
                     stroke="white"
-                    stroke-width="4"
+                    strokeWidth="4"
                   />
                 </svg>
               </button>

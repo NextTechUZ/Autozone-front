@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.cdnfonts.com/css/geometria");
-@import url("https://fonts.cdnfonts.com/css/abeezee");
 :root {
   --color-brand--1: #c53720;
   --color-brand--2: #1d1d1d;
@@ -19,13 +20,12 @@ html {
 }
 
 body {
-  font-family: "geometria", sans-serif;
-  max-width: 1600px;
-  margin: 0 auto;
+  font-family: "ABeeZee", sans-serif;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1600px;
+  padding: 0 10rem;
   margin: 0 auto;
 }
 @media (max-width: 1400px) {
@@ -74,8 +74,4 @@ ol {
 
 a {
   text-decoration: none;
-}
-
-button {
-  font-family: "Geometria";
 }

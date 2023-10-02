@@ -1,8 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 .header {
     background-color: #0E0E0E;
     padding: 20px 0px;
     color: #fff;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
 }
 
 .header__container {

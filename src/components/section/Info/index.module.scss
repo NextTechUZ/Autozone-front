@@ -2,12 +2,14 @@
     background: url(../../../img/infobg.png) no-repeat center center;
     background-size: cover;
     color: #fff;
+    background-attachment: fixed;
 
 }
 
 .info__gradient {
     background: url(../../../img/infogr.png) no-repeat center center;
     padding: 80px 0px;
+    background-size: cover;
 }
 
 .info__wrapper {

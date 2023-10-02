@@ -1,65 +1,13 @@
-.footer {
-  color: #fff;
-}
-
-.footer__gradient {
-  background: url(../../../img/infogr.png);
-}
-
-.footer__container {
-  padding: 60px 0px;
+.showcase-item {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 500px;
 }
-
-.footer__link {
-  color: #fff;
-  font-size: 1.2rem;
-  line-height: 15px;
-  letter-spacing: 0em;
-  opacity: 0.7;
-}
-
-.footer__list__title {
-  color: #fff;
-  font-size: 1.6rem;
-  line-height: 20px;
-  letter-spacing: 0em;
-  margin-bottom: 20px;
-}
-
-.footer__list {
-  margin-right: 30px;
-}
-
-.footer__item {
-  width: 130px;
-  margin-bottom: 17px;
-}
-
-.footer__connect__link {
-  margin-bottom: 16px;
-  line-height: 20px;
-  letter-spacing: 0em;
-  color: #fff;
-  display: block;
-  padding-left: 25px;
-  position: relative;
-  font-size: 1.6rem;
-}
-
-.footer__info {
-  width: 263px;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-top: 50px;
-  font-size: 1.6rem;
-  font-weight: 800;
-  line-height: 19px;
-}
-
-.footer__span {
-  position: absolute;
-  left: 0;
+.showcase-item img {
+  width: 26rem;
 }
