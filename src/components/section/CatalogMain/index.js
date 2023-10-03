@@ -14,7 +14,7 @@ export default function CatalogMain() {
                     <div className={styles.info}>
                         <div className={styles.title} style={{fontSize:"1.6rem",fontWeight:"400"}}>{item.title}</div>
                         <div className={styles.describtion} style={{fontSize:"1.2rem",fontWeight:"800"}}>
-                            {Number(item.about.length)<200?item.about:item.about.slice(0,195)+" . . ."}
+                            {Number(item.about.length)<200?item.about:item.about.slice(0,170)+" . . ."}
                         </div>
                     </div>
                     <div className={styles.btn_sector}>

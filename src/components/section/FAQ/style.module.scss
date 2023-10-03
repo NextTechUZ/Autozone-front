@@ -39,3 +39,32 @@
         font-size: 0.9rem;
     }
 }
+.list_area{
+    color: var(--color-white);
+    width: 100%;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+.list{
+    width: 100%;
+}
+.item{
+    width: 100%;
+    border-bottom: 1px solid var(--color-white);    
+    padding-bottom: 2rem;
+}
+.item_button{
+    width: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-weight: 400;
+}
+.main{
+    width: 100%;
+    padding: 1rem 1rem;
+    font-weight: 800;
+}

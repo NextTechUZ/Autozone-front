@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Button(prop){
     const newStyle={
         fontSize:"1.2rem",
@@ -12,11 +14,13 @@ function Button(prop){
         backgroundColor:`${prop.backgroundColor==undefined?"":prop.backgroundColor}`,
         color:`${prop.color==undefined?"white":prop.color}`
     }
-
+    // <Button value={anything} width="20rem" border="color" backgroundColor="color/url("https//") color="color"/>
     return(
-        <div style={newStyle} onClick={()=>prop?.onClick()}>
-            {prop.value}
-        </div>
+        <Link to={prop.link}>
+            <div style={newStyle} onClick={()=>prop.onClick?prop.onClick():""}>
+                {prop.value}
+            </div>     
+        </Link>
     )
 }
 export default Button
