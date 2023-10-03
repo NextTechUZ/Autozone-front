@@ -7,7 +7,7 @@ import {
     dropData
 } from '../../store/store'
 
-function DropDown({id,active}) {
+function DropDown({id}) {
     const [display,setDisplay]=useState(false)
     const data = dropData.find((el) => el.id == id)
     

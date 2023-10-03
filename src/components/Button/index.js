@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
+import styles from "./index.module.scss"
 
-function Button(prop){
+function Button({prop}){
     const newStyle={
         fontSize:"1.2rem",
         padding: "0.8rem 1rem",
@@ -17,7 +18,7 @@ function Button(prop){
     // <Button value={anything} width="20rem" border="color" backgroundColor="color/url("https//") color="color"/>
     return(
         <Link to={prop.link}>
-            <div style={newStyle} onClick={()=>prop.onClick?prop.onClick():""}>
+            <div className={styles.button} style={newStyle} onClick={()=>prop.onClick?prop.onClick():""}>
                 {prop.value}
             </div>     
         </Link>

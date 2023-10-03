@@ -1,0 +1,52 @@
+.hamburger{
+    position: fixed;
+    background-color: #0E0E0E;
+    top: 100px;
+    left: 0;
+    width: 500px;
+    height: 100vh;
+    padding-left: 5rem;
+    z-index: 9;
+}
+.hamburger__button , .hamburger__close-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background: url(../../img/hamb.svg) no-repeat center center;
+    background-size: contain;
+}
+.hamburger__close-button{
+    background: url(../../img//close.svg) no-repeat center center;
+    background-size: contain;
+}
+.hamburger__item{
+    margin: 30px;
+    position: relative;
+}
+
+.hamburger__link{
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.hamburger__wrapper{
+    display: none;
+}
+.hamburger__gradient{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #0E0E0E;
+    opacity: 0.5;
+    left: 0;
+}
+@media only screen and (max-width:1070px){
+    .hamburger__wrapper{
+        display: block;
+    }
+}
