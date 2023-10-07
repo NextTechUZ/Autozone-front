@@ -1,12 +1,11 @@
 import React, { createElement, useEffect, useRef, useState } from 'react';
-import GoogleMapReact from 'google-map-react';
 
 const Map = (
   {
     width="100%",
     height="100%",
     maxHeight="100%",
-    background="var(--color-brand--2)"
+    background="var(--color-brand--3)"
   }
   ) => {
     // let [state,setState]=useState({})

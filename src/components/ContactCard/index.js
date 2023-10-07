@@ -9,6 +9,7 @@ export default function ContactCard({
     subtitlecolor = "var(--color-white)",
     maxWidth = "100%",
     width="100%",
+    height="100%",
     backgroundColor="var(--color-brand--2)"
   }) {
   return (
@@ -20,6 +21,7 @@ export default function ContactCard({
           (justifyContent === "right" && "right"),
           maxWidth,
           width,
+          height,
           color,
           backgroundColor
       }}

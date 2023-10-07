@@ -14,12 +14,11 @@ function ProductsPage() {
           <div className="container">
             <Title children="MAGNUM - каталог АКБ от 60 до 230Ah"/>
             <div className={styles.Main}>
-              <ManuList/>
-              <CatalogMain/>
+              <ManuList width='33%'/>
+              <CatalogMain width='75%'/>
             </div>
           </div>
         </div>
-          <Faq/> 
     </div>
   )
 }
