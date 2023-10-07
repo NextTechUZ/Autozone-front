@@ -1,5 +1,7 @@
 import AskQuestionPage from "./AskQuestionPage";
+import CatalogProduct from "./CatalogProductPage";
 import CategoryPage from "./CategoryPage";
+import ContactPage from "./ContactsPage";
 import HomePage from "./HomePage";
 import NotFoundPage from "./NotFoundPage";
 import ProductsPage from "./ProductsPage";
@@ -10,4 +12,6 @@ export const routes = [
   { id: 3, path: "/products", element: <ProductsPage /> },
   { id: 4, path: "*", element: <NotFoundPage /> },
   { id: 5, path: "/ask-question", element: <AskQuestionPage /> },
+  { id: 6, path: "/contacts", element: <ContactPage/> },
+  { id: 6, path: "/catalog-product", element: <CatalogProduct/> },
 ];

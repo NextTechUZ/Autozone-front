@@ -1,21 +1,22 @@
 import React from 'react'
-import Button from '../../Button/index';
-import styles from"./style.module.scss"
-import FactoryCard from '../../FactoryCard';
-export default function CatalogMain({
-    width="100%"
-}) {
+import styles from './index.module.scss'
+import Title from '../../Title'
+import FactoryCard from '../../FactoryCard'
+export default function RelatedFactory() {
   return (
-    <div className={styles.Right}
-    style={{width}}>
-        {
-            backend()[1].incloud[0].incloud?.map((item,index)=><FactoryCard key={index} item={item} width='32%'/>)
-        }
-        
+    <div className={styles.related_factory} style={{margin:"4rem 0"}}>
+        <div className='container'>
+            <Title textAlign="left">Related products</Title>
+            <div style={{width:"100%",display:"flex",flexWrap:"wrap"}}>
+                {
+                    backend()[1].incloud[0].incloud.slice(0,4)?.map((item,index)=><FactoryCard key={index} item={item} width='23%'/>)
+                }
+            </div>
+        </div>
+
     </div>
   )
 }
-
 export function backend(){
     return [
         {
@@ -540,4 +541,3 @@ export function backend(){
         },
     ]
   }
-  
