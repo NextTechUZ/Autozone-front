@@ -7,6 +7,7 @@ import "swiper/css/effect-fade";
 
 import styles from "./index.module.scss";
 import Subtitle from "../../Subtitle";
+import Button from "../../Button";
 
 function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
   return (
@@ -27,30 +28,31 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
         {data.map(({ id, title, buttonTitle, bgImg }) => (
           <SwiperSlide
             style={{
-              padding: "0 25rem",
               background: `url(${bgImg}) center`,
               backgroundSize: "cover",
             }}
             key={id}
           >
-            <div className={styles["showcase-item"]}>
-              <img src={notFoundImg} alt="" />
-              <Title
-                fontStyle="italic"
-                maxWidth="550px"
-                size="4.8rem"
-                margin={titleMargin}
-                textAlign="left"
-                color="#fff"
-              >
-                {title}
-              </Title>
-              {subtitle && (
-                <Subtitle maxWidth="60rem" textAlign="left" color="#fff">
-                  {subtitle}
-                </Subtitle>
-              )}
-              <button>{buttonTitle}</button>
+            <div className="container">
+              <div className={styles["showcase-item"]}>
+                <img src={notFoundImg} alt="" />
+                <Title
+                  fontStyle="italic"
+                  maxWidth="550px"
+                  size="4.8rem"
+                  margin={titleMargin}
+                  textAlign="left"
+                  color="#fff"
+                >
+                  {title}
+                </Title>
+                {subtitle && (
+                  <Subtitle maxWidth="60rem" textAlign="left" color="#fff">
+                    {subtitle}
+                  </Subtitle>
+                )}
+                <Button value={buttonTitle}>{buttonTitle}</Button>
+              </div>
             </div>
           </SwiperSlide>
         ))}

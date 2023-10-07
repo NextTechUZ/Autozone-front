@@ -1,3 +1,4 @@
+import Button from "../Button";
 import Subtitle from "../Subtitle";
 import styles from "./index.module.scss";
 function ImgCard({ imgUrl, title }) {
@@ -8,7 +9,7 @@ function ImgCard({ imgUrl, title }) {
         <Subtitle size="2.4rem" color="var(--color-white)" capitalize>
           {title}
         </Subtitle>
-        <button>СДЕЛАТЬ ЗАКАЗ</button>
+        <Button value="СДЕЛАТЬ ЗАКАЗ">СДЕЛАТЬ ЗАКАЗ</Button>
       </div>
     </div>
   );

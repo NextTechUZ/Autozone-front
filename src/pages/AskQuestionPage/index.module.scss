@@ -4,7 +4,7 @@
   padding: 15rem 0;
 
   .wrapper--form {
-    width: 875px;
+    width: 87rem;
     box-shadow: 2px 2px 15px black;
     .wrapper--form__top {
       background-color: var(--color-brand--2);
@@ -24,7 +24,7 @@
         color: var(--color-brand--1, #c53720);
         text-align: right;
         font-family: Abhaya Libre;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
@@ -69,7 +69,7 @@
     gap: 1rem;
     align-items: center;
     input[type="checkbox"] {
-      box-shadow: 0 0 0 3px hotpink;
+      box-shadow: 0 0 0 0.3rem hotpink;
       border-radius: 0;
     }
   }
@@ -100,8 +100,12 @@
       position: absolute;
       top: 2px;
       left: 2px;
-      background: rgb(73, 73, 85);
-      background: linear-gradient(top, rgba(80, 62, 62, 0.489) 0%, red 100%);
+      background: red;
+      background: linear-gradient(
+        top,
+        rgba(80, 62, 62, 0.489) 0%,
+        rgb(0, 110, 255) 100%
+      );
       box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
       opacity: 0;
     }
