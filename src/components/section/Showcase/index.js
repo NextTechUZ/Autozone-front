@@ -27,8 +27,9 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
         {data.map(({ id, title, buttonTitle, bgImg }) => (
           <SwiperSlide
             style={{
-              padding: "0 250px",
-              backgroundImage: `url(${bgImg})`,
+              padding: "0 25rem",
+              background: `url(${bgImg}) center`,
+              backgroundSize: "cover",
             }}
             key={id}
           >
