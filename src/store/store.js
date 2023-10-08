@@ -1,4 +1,7 @@
 import img from "../img/news1.jpg";
+import ShowcaseImg1 from "../img/showcaseBg1.png";
+import ShowcaseImg2 from "../img/showcaseBg2.png";
+import ShowcaseImg3 from "../img/showcaseBg3.png";
 export const newsData = [
   {
     id: 1,
@@ -240,5 +243,28 @@ export const products = [
     id: 9,
     name: "ГЕЛИЕВЫЕ АКБ OPTIMA",
     to: "/",
+  },
+];
+
+export const showcaseData = [
+  {
+    id: 1,
+    bgImg: ShowcaseImg1,
+    title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
+    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+    subtitle:
+      "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
+  },
+  {
+    id: 2,
+    bgImg: ShowcaseImg2,
+    title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
+    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+  },
+  {
+    id: 3,
+    bgImg: ShowcaseImg3,
+    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
   },
 ];

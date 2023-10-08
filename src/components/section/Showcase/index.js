@@ -9,7 +9,7 @@ import styles from "./index.module.scss";
 import Subtitle from "../../Subtitle";
 import Button from "../../Button";
 
-function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
+function Showcase({ subtitle, notFoundImg, data, titleMargin = "0 0 3rem" }) {
   return (
     <div>
       <Swiper
