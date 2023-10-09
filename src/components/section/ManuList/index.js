@@ -7,7 +7,7 @@ import Filter from '../../Filter';
 
 export default function ManuList({
   width="100%",
-  color="var(--color-white)"
+  color="var(--color-white)",
 }){
  
 

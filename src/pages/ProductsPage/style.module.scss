@@ -3,6 +3,23 @@
     background-color: #EDEDED;
     padding: 3rem 0;
 }
+.tools_section{
+    display:none;
+    justify-content: end;
+    padding: 2rem 0;
+    svg:hover{
+        cursor: pointer;
+    }
+    .filter_btn{
+        border: none;
+        cursor: pointer;
+    }
+}
 .Main{
     display: flex;
+}
+@media (max-width: 576px) {
+    .tools_section{
+        display: flex;
+    }
 }

@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import Subtitle from '../Subtitle'
 import { ClockIcon, LoctationIcon, SmsIcon, TelIcon } from '../../img/icon'
 export default function ContactCard({
-    justifyContent= "left",
+    justifyContent= "",
     color="var(--color-white)",
     titlecolor = "var(--color-white)",
     subtitlecolor = "var(--color-white)",
@@ -26,34 +26,38 @@ export default function ContactCard({
           backgroundColor
       }}
      className={styles.Card}>
-            <Subtitle textAlign="left" color={titlecolor}>
-                Как с нами связаться
-            </Subtitle>
-            <ul className={styles.contact_list}>
-                <li className={styles.contact_item}>
-                    <TelIcon/>
-                    <p style={{color:subtitlecolor}}>+7 (342) 279-36-13</p>
-                </li>
-                <li className={styles.contact_item}>
-                    <SmsIcon/>
-                    <p style={{color:subtitlecolor}}>proauto59@yandex.ru</p>
-                </li>
-                <li className={styles.contact_item}>
-                    <LoctationIcon/>
-                    <p style={{color:subtitlecolor}}>г. Пермь, Леонова 82 Б</p>
-                </li>
-            </ul>
-            <Subtitle textAlign="left" color={titlecolor} margin='3rem 0 0 0'>
-                Режим работы
-            </Subtitle>
-            <ul className={styles.contact_list}>
-                <li className={styles.contact_item}>
-                    <ClockIcon/>
-                    <p style={{color:subtitlecolor}}>
-                        Пн. – Вс.: с 9:00 до 18:00
-                    </p>
-                </li>
-            </ul>
+            <div className={styles.contact_section}>
+                <Subtitle textAlign="left" color={titlecolor}>
+                    Как с нами связаться
+                </Subtitle>
+                <ul className={styles.contact_list}>
+                    <li className={styles.contact_item}>
+                        <TelIcon/>
+                        <p style={{color:subtitlecolor}}>+7 (342) 279-36-13</p>
+                    </li>
+                    <li className={styles.contact_item}>
+                        <SmsIcon/>
+                        <p style={{color:subtitlecolor}}>proauto59@yandex.ru</p>
+                    </li>
+                    <li className={styles.contact_item}>
+                        <LoctationIcon/>
+                        <p style={{color:subtitlecolor}}>г. Пермь, Леонова 82 Б</p>
+                    </li>
+                </ul>
+            </div>
+            <div className={styles.contact_section}>
+                <Subtitle textAlign="left" color={titlecolor}>
+                    Режим работы
+                </Subtitle>
+                <ul className={styles.contact_list}>
+                    <li className={styles.contact_item}>
+                        <ClockIcon/>
+                        <p style={{color:subtitlecolor}}>
+                            Пн. – Вс.: с 9:00 до 18:00
+                        </p>
+                    </li>
+                </ul>
+            </div>
     </div>
   )
 }

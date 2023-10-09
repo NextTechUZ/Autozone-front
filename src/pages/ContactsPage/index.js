@@ -19,8 +19,8 @@ export default function ContactPage() {
               Аккумуляторы и автомасла в Перми
             </Subtitle>
             <div className={styles.contact_sector}>
-              <ContactCard width="50%" />
-              <Map width="50%" />
+              <ContactCard width="100%" />
+              <Map width="100%" /> 
             </div>
           </div>
         </div>

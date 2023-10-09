@@ -1,4 +1,5 @@
 .Contact_page{
+    width: 100%;   
 }
 .contact_section{
     width: 100%;
@@ -6,11 +7,21 @@
 }
 .contact_sector{
     width: 100%;
-    min-height: 10rem;
-    background-color: aquamarine;
+    min-height: 40rem;
     display: flex;
 }
 .ask_section{
     width: 100%;
     background-size: cover;
 }
+
+  @media (max-width: 768px) {
+    
+  }
+
+  @media (max-width: 576px) {
+    .contact_sector{
+        flex-direction: column;
+        gap: 1rem;
+    }
+  }

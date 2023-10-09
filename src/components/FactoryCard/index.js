@@ -4,6 +4,7 @@ import styles from './index.module.scss'
 export default function FactoryCard({
     key="",
     width="33%",
+    minheight="4rem",
     img="",
     item=""
 }) {
