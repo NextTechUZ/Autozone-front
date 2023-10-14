@@ -7,7 +7,7 @@ export default function RelatedFactory() {
   return (
     <div className={styles.related_factory} style={{margin:"4rem 0"}}>
         <div className='container'>
-            <Title textAlign="left">Related products</Title>
+            <Title textAlign="left" margin='2rem 0'>Related products</Title>
             <div style={{width:"100%",display:"flex",flexWrap:"wrap"}}>
                 {
                     backend()[1].incloud[0].incloud.slice(0,4)?.map((item,index)=><FactoryCard key={index} item={item} width={windowWidth<576 ? "45%" :"23%"}/>)

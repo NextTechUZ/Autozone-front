@@ -53,7 +53,8 @@
         width: 100%;
         padding: 2rem 1rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 2rem;
     }
     .input_sector{
         width: 100%;
@@ -81,11 +82,11 @@
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
-            .checkbox{
+            #checkbox{
                 width: 2rem;
                 height: 2rem;
             }
-            p{
+            label{
                 margin-left: 1rem;
             }
         }

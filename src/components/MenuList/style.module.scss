@@ -9,6 +9,9 @@
 }
 .item{
   width: 100%;
+    a{
+      color: inherit;
+    }
 }
 .item_button{
   width: 100%;
@@ -16,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
   &:hover{
     background-color: #1D1D1D;
   }

@@ -4,7 +4,6 @@ import Produc from '../../components/Produc'
 import RelatedFactory from '../../components/section/RelatedFactory'
 import Navigation from '../../components/Navigation'
 export default function CatalogProduct() {
-   
   return (
     <div>
         <Navigation/>

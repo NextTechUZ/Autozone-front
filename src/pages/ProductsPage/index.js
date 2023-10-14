@@ -18,7 +18,7 @@ function ProductsPage() {
       <Navigation/>
       <div className={styles.catalog_page}> 
           <div className="container">
-            <Title children="MAGNUM - каталог АКБ от 60 до 230Ah"/>
+            <Title children="MAGNUM - каталог АКБ от 60 до 230Ah" margin='2rem 0'/>
             <div className={styles.tools_section}>
               <button className={styles.filter_btn} onClick={()=>FilterOpen()}>
                 <FilterIcon/>
@@ -28,7 +28,7 @@ function ProductsPage() {
               {
                 windowWidth>576||state.filterOpen?<ManuList width='33%'/>:""
               }
-              <CatalogMain width={`${windowWidth<567&&!state.toolsOpen?"100%":'75%'}`} maxHeight='80vh'  cardWidth={`${windowWidth<567?"45%":"30%"}`}/>
+              <CatalogMain width={`${windowWidth<567&&!state.toolsOpen?"100%":'75%'}`} cardWidth={`${windowWidth<567?"45%":"30%"}`}/>
             </div>
           </div>
         </div>

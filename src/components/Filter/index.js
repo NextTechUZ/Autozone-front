@@ -80,16 +80,20 @@ export default function Filter(props) {
                             state.isopen.status? <ul className={styles.list}>
                             <div className={styles.status_sector}>
                                 <div className={styles.sector}>
-                                    <input type='checkbox' className={styles.checkbox}
+                                    <input type='checkbox' id={styles.checkbox}
                                         checked={state.filter?.inStock}
                                         onClick={(e) => dispatch({ type: "SET_FILTER", payload: { inStock: e.target.checked } })} />
-                                    <p>В НАЛИЧИИ</p>
+                                    <label for={styles.checkbox}>
+                                        В НАЛИЧИИ
+                                    </label>
                                 </div>
                                 <div className={styles.sector}>
-                                    <input type='checkbox' className={styles.checkbox}
+                                    <input type='checkbox' id={styles.checkbox}
                                         checked={state.filter?.toOrder}
                                         onClick={(e) => dispatch({ type: "SET_FILTER", payload: { toOrder: e.target.checked } })} />
-                                    <p>ПОД ЗАКАЗ</p>
+                                    <label for={styles.checkbox}>
+                                        ПОД ЗАКАЗ
+                                    </label>    
                                 </div>
                             </div>
                         </ul>:""

@@ -16,30 +16,43 @@ export default function ListItem(props) {
         })
     },[])
     const handleClick = (id) => {
-        let drop=state.data.drop.map(item=>id==item.id?{...item,isopen:!item.isopen}:item)
-        let {data}=state
-        data={...data,drop}
-        setState({...state,data})
+        isOpen(id)
       };
+
+    const isOpen=(id)=>{
+    let drop=state.data.drop.map(item=>id==item.id?{...item,isopen:!item.isopen}:item)
+    let {data}=state
+    data={...data,drop}
+    setState({...state,data})
+    }
     return (
         <div style={props.sx} className={styles.list_area}>
             <ul className={styles.list}>
                <li className={styles.item}>
                 <div className={styles.item_button} style={{backgroundColor:"var(--color-brand--1)"}}>
                     <p>{state.data?.text}</p>
-                    <div className={styles.dropdown}></div>
+                    {/* <div className={styles.dropdown}></div> */}
                 </div>
                 
                 <ul className={styles.list}>
                     {
-                        state.data?.drop.map((item,index)=><li key={index} className={item.isopen? styles.active : styles.not_active +" "+styles.item}>
-                            <Link to={item.to} style={{color:'inherit'}}>
-                                <div className={styles.item_button}
-                                    onClick={() => handleClick(item.id)}>
-                                    {item.text}
-                                    <div className={item.isopen?styles.dropdown:styles.dropright}></div>
-                                </div>
-                            </Link>
+                        state.data?.drop.map((item,index)=><li key={index} className={item.isopen? styles.active : styles.not_active +" "+styles.item}>                            
+                            <div className={styles.item_button}
+                                onClick={() => handleClick(item.id)}>
+                                {item.text}
+                                <div className={item.isopen?styles.dropdown:styles.dropright}></div>
+                            </div>
+                            <ul className={styles.list}>
+                                {
+                                    item.isopen?item.drop?.map((item,index)=><li key={index} className={styles.item} onClick={()=>{localStorage.setItem("catalogPraduct",JSON.stringify(item))}}>
+                                            <Link to="/catalog-product">
+                                                <div className={styles.item_button}>
+                                                        {item.text}
+                                                </div>
+                                            </Link>
+                                    </li>):""
+                                }
+                            </ul>
                         </li>)
                     }
                 </ul>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../../Button/index';
 import styles from"./style.module.scss"
 import FactoryCard from '../../FactoryCard';
@@ -8,13 +8,17 @@ export default function CatalogMain({
     height="100%",
     maxHeight="100%"
 }) {
+
+    let [state,setState]=useState()
+    useEffect(()=>{
+        setState(backend()[1].incloud[0].incloud)
+    },[])
   return (
     <div className={styles.Right}
-    style={{width,height,maxHeight,overflow:"scroll"}}>
+    style={{width,height,maxHeight}}>
         {
-            backend()[1].incloud[0].incloud?.map((item,index)=><FactoryCard key={index} item={item} width={cardWidth}/>)
+            state?.map((item,index)=><FactoryCard key={index} item={item} width={cardWidth}/>)
         }
-        
     </div>
   ) 
 }
@@ -526,7 +530,7 @@ export function backend(){
                             id:"3",
                             title:"АКБ MAGNUM",
                             img:"",
-                            about:"Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ»Казахстан Компания «Кайнар – АКБ», КазахстанКазахстан Компания «Кайнар – АКБ»Казахстан Компания «Кайнар – АКБ», Казахстан",
+                            about:" АКБ»Казахстан Компания «Кайнар – АКБ», Казахстан",
                             incloud:[
                                 {
                                     id:"1",
@@ -752,7 +756,7 @@ export function backend(){
                             id:"3",
                             title:"АКБ MAGNUM",
                             img:"",
-                            about:"Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ»Казахстан Компания «Кайнар – АКБ», КазахстанКазахстан Компания «Кайнар – АКБ»Казахстан Компания «Кайнар – АКБ», Казахстан",
+                            about:" АКБ»Казахстан Компания «Кайнар – АКБ», Казахстан",
                             incloud:[
                                 {
                                     id:"1",
@@ -978,7 +982,7 @@ export function backend(){
                             id:"3",
                             title:"АКБ MAGNUM",
                             img:"",
-                            about:"Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ», Казахстан Компания «Кайнар – АКБ»Казахстан Компания «Кайнар – АКБ», КазахстанКазахстан Компания «Кайнар – АКБ»Казахстан Компания «Кайнар – АКБ», Казахстан",
+                            about:" АКБ»Казахстан Компания «Кайнар – АКБ», Казахстан",
                             incloud:[
                                 {
                                     id:"1",
