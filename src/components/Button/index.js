@@ -10,7 +10,6 @@ function Button(prop) {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    display: "inline-block",
     cursor: "pointer",
     width: `${prop.width === undefined ? "" : prop.width}`,
     border: `${
