@@ -5,7 +5,7 @@ import styles from "./index.module.scss";
 function Directory({ data, title, subtitle }) {
   return (
     <div className={styles.wrapper}>
-      <Title textAlign="center" outline>
+      <Title margin="0 0 3rem 0" textAlign="center" outline>
         {title}
       </Title>
       <Subtitle uppercase={true}>{subtitle}</Subtitle>

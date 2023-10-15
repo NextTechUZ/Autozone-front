@@ -43,7 +43,9 @@ function License() {
         {data.map(({ id, licenseImg, licenseTitle }) => (
           <div className={styles["license-item"]}>
             <img src={licenseImg} alt="" />
-            <Subtitle>{licenseTitle}</Subtitle>
+            <Subtitle maxWidth="20rem" size="1.8rem">
+              {licenseTitle}
+            </Subtitle>
           </div>
         ))}
       </div>

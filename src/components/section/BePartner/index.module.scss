@@ -1,0 +1,19 @@
+.bePartner {
+  background: linear-gradient(rgba(0, 0, 0, 0.611), rgba(19, 3, 3, 0.644)),
+    url("../../../img/be-partner-bg.png") center no-repeat;
+  background-size: cover;
+  padding: 4rem 0;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-top: 4rem;
+  @media (max-width: 520px) {
+    grid-template-columns: 30rem 30rem;
+    justify-content: space-around;
+    gap: 4rem;
+  }
+}
