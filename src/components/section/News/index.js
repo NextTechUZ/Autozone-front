@@ -2,8 +2,16 @@ import React from 'react'
 import styles from './index.module.scss'
 import Title from '../../Title'
 import NewsCard from '../../newsCard'
+import Button from '../../Button'
 
+const buttonData={
+  width:"168px",
+  color: "#C53720",
+  backgroundColor:"transparent",
+  value:"ЧИТАТЬ ВСЕ НОВОСТИ",
+  link:"/",
 
+}
 function News({data}) {
     return (
         <section className={styles.news}>
@@ -18,7 +26,7 @@ function News({data}) {
                 }
 
             </ul>
-            <button >ЧИТАТЬ ВСЕ НОВОСТИ</button>
+            <div className={styles["news__button-wrapper"]}> <Button prop={buttonData} /></div>
             </div>
           </div>
         </section>

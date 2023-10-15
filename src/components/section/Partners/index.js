@@ -14,8 +14,7 @@ function Partners({elemets,autoPlay,toShow}) {
       autoplay: autoPlay,
       speed: 2000,
       autoplaySpeed: 2000,
-      cssEase: "linear"
-      
+      cssEase: "linear",
 
     };
     return (

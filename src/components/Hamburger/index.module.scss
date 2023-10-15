@@ -3,7 +3,7 @@
     background-color: #0E0E0E;
     top: 100px;
     left: 0;
-    width: 500px;
+    width: 60%;
     height: 100vh;
     padding-left: 5rem;
     z-index: 9;
@@ -48,5 +48,13 @@
 @media only screen and (max-width:1070px){
     .hamburger__wrapper{
         display: block;
+    }
+}
+@media only screen and (max-width:470px){
+    .hamburger__item{
+        margin: 20px;
+    }
+    .hamburger{
+        padding-left: 1.3rem;
     }
 }
