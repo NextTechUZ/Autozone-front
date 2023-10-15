@@ -1,7 +1,15 @@
 import React from 'react'
 import styles from './index.module.scss'
 import Title from '../../Title'
-
+import Button from '../../Button'
+const buttonData={
+    width:"168px",
+    color:"#fff",
+    backgroundColor:"transparent",
+    value:"УЗНАТЬ БОЛЬШЕ",
+    link:"/",
+  
+  }
 function Info() {
     return (
         <section className={styles.info}>
@@ -17,7 +25,7 @@ function Info() {
                         <p className={styles.info__text}>Машина плохо заводится? Аккумулятор вас подводит? Не проблема! Вам в 
                       «PRO Auto»! Мы подберём хороший, надёжный, а главное недорогой аккумулятор именно для вашего авто! С 1997 года сеть магазинов «PRO Auto» занимается продажей автомобильных аккумуляторов, масел, расходных материалов, химией 
                       и аксессуаров.</p>
-                      <button >УЗНАТЬ БОЛЬШЕ</button>
+                      <div className={styles["info__button-wrapper"]}> <Button prop={buttonData} /></div>
                     </div>
                 </div>
                </div>

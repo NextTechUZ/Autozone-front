@@ -1,29 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
 .header {
     background-color: #0E0E0E;
     padding: 20px 0px;
     color: #fff;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
 }
 
 .header__container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+     align-items: center;
+     justify-content: space-between;
 }
 
 .header__nav {
-    margin-left: 30px;
-
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
 }
 
 .header__list {
     display: flex;
-    margin-right: 10px;
-
 }
 
 .header__item {
-    margin-right: 15px;
+    margin-right: 28px;
     position: relative;
 }
 
@@ -44,7 +47,12 @@
     border: none;
     margin-right: 20px;
     cursor: pointer;
+    background: url(../../../img/lupa.svg) no-repeat center center;
 
+}
+.header__manage{
+    display: flex;
+    align-items:center;
 }
 
 .header__shop__button {
@@ -54,4 +62,25 @@
     border: none;
     cursor: pointer;
     margin-right: 10px;
+}
+@media only screen and (max-width:1115px){
+.header__item{
+    margin-right: 18px;
+}
+}
+@media only screen and (max-width:1070px){
+    .header__item{
+        margin-right: 18px;
+    }
+    .header__search__button{
+        width: 30px;
+        height: 30px;
+    }
+    .header__nav{
+        display: none;
+    }
+   .header__manage{
+    width: 150px;
+    justify-content: space-between;
+   }
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import styles from './index.module.scss'
 import Title from '../../Title'
 import Subtitle from '../../Subtitle'
+import Button from '../../Button'
+import { buttonData } from '../../../layouts/components/Navbar'
 
 
 function Services() {
@@ -10,6 +12,7 @@ function Services() {
         <section className={styles.services}>
         <div className={styles.services__gradient}>
         <div className='container'>
+            <div className={styles.services__shadow}></div>
         <div className={styles.services__container}>
           <Title color={"white"} outline children={"услуги"} />
           <Subtitle align={"center"} children="Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции." color='white' />
@@ -27,7 +30,7 @@ function Services() {
                 <p className={styles.services__item__text}>Приезжайте к нам и мы бесплатно проведём диагностику вашего аккумулятора!</p>
             </li>
           </ul>
-          <button>ЗАДАТЬ ВОПРОС</button>
+         <div className={styles["services__button-wrapper"]}> <Button prop={buttonData} /></div>
         </div>
         </div>     
         </div>

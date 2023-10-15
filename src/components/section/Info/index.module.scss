@@ -2,24 +2,28 @@
     background: url(../../../img/infobg.png) no-repeat center center;
     background-size: cover;
     color: #fff;
+    background-attachment: fixed;
 
 }
 
 .info__gradient {
     background: url(../../../img/infogr.png) no-repeat center center;
     padding: 80px 0px;
+    background-size: cover;
 }
 
 .info__wrapper {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
+    align-items: flex-start;
     margin-top: 100px;
 }
 
 .info__img__wrapper {
     width: 360px;
     height: 347px;
-    ;
+    margin-right: 20px;
+    flex-shrink: 0;
 
     position: relative;
 
@@ -52,11 +56,12 @@
 }
 
 .info__text__wrapper {
-    width: 744px;
+    max-width: 744px;
 }
 
 .info__text__wrapper {
-    background: url(../../../img//info-text-wr.png) no-repeat;
+    background: url(../../../img//infogr.png) no-repeat;
+    border: 4px #C53720 solid;
 }
 
 .info__text {
@@ -65,5 +70,28 @@
     line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
+}
 
+.info__button-wrapper {
+    margin-left: 30px;
+    padding-bottom: 3rem;
+}
+
+@media only screen and (max-width:800px) {
+    .info__wrapper {
+        flex-direction: column;
+    }
+
+    .info__img__wrapper {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .info__text {
+        text-align: center;
+    }
+
+    .info__button-wrapper {
+        text-align: center;
+    }
 }
