@@ -4,14 +4,6 @@ import Title from '../../Title'
 import NewsCard from '../../newsCard'
 import Button from '../../Button'
 
-const buttonData={
-  width:"168px",
-  color: "#C53720",
-  backgroundColor:"transparent",
-  value:"ЧИТАТЬ ВСЕ НОВОСТИ",
-  link:"/",
-
-}
 function News({data}) {
     return (
         <section className={styles.news}>
@@ -26,7 +18,7 @@ function News({data}) {
                 }
 
             </ul>
-            <div className={styles["news__button-wrapper"]}> <Button prop={buttonData} /></div>
+            <div className={styles["news__button-wrapper"]}> <Button color='var(--color-brand--1)'>ЧИТАТЬ ВСЕ НОВОСТИ</Button></div>
             </div>
           </div>
         </section>

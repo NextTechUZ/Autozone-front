@@ -1,37 +1,51 @@
 import { Link } from "react-router-dom";
-//buttonga children oladingan qilib qo'ying iloji bo'lsa !!!
-//nega button ishlatmasdan div ishlatgansiz !!!
-//propsdan font size oladigan qilib qo'ying iloji bo'lsa iltimos !!!
 // nega display 2 marta yozilgan newStyle ichida ???
-function Button(prop) {
+function Button({
+  children,
+  onClick,
+  link="",
+  fontSize= "1.2rem",
+  margin="0 0",
+  padding= "0.8rem 1rem",
+  justifyContent= "center",
+  cursor= "pointer",
+  width,
+  height,
+  border= "0.25rem solid #C53720",
+  backgroundColor="transparent",
+  color="var(--color-white)",
+  display="flex",
+}) {
   const newStyle = {
-    fontSize: "1.2rem",
-    padding: "0.8rem 1rem",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    cursor: "pointer",
-    width: `${prop.width === undefined ? "" : prop.width}`,
-    border: `${
-      prop.border === undefined
-        ? "0.25rem solid #C53720"
-        : "0.25rem solid " + prop.border
-    }`,
-    backgroundColor: `${
-      prop.backgroundColor === undefined ? "" : prop.backgroundColor
-    }`,
-    color: `${prop.color === undefined ? "white" : prop.color}`,
+    fontSize,
+    padding,
+    cursor,
+    width,
+    height,
+    margin,
+    border,
+    backgroundColor,
+    textAlign: "center",
+    fontFamily: "ABeeZee",
   };
-  // <Button value={anything} width="20rem" border="color" backgroundColor="color/url("https//") color="color"/>
   return (
-    <Link to={prop.link}>
-      <div
-        style={newStyle}
-        onClick={() => (prop.onClick ? prop.onClick() : "")}
-      >
-        {prop.value}
-      </div>
-    </Link>
+    <div style={{
+      width:display=="inline-block"?"0":'100%',
+      display,
+      justifyContent:
+        (justifyContent === "center" && "center") ||
+        (justifyContent === "left" && "left") ||
+        (justifyContent === "right" && "right"),
+    }}>
+      <button
+          style={newStyle}
+          onClick={() => onClick}
+        >
+        <Link to={link} style={{width:"100%",height:"100%",color}}>
+          {children}
+        </Link>
+        </button>
+    </div>
   );
 }
 export default Button;

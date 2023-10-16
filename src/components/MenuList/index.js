@@ -44,7 +44,9 @@ export default function ListItem(props) {
                             </div>
                             <ul className={styles.list}>
                                 {
-                                    item.isopen?item.drop?.map((item,index)=><li key={index} className={styles.item} onClick={()=>{localStorage.setItem("catalogPraduct",JSON.stringify(item))}}>
+                                    item.isopen?item.drop?.map((item,index)=><li key={index} className={styles.item} onClick={()=>{
+                                        localStorage.setItem("catalogPraduct",JSON.stringify(item))
+                                        }}>
                                             <Link to="/catalog-product">
                                                 <div className={styles.item_button}>
                                                         {item.text}

@@ -9,6 +9,7 @@ export default function Produc() {
     },[])
     console.log(state);
   return (
+    <div className={styles.product_section}>
         <div className={styles.product_card}>
             <div className='container'>
                 <Title textAlign="left">
@@ -31,6 +32,6 @@ export default function Produc() {
                 </div>
             </div>
         </div>
-        
+    </div>  
   )
 }

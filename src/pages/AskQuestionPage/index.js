@@ -75,8 +75,7 @@ function AskQuestionPage({
           </div>
 
           <div className={styles["form--bottom"]}>
-            <p>* Обязательное поле</p>
-            <Button value="ОТПРАВИТЬ" />
+            <Button justifyContent="right">ОТПРАВИТЬ</Button>
           </div>
         </form>
       </div>

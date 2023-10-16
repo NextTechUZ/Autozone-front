@@ -103,9 +103,12 @@ export default function Filter(props) {
                 </ul>
             </div>
             <div className={styles.btn_sector}>
-                <Button value="ПОКАЗАТЬ" onClick={() => dispatch({ type: "SET_FILTER", payload: { submit: true } })} />
-                <Button value="СБРОСИТЬ" 
-                onClick={() => dispatch({ type: "DEL_FILTER", payload: { del: true } })}/>
+                <Button onClick={() => dispatch({ type: "SET_FILTER", payload: { submit: true } })}>
+                    ПОКАЗАТЬ
+                </Button>
+                <Button onClick={() => dispatch({ type: "DEL_FILTER", payload: { del: true } })}>
+                    СБРОСИТЬ
+                </Button>
             </div>
             <p className={styles.footer_des}>
                 Подберём аккумулятор и масло конкретно на ваш автомобиль. Цель нашего магазина - предложение широкого ассортимента товаров.

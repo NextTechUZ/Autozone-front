@@ -72,6 +72,126 @@ export let dropData = [
         id: 1,
         text: "АККУМУЛЯТОРЫ",
         to: "/",
+        drop:[
+          {
+            id:1,
+            text:"АКБ MAGNUM",
+            drop:[
+              {
+                id:1,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+              {
+                id:2,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+              {
+                id:3,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+            ]
+          },
+          {
+            id:2,
+            text:"АКБ MAGNUM",
+            drop:[
+              {
+                id:1,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+              {
+                id:2,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+              {
+                id:3,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+            ]
+          },
+          {
+            id:3,
+            text:"АКБ MAGNUM",
+            drop:[
+              {
+                id:1,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+              {
+                id:2,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+              {
+                id:3,
+                text:"MAGNUM 60Ah",
+                title:"Газовая плита GEFEST 6500-03 0044, черный",
+                describe:[
+                  {
+                    title:"Материал рабочей поверхности",
+                    main:"Закаленное стекло"
+                  }
+                ]
+              },
+            ]
+          },
+
+        ]
       },
       {
         id: 2,
@@ -130,7 +250,7 @@ export let dropData = [
     id: 5,
     title: "КОНТАКТЫ",
     focus: false,
-    to: "/",
+    to: "/contacts",
     data: [
       {
         id: 1,

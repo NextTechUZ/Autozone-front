@@ -16,6 +16,7 @@ import {
   newsData
 } from '../../store/store'
 import Showcase from '../../components/section/Showcase'
+import { showcaseData } from "../../store/store";
 import ShowcaseImg1 from "../../img/showcaseBg1.png";
 import ShowcaseImg2 from "../../img/showcaseBg2.png";
 import ShowcaseImg3 from "../../img/showcaseBg3.png";
@@ -25,26 +26,26 @@ import part3 from "../../img/partne3.png"
 import part4 from "../../img/partne4.png"
 import part5 from "../../img/partne5.png"
 
-const showcaseData = [{
-    id: 1,
-    bgImg: ShowcaseImg1,
-    title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-    subtitle: "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
-  },
-  {
-    id: 2,
-    bgImg: ShowcaseImg2,
-    title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-  {
-    id: 3,
-    bgImg: ShowcaseImg3,
-    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-];
+// const showcaseData = [{
+//     id: 1,
+//     bgImg: ShowcaseImg1,
+//     title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
+//     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+//     subtitle: "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
+//   },
+//   {
+//     id: 2,
+//     bgImg: ShowcaseImg2,
+//     title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
+//     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+//   },
+//   {
+//     id: 3,
+//     bgImg: ShowcaseImg3,
+//     title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+//     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+//   },
+// ];
 const partnersData = [{
     id: 1,
     img: part1,
@@ -118,14 +119,14 @@ function HomePage() {
       setShow(1)
     }
   }, [windowSize])
-  console.log(toShow);
 
   return (
     <>
+    <Showcase data={showcaseData} />
     {/* <Showcase data={showcaseData}/>  */}
     <Advantages/>
-    {/* <Directory data={data} title="Автотовары: аксессуары, 
-    расходники и многое другое" subtitle="PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей. "/> */}
+    <Directory data={data} title="Автотовары: аксессуары, 
+    расходники и многое другое" subtitle="PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей. "/>
     <Services/>
     <Info/>
     <News data={newsData}/>

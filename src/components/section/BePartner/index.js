@@ -25,7 +25,7 @@ function BePartner() {
           ))}
         </div>
       </div>
-      <Button value="СТАТЬ ПАРТНЕРОМ" />
+      <Button margin="2rem 0">СТАТЬ ПАРТНЕРОМ</Button>
     </div>
   );
 }

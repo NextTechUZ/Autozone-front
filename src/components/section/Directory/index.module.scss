@@ -1,7 +1,10 @@
 .wrapper {
   padding: 4rem;
 }
-
+.title_sector{
+  width: 60%;
+  margin: auto;
+}
 .directory {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

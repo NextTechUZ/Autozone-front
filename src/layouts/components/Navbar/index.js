@@ -15,7 +15,7 @@ export const buttonData={
   width:"168px",
   color:"#fff",
   backgroundColor:"transparent",
-  value:"ЗАКАЗАТЬ ЗВОНОК",
+  value:"",
   link:"/",
 
 }
@@ -60,7 +60,7 @@ function handleOpen() {
                 </li>)}
                
               </ul>
-              <Button prop={buttonData}/>
+              <Button link="/ask-question">ЗАКАЗАТЬ ЗВОНОК</Button>
             </nav>
             
            <Search />

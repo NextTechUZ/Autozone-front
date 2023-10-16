@@ -14,8 +14,10 @@ function Services() {
         <div className='container'>
             <div className={styles.services__shadow}></div>
         <div className={styles.services__container}>
-          <Title color={"white"} outline children={"услуги"} />
-          <Subtitle align={"center"} children="Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции." color='white' />
+            <div  className={styles.title_sector}>
+                <Title color={"white"} outline children={"услуги"} />
+                <Subtitle align={"center"} margin='2rem' children="Менеджеры компании с радостью ответят на ваши вопросы и помогут с выбором продукции." color='white' />
+            </div>
           <ul className={styles.services__list}>
             <li className={styles.services__item}>
                 <h3 className={styles.services__item__title}>БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА</h3>
@@ -30,7 +32,7 @@ function Services() {
                 <p className={styles.services__item__text}>Приезжайте к нам и мы бесплатно проведём диагностику вашего аккумулятора!</p>
             </li>
           </ul>
-         <div className={styles["services__button-wrapper"]}> <Button prop={buttonData} /></div>
+         <div className={styles["services__button-wrapper"]}> <Button>ЗАДАТЬ ВОПРОС</Button></div>
         </div>
         </div>     
         </div>

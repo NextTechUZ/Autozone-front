@@ -1,16 +1,27 @@
 import React, { useState } from 'react'
-import styles from "./index.module.scss"
 import Produc from '../../components/Produc'
 import RelatedFactory from '../../components/section/RelatedFactory'
 import Navigation from '../../components/Navigation'
 export default function CatalogProduct() {
+  let navigationBar=[
+    {
+      title:"Home",
+      link:"/"
+    },
+    {
+      title:"products",
+      link:"/products"
+    },
+    {
+      title:"product",
+      link:"/catalog-product"
+    }
+  ]
   return (
-    <div>
-        <Navigation/>
-        <div className={styles.product_page}>
-            <Produc/>
-            <RelatedFactory/>
-        </div>
+    <div style={{marginTop:"10rem"}}>
+        <Navigation pathUrl={navigationBar}/>
+        <Produc/>
+        <RelatedFactory/>
     </div>
   )
 }
