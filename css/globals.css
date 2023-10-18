@@ -36,16 +36,25 @@ body {
   }
 }
 @media (max-width: 1200px) {
+  html{
+    font-size: 62.5%
+  }
   .container {
     padding: 0 6rem;
   }
 }
 @media (max-width: 992px) {
+  html{
+    font-size: 46%
+  }
   .container {
     padding: 0 5rem;
   }
 }
 @media (max-width: 768px) {
+  html{
+    font-size: 31.25%
+  }
   .container {
     padding: 0 4rem;
   }

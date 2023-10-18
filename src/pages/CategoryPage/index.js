@@ -9,10 +9,20 @@ import Navigation from "../../components/Navigation";
 import { showcaseData } from "../../store/store";
 
 function CategoryPage() {
+  let navigationBar=[
+    {
+      title:"ГЛАВНАЯ",
+      link:"/"
+    },
+    {
+      title:"КАТАЛОГ",
+      link:"/category"
+    }
+  ]
   return (
     <div className={styles["category-page"]}>
       <Showcase data={showcaseData} />
-      <Navigation />
+      <Navigation pathUrl={navigationBar}/>
       <Directory
         subtitle="Мы предлагаем лучшие цены на продукцию!"
         title="КАТАЛОГ"

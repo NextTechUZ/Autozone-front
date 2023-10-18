@@ -63,9 +63,11 @@ function handleOpen() {
               <Button link="/ask-question">ЗАКАЗАТЬ ЗВОНОК</Button>
             </nav>
             
-           <Search />
+              <Search/>
             <div className={styles.header__manage}>
+            <Link to="/search">
               <button onClick={handleOpen} className={styles.header__search__button}></button>
+            </Link>
              
               <a href="/">
                 <img

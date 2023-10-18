@@ -7,11 +7,11 @@ import Contact from "../../components/section/Contact";
 export default function ContactPage() {
   let navigationBar=[
     {
-      title:"Home",
+      title:"ГЛАВНАЯ",
       link:"/"
     },
     {
-      title:"contact",
+      title:"КОНТАКТЫ",
       link:"/contacts"
     }
   ]

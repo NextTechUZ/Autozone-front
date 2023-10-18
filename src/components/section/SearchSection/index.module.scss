@@ -1,16 +1,16 @@
-.Right{
+.cards_area{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto  ;
     grid-gap: 1rem;
 } 
   @media (max-width: 992px) {
-    .Right{
+    .cards_area{
         grid-template-columns: auto auto auto;
     }
   }
   
   @media (max-width: 576px) {
-    .Right{
+    .cards_area{
         grid-template-columns: auto auto;
     }
   }

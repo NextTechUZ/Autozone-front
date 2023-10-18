@@ -9,7 +9,7 @@ function ImgCard({ imgUrl, title }) {
         <Subtitle size="2.4rem" color="var(--color-white)" capitalize>
           {title}
         </Subtitle>
-        <Button value="СДЕЛАТЬ ЗАКАЗ">СДЕЛАТЬ ЗАКАЗ</Button>
+        <Button>СДЕЛАТЬ ЗАКАЗ</Button>
       </div>
     </div>
   );

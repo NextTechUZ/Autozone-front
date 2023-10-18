@@ -3,15 +3,16 @@ import Button from '../Button'
 import styles from './index.module.scss'
 export default function FactoryCard({
     key="",
-    width="33%",
+    width,
     minheight="4rem",
-    img="",
-    item=""
+    img=require("../../img/magnum 1.png"),
+    item="",
+    margin
 }) {
   return (
-    <div className={styles.card} key={key} style={{width}}>
+    <div className={styles.card} key={key} style={{width,margin}}>
         <div className={styles.image_sector}>
-            <img src={require("../../img/magnum 1.png")} style={{objectFit:"scale-down",background:"var(--color-white)"}}/>
+            <img src={img} style={{objectFit:"scale-down",background:"var(--color-white)"}}/>
         </div>
         <div className={styles.des_sector} style={{height:'40%'}}>
             <div className={styles.info}>

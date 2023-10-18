@@ -38,3 +38,15 @@ export function FilterIcon() {
         </svg>
     )
 }
+export function Dropaft({
+    color="var(--color-white)",
+    strokeWidth="3",
+    width="20",
+    height="20"
+}) {
+    return (
+        <svg width={width} height={height} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 4L12 10L8 16" stroke={color} strokeWidth={strokeWidth}/>
+        </svg>
+    )
+}

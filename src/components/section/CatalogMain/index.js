@@ -17,7 +17,7 @@ export default function CatalogMain({
     <div className={styles.Right}
     style={{width,height,maxHeight}}>
         {
-            state?.map((item,index)=><FactoryCard key={index} item={item} width={cardWidth}/>)
+            state?.map((item,index)=><FactoryCard key={index} item={item}/>)
         }
     </div>
   ) 

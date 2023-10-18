@@ -20,10 +20,10 @@ export default function ProductList() {
               </button>
             </div>
             <div className={styles.Main}>
-              {
-                windowWidth>576||state.filterOpen?<ManuList width='33%'/>:""
-              }
-              <CatalogMain width={`${windowWidth<567&&!state.toolsOpen?"100%":'75%'}`} cardWidth={`${windowWidth<567?"45%":"30%"}`}/>
+                {
+                  windowWidth>576||state.filterOpen?<ManuList width='33%'/>:""
+                }
+                <CatalogMain width={`${windowWidth<567&&!state.toolsOpen?"100%":'75%'}`}/>
             </div>
           </div>
         </div>

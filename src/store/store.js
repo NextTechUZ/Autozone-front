@@ -29,6 +29,7 @@ export let dropData = [
     id: 1,
     title: "КОМПАНИЯ",
     focus: false,
+    to:"/about",
     data: [
       {
         id: 1,
