@@ -104,7 +104,7 @@ function Faq() {
                     </div>
                     
                     <div style={{ display: "flex", justifyContent: "center",marginTop:"4rem"}}>
-                        <Button value="ЗАДАТЬ ВОПРОС" />
+                        <Button link="/ask-question">ЗАДАТЬ ВОПРОС</Button>
                     </div>
                 </div>
             </div>

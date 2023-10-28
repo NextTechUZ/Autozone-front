@@ -4,7 +4,10 @@ import Title from '../../Title'
 import CatalogMain from '../CatalogMain'
 import styles from "./styles.module.scss"
 import ManuList from '../ManuList'
-export default function ProductList() {
+export default function ProductList({
+  menuData,
+  productData
+}) {
     let windowWidth=window.innerWidth
     let [state,setState]=useState({toolsOpen:false,filterOpen:false})
     const FilterOpen=()=>{
@@ -21,7 +24,7 @@ export default function ProductList() {
             </div>
             <div className={styles.Main}>
                 {
-                  windowWidth>576||state.filterOpen?<ManuList width='33%'/>:""
+                  windowWidth>576||state.filterOpen?<ManuList width='33%' menuData={menuData}/>:""
                 }
                 <CatalogMain width={`${windowWidth<567&&!state.toolsOpen?"100%":'75%'}`}/>
             </div>

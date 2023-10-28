@@ -1,0 +1,9 @@
+.review{
+    @import url(../../../styles/slider.scss);     
+    .slick-next {
+      transform: rotate(0deg);
+    }
+    .slick-prev {
+          transform: rotate(0deg);
+      }
+}

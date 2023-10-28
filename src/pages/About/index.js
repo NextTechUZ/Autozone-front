@@ -7,7 +7,11 @@ import Showcase from "../../components/section/Showcase";
 import { showcaseData } from "../../store/store";
 import styles from "./index.module.scss";
 import profileImg from "../../img/info-per.jpg"
+import { useEffect } from "react";
 function About() {
+  useEffect(()=>{
+    window.scrollTo(0,450)
+  },[])
   let reviewsData=[
     {
       id:"1",

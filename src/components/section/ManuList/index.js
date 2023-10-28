@@ -1,11 +1,11 @@
 import React  from 'react'
-import styles from"./style.module.scss"
 import ListItem from '../../MenuList';
 import Filter from '../../Filter';
 
 
 
 export default function ManuList({
+  menuData,
   width="100%",
   color="var(--color-white)",
 }){
@@ -13,7 +13,7 @@ export default function ManuList({
 
   return (
     <div style={{width,color}}>
-        <ListItem id={1} sx={{width:"100"}}/>
+        <ListItem width="100" menuData={menuData}/>
         <Filter/>
     </div>
   );

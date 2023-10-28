@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 // nega display 2 marta yozilgan newStyle ichida ???
-function Button({
+function    Button({
   children,
-  onClick,
+  onClick=()=>{},
   link="",
   fontSize= "1.2rem",
   margin="0 0",
@@ -15,8 +15,9 @@ function Button({
   backgroundColor="transparent",
   color="var(--color-white)",
   display="flex",
+  type=""
 }) {
-  const newStyle = {
+  const newStyle = {  
     fontSize,
     padding,
     cursor,
@@ -39,7 +40,8 @@ function Button({
     }}>
       <button
           style={newStyle}
-          onClick={() => onClick}
+          onClick={() => onClick()}
+          type={type}
         >
         <Link to={link} style={{width:"100%",height:"100%",color}}>
           {children}

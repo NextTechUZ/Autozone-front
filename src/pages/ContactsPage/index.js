@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./index.module.scss";
 import AskQuestionPage from "../AskQuestionPage";
 import AskSectionBg from "../../img/asksection-bg.png";
 import Navigation from "../../components/Navigation";
 import Contact from "../../components/section/Contact";
+import Showcase from "../../components/section/Showcase";
+import { showcaseData } from '../../store/store'
 export default function ContactPage() {
   let navigationBar=[
     {
@@ -15,8 +17,12 @@ export default function ContactPage() {
       link:"/contacts"
     }
   ]
+  useEffect(()=>{
+    window.scrollTo(0,450)
+  },[])
   return (
-    <div style={{marginTop:"10rem"}}>
+    <div>
+      <Showcase data={showcaseData}/>
       <Navigation pathUrl={navigationBar}/>
       <Contact/>
       <div

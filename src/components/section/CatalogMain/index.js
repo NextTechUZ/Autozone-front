@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Button from '../../Button/index';
 import styles from"./style.module.scss"
 import FactoryCard from '../../FactoryCard';
+import { useQuery } from 'react-query';
+import { useLocation, useParams } from 'react-router-dom';
+import { myAxios } from '../../../utils/myAxios';
 export default function CatalogMain({
     width="100%",
     cardWidth="33%",
@@ -13,6 +16,10 @@ export default function CatalogMain({
     useEffect(()=>{
         setState(backend()[1].incloud[0].incloud)
     },[])
+    let {search}=useLocation()
+    let menuListPage=new URLSearchParams(search).get("page")
+    let menuListId=new URLSearchParams(search).get("itemId")
+    let {data,isloading,iserror}=useQuery(menuListPage,()=>myAxios(`"peoduct?"${menuListPage}=${menuListId}`))
   return (
     <div className={styles.Right}
     style={{width,height,maxHeight}}>

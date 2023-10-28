@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./index.module.scss";
 
 import Directory from "../../components/section/Directory";
 import Showcase from "../../components/section/Showcase";
-import ShowcaseImg1 from "../../img/showcaseBg1.png";
 import Navigation from "../../components/Navigation";
 import { showcaseData } from "../../store/store";
+import { useQuery } from "react-query";
+ import {myAxios} from "../../utils/myAxios"
 
 function CategoryPage() {
+  useEffect(()=>{
+    window.scrollTo(0,450)
+  },[])
   let navigationBar=[
     {
       title:"ГЛАВНАЯ",
@@ -19,6 +23,9 @@ function CategoryPage() {
       link:"/category"
     }
   ]
+  const {data}= useQuery("category",()=> myAxios.get('category'),{
+    select:el =>{return {...el?.data.data,url:el.config.url}}
+  })
   return (
     <div className={styles["category-page"]}>
       <Showcase data={showcaseData} />
@@ -33,40 +40,3 @@ function CategoryPage() {
 }
 
 export default CategoryPage;
-
-export const data = [
-  {
-    id: 1,
-    imgUrl: ShowcaseImg1,
-    title: "АККУМУЛЯТОРЫ",
-  },
-  {
-    id: 2,
-    imgUrl: ShowcaseImg1,
-
-    title: "АККУМУЛЯТОРЫ",
-  },
-  {
-    id: 3,
-    imgUrl: ShowcaseImg1,
-
-    title: "АККУМУЛЯТОРЫ",
-  },
-  {
-    id: 4,
-    imgUrl: ShowcaseImg1,
-
-    title: "АККУМУЛЯТОРЫ",
-  },
-  {
-    id: 5,
-    imgUrl: ShowcaseImg1,
-
-    title: "АККУМУЛЯТОРЫ",
-  },
-  {
-    id: 6,
-    imgUrl: ShowcaseImg1,
-    title: "АККУМУЛЯТОРЫ",
-  },
-];

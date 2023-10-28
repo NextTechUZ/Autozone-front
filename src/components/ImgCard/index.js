@@ -1,7 +1,7 @@
 import Button from "../Button";
 import Subtitle from "../Subtitle";
 import styles from "./index.module.scss";
-function ImgCard({ imgUrl, title }) {
+function ImgCard({ imgUrl, title, dataId,PageUrl}) {
   return (
     <div className={styles["img-card"]}>
       <img className={styles.img} src={imgUrl} alt="" />
@@ -9,7 +9,7 @@ function ImgCard({ imgUrl, title }) {
         <Subtitle size="2.4rem" color="var(--color-white)" capitalize>
           {title}
         </Subtitle>
-        <Button>СДЕЛАТЬ ЗАКАЗ</Button>
+        <Button link={`/products?page=${PageUrl}&itemId=${dataId}`}>СДЕЛАТЬ ЗАКАЗ</Button>
       </div>
     </div>
   );

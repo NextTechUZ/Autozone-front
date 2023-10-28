@@ -51,7 +51,7 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin = "0 0 3rem" }) {
                     {subtitle}
                   </Subtitle>
                 )}
-                <Button justifyContent="start">{buttonTitle}</Button>
+                <Button justifyContent="start" link="/category">{buttonTitle}</Button>
               </div>
             </div>
           </SwiperSlide>

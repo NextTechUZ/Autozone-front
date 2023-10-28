@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../section/News/index.module.scss";
 
-function NewsCard({ date, img, text, to }) {
+function NewsCard({ date, img, text }) {
   return (
     <li className={styles.news__item}>
       <img width="360" height="284" src={img}></img>

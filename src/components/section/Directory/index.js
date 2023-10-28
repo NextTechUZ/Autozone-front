@@ -12,8 +12,8 @@ function Directory({ data, title, subtitle }) {
         <Subtitle uppercase={true}>{subtitle}</Subtitle>
       </div>
       <div className={styles.directory}>
-        {data?.map(({ id, imgUrl, title }) => (
-          <ImgCard key={id} imgUrl={imgUrl} title={title} />
+        {data?.categories?.map(({ _id, image, title ,url}) => (
+          <ImgCard key={_id} imgUrl={image} title={title} dataId={_id} PageUrl={data.url}/>
         ))}
       </div>
     </div>

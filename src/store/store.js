@@ -1,7 +1,9 @@
+import {  useQuery } from "react-query";
 import img from "../img/news1.jpg";
 import ShowcaseImg1 from "../img/showcaseBg1.png";
 import ShowcaseImg2 from "../img/showcaseBg2.png";
 import ShowcaseImg3 from "../img/showcaseBg3.png";
+import { myAxios } from "../utils/myAxios";
 export const newsData = [
   {
     id: 1,
@@ -24,45 +26,7 @@ export const newsData = [
     link: "/",
   },
 ];
-export let dropData = [
-  {
-    id: 1,
-    title: "КОМПАНИЯ",
-    focus: false,
-    to:"/about",
-    data: [
-      {
-        id: 1,
-        text: "О КОМПАНИИ",
-        to: "/",
-      },
-      {
-        id: 2,
-        text: "ЛИЦЕНЗИИ",
-        to: "/",
-      },
-      {
-        id: 3,
-        text: "ПАРТНЕРЫ",
-        to: "/",
-      },
-      {
-        id: 4,
-        text: "ОТЗЫВЫ КЛИЕНТОВ",
-        to: "/",
-      },
-      {
-        id: 5,
-        text: "РЕКВИЗИТЫ",
-        to: "/",
-      },
-      {
-        id: 6,
-        text: "ВАКАНСИИ",
-        to: "/",
-      },
-    ],
-  },
+export const dropData = [
   {
     id: 2,
     title: "КАТАЛОГ",
@@ -191,7 +155,7 @@ export let dropData = [
               },
             ]
           },
-
+  
         ]
       },
       {
@@ -212,40 +176,16 @@ export let dropData = [
     ],
   },
   {
-    id: 3,
-    title: "УСЛУГИ",
+    id: 1,
+    title: "О НАС",
     focus: false,
-    to: "/service",
-    data: [
-      {
-        id: 1,
-        text: "ДИАГНОСТИКА АККУМУЛЯТОРА",
-        to: "/",
-      },
-      {
-        id: 2,
-        text: "ПРИЕМ АККУМУЛЯТОРОВ",
-        to: "/",
-      },
-    ],
+    to:"/about",
   },
   {
     id: 4,
-    title: "ИНФОРМАЦИЯ",
+    title: "НОВОСТИ",
     focus: false,
-    to: "/info",
-    data: [
-      {
-        id: 1,
-        text: "НОВОСТИ",
-        to: "/",
-      },
-      {
-        id: 2,
-        text: "F.A.Q",
-        to: "/ask-question",
-      },
-    ],
+    to: "/news",
   },
   {
     id: 5,
@@ -254,15 +194,10 @@ export let dropData = [
     to: "/contacts",
     data: [
       {
-        id: 1,
-        text: "НОВОСТИ",
-        to: "/",
-      },
-      {
         id: 2,
         text: "F.A.Q",
-        to: "/",
-      },
+        to: "/faq",
+      }
     ],
   },
 ];

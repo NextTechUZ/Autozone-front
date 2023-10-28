@@ -10,7 +10,7 @@ function Hamburger() {
     const [focus, setFocus] = useState(false);
     function handleFocus(id) {
         dropData.forEach(element => {
-          if (element.id == id) {
+          if ((element.id == id) && (element.data!==undefined)){
             element.focus = !element.focus
           } else {
             element.focus = false
@@ -33,7 +33,7 @@ function Hamburger() {
                     </li>
                 )}
             </ul>
-            <Button prop={buttonData}/>
+            <Button link="/ask-question">ЗАКАЗАТЬ ЗВОНОК</Button>
          </div>
         </div>
     )

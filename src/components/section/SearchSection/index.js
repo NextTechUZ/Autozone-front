@@ -8,13 +8,14 @@ export default function SearchSection() {
   let [state,setState]=useState()
   useEffect(()=>{
     setState({...state,data:BackendData().drop})
+    window.scrollTo(0,450)
   },[])
+  
   let getPaginationNumbe=(num)=>{
     setState({...state,PagNum:num})
   }
-  let windowWidth=window.innerWidth
   return (
-    <div style={{margin:"10rem 0"}}>
+    <div style={{padding:"10rem 0"}}>
       <div className='container'>
         <Title outline={true}>ПОиск</Title>
         <Subtitle margin='2rem 0'>Результаты поиска</Subtitle>

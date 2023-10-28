@@ -12,10 +12,10 @@ function DropDown({id}) {
     const data = dropData.find((el) => el.id == id)
     
      function handleClose(id) {
-        dropData.forEach(element => {
+         dropData.forEach(element => {
+            console.log(element);
             if (element.id == id) {
               element.focus = !element.focus
-              console.log(element.focus);
               setDisplay(!display)
             }
           });
@@ -24,7 +24,7 @@ function DropDown({id}) {
     return (
         <>
         <ul onMouseLeave={()=>handleClose(data.id)}  style={data.focus?{display:'block'}:{display:'none'}} className={styles.dropdown__list}>
-            {data.data.map(data=>
+            {data.data?.map(data=>
             <li key={data.id} className={styles.dropdown__item}>
               {<Link  className={styles.dropdown__link} to={data.to} children={data.text}/>}
             </li>)}

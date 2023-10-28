@@ -5,6 +5,7 @@ import React, {
 import styles from "./index.module.scss";
 import DropDown from "../../../components/DropDown";
 import {
+  Caa,
   dropData, handleSearchOpen, searchControl
 } from "../../../store/store";
 import Search from "../../../components/Search";
@@ -25,23 +26,31 @@ const Navbar = () => {
 
   function handleFocus(id) {
     dropData.forEach(element => {
-      if (element.id == id) {
-        element.focus = !element.focus
+      if ((element.id == id) && (element.data!==undefined)){
+        console.log(element.data);
+        element.focus = true
       } else {
         element.focus = false
       }
     });
     setFocus(!focus)
   }
- 
-function handleOpen() {
-  setSearch(!search)
-  handleSearchOpen()
-}
+ const  removeFocus =() => {
+  dropData.forEach(element => {
+     
+       element.focus = false
+    
+  });
+  setFocus(!focus)
 
+ }
+function handleOpen() {
+  setSearch(!search) 
+  handleSearchOpen() 
+}
   return (
     <>
-      <header className={styles.header}>
+      <header className={styles.header} onMouseLeave ={()=>removeFocus()}>
         <div className="container">
           <div className={styles.header__container}>
             <a href="/">
@@ -55,7 +64,7 @@ function handleOpen() {
               <ul className={styles.header__list}>
                 {dropData.map(el=>
                 <li key={el.id}  className={styles.header__item}>
-                   <Link to={el.to} onMouseEnter ={()=>handleFocus(el.id)}  className={styles.header__item__link} children={el.title}/>
+                   <Link to={el.to} onMouseEnter ={()=>handleFocus(el.id)}    className={styles.header__item__link} children={el.title}/>
                   <DropDown  id={el.id}/>
                 </li>)}
                
@@ -68,14 +77,6 @@ function handleOpen() {
             <Link to="/search">
               <button onClick={handleOpen} className={styles.header__search__button}></button>
             </Link>
-             
-              <a href="/">
-                <img
-                  width="40"
-                  height="40"
-                  src={require("../../../img/user.png")}
-                ></img>
-              </a>
               <Hamburger />
             </div>
            

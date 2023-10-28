@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./index.module.scss";
+import "./index.scss"
 function Partners({ elemets, autoPlay, toShow }) {
   const settings = {
     dots: false,
@@ -16,7 +17,7 @@ function Partners({ elemets, autoPlay, toShow }) {
     cssEase: "linear",
   };
   return (
-    <section className={styles.partners}>
+    <section className={styles.partners+" "+"partners"}>
       <div className="container">
         <Slider className={styles.partners__wrapper} {...settings}>
           {elemets.map((el) => (

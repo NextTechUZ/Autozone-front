@@ -9,7 +9,7 @@ export default function Navigation({
         <div className={`container ${style.navigation__card}`}>
             {
               pathUrl?.map((item,index)=><div key={index} style={{display:"flex",alignItems:"center",cursor:"pointer"}}>
-                <Link to={"/"+ `${item.title=="Home"?"":item.link}`}>
+                <Link to={item.link}>
                   <p className={style.pathname +" "+ style.item} style={index == 0? {color:"var(--color-brand--1)"} : {color:"var(--color-brand--2)"}}>{item.title}</p>
                 </Link>
                 {

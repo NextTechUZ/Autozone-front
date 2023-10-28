@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./index.module.scss";
+import "./index.scss"
 import Title from "../../Title";
 import Subtitle from "../../Subtitle";
 import Button from "../../Button";
@@ -20,7 +21,7 @@ function Reviews({ elemets, autoPlay, toShow }) {
     cssEase: "linear",
   };
   return (
-    <section style={{padding:"5rem"}}>
+    <section style={{padding:"5rem"}} className="review">
       <div className="container">
         <div style={{width:"60%",margin:"auto"}}>
             <Title outline>ОТЗЫВЫ</Title>
@@ -42,7 +43,7 @@ function Reviews({ elemets, autoPlay, toShow }) {
             ))
           }
         </Slider>
-        <Button color="var(--color-brand--1)">ОСТАВИТЬ СВОЙ ОТЗЫВ</Button>
+        <Button color="var(--color-brand--1)" link="/ask-question">ОСТАВИТЬ СВОЙ ОТЗЫВ</Button>
       </div>
     </section>
   );

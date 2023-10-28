@@ -32,7 +32,7 @@ function Services() {
                 <p className={styles.services__item__text}>Приезжайте к нам и мы бесплатно проведём диагностику вашего аккумулятора!</p>
             </li>
           </ul>
-         <div className={styles["services__button-wrapper"]}> <Button>ЗАДАТЬ ВОПРОС</Button></div>
+         <div className={styles["services__button-wrapper"]}> <Button link='/ask-question'>ЗАДАТЬ ВОПРОС</Button></div>
         </div>
         </div>     
         </div>
