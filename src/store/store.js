@@ -138,7 +138,7 @@ export let dropData = [{
       {
         id: 2,
         text: "F.A.Q",
-        to: '/'
+        to: '/ask-question'
       }
     ]
   }
