@@ -56,7 +56,7 @@ function handleOpen() {
                 {dropData.map(el=>
                 <li key={el.id}  className={styles.header__item}>
                    <Link to={el.to} onMouseEnter ={()=>handleFocus(el.id)}  className={styles.header__item__link} children={el.title}/>
-                  <DropDown  id={el.id}/>
+                  <DropDown hover={true} id={el.id}/>
                 </li>)}
                
               </ul>

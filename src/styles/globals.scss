@@ -9,6 +9,7 @@
   --color-brand--2: #1d1d1d;
   --color-white: #ffffff;
 }
+
 *,
 *::before,
 *::after {
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "ABeeZee", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -55,6 +56,20 @@ body {
   }
 }
 
+@mixin hover-effect {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+  }
+}
+
 ul,
 ol {
   list-style: none;
@@ -74,4 +89,4 @@ ol {
 
 a {
   text-decoration: none;
-} 
+}

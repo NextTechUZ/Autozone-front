@@ -118,14 +118,13 @@ function HomePage() {
       setShow(1)
     }
   }, [windowSize])
-  console.log(toShow);
 
   return (
     <>
-    {/* <Showcase data={showcaseData}/>  */}
+    <Showcase data={showcaseData}/> 
     <Advantages/>
-    {/* <Directory data={data} title="Автотовары: аксессуары, 
-    расходники и многое другое" subtitle="PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей. "/> */}
+    <Directory data={data} title="Автотовары: аксессуары, 
+    расходники и многое другое" subtitle="PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей. "/>
     <Services/>
     <Info/>
     <News data={newsData}/>

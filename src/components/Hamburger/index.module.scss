@@ -1,4 +1,38 @@
+@keyframes hamburger{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 1%;
+    }
+}
+@keyframes hamburger-close{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
+}
+@keyframes hamburger-button-active{
+   0%{
+    transform: rotate(45deg);
+   }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes dropdown{
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 30px;
+    }
+ }
+
 .hamburger{
+    display: block;
     position: fixed;
     background-color: #0E0E0E;
     top: 100px;
@@ -7,6 +41,19 @@
     height: 100vh;
     padding-left: 5rem;
     z-index: 9;
+    animation-name: hamburger;
+    animation-duration: 800ms;
+}
+.hamburger--close{
+    position: fixed;
+    background-color: #0E0E0E;
+    top: 100px;
+    left: -100%;
+    width: 60%;
+    height: 100vh;
+    padding-left: 5rem;
+    animation-name: hamburger-close;
+    animation-duration: 1000ms;
 }
 .hamburger__button , .hamburger__close-button{
     width: 30px;
@@ -20,11 +67,59 @@
     background: url(../../img//close.svg) no-repeat center center;
     background-size: contain;
 }
+.hamburger__list{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
 .hamburger__item{
-    margin: 30px;
     position: relative;
+    margin: 30px;
+    width: 200px;
+    margin-bottom: 0;
+    display: flex;
+
+}
+.hamburger__item-dropbutton{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    display: block;
+    height: 20px;
+    content: '';
+    right: 10px;
+    appearance: none;
+    background: url(../../img/dropaft.svg);
 }
 
+.hamburger__item-dropbutton:checked + .dropdown__list{
+    display: block;
+}
+.hamburger__item-dropbutton:checked{
+    animation-name: hamburger-button-active;
+    animation-duration: 500ms;
+    transform: rotate(90deg);
+}
+.dropdown__list {
+    position: absolute;
+    display: none;
+    top: 30px;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 288px;
+    padding: 10px 0px;
+    animation-name: dropdown;
+    animation-duration: 400ms;
+    &::after {
+        position: absolute;
+        width: 94px;
+        height: 4px;
+        left: 0;
+        background: #C53720;
+        content: '';
+        top: -5px;
+    }
+}
 .hamburger__link{
     line-height: 20px;
     letter-spacing: 0em;
@@ -33,6 +128,8 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    text-transform: uppercase;
+  
 }
 .hamburger__wrapper{
     display: none;
@@ -45,6 +142,9 @@
     opacity: 0.5;
     left: 0;
 }
+.hamburger__button-wrapper{
+    margin-left: 35px;
+}
 @media only screen and (max-width:1070px){
     .hamburger__wrapper{
         display: block;
@@ -53,6 +153,7 @@
 @media only screen and (max-width:470px){
     .hamburger__item{
         margin: 20px;
+        margin-bottom: 0;
     }
     .hamburger{
         padding-left: 1.3rem;

@@ -15,7 +15,7 @@ const data = [
 
 function NotFoundPage() {
   return (
-    <div className={styles["not__found--page"]}>
+    <div className={styles["notfound"]}>
       <Showcase
         notFoundImg={notfound}
         subtitle="Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес."

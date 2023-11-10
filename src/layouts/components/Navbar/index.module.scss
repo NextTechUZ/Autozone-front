@@ -1,4 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+@import '../../../styles//globals.scss';
+
+@keyframes slide {
+    from {
+        width: 50%
+    }
+
+    to {
+        width: 100%
+    }
+}
+
 .header {
     background-color: #0E0E0E;
     padding: 20px 0px;
@@ -11,8 +22,8 @@
 
 .header__container {
     display: flex;
-     align-items: center;
-     justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header__nav {
@@ -28,6 +39,7 @@
 .header__item {
     margin-right: 28px;
     position: relative;
+   @include hover-effect
 }
 
 .header__item__link {
@@ -38,7 +50,9 @@
     background: transparent;
     border: none;
     cursor: pointer;
+
 }
+
 
 .header__search__button {
     width: 40px;
@@ -50,9 +64,10 @@
     background: url(../../../img/lupa.svg) no-repeat center center;
 
 }
-.header__manage{
+
+.header__manage {
     display: flex;
-    align-items:center;
+    align-items: center;
 }
 
 .header__shop__button {
@@ -63,24 +78,29 @@
     cursor: pointer;
     margin-right: 10px;
 }
-@media only screen and (max-width:1115px){
-.header__item{
-    margin-right: 18px;
-}
-}
-@media only screen and (max-width:1070px){
-    .header__item{
+
+@media only screen and (max-width:1115px) {
+    .header__item {
         margin-right: 18px;
     }
-    .header__search__button{
+}
+
+@media only screen and (max-width:1070px) {
+    .header__item {
+        margin-right: 18px;
+    }
+
+    .header__search__button {
         width: 30px;
         height: 30px;
     }
-    .header__nav{
+
+    .header__nav {
         display: none;
     }
-   .header__manage{
-    width: 150px;
-    justify-content: space-between;
-   }
+
+    .header__manage {
+        width: 150px;
+        justify-content: space-between;
+    }
 }

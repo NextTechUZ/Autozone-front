@@ -1,4 +1,6 @@
+@import '../../styles/globals.scss';
 .button{
     text-align: center;
-    font-family: "ABeeZee",
+    display: block;
+    @include hover-effect
 }

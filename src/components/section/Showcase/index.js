@@ -4,9 +4,18 @@ import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-
+import Button from  '../../Button'
 import styles from "./index.module.scss";
 import Subtitle from "../../Subtitle";
+
+const buttonData={
+  width:"168px",
+  color:"#fff",
+  backgroundColor:"transparent",
+  value:"ПЕРЕЙТИ В КАТАЛОГ",
+  link:"/",
+
+}
 
 function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
   return (
@@ -49,7 +58,7 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
                   {subtitle}
                 </Subtitle>
               )}
-              <button>{buttonTitle}</button>
+              <Button prop={buttonData}/>
             </div>
           </SwiperSlide>
         ))}
