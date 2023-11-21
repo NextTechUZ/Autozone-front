@@ -13,12 +13,12 @@
     bottom: 0;
   }
 
-  &:hover .intro p {
+  &:hover .img__title {
     visibility: visible;
     opacity: 1;
   }
 
-  &:hover .intro button {
+  &:hover .img__button {
     visibility: visible;
     opacity: 1;
   }
@@ -37,16 +37,24 @@
     position: absolute;
     display: grid;
     place-content: center;
-
-    p {
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.5s;
-    }
-    button {
-      visibility: hidden;
-      opacity: 0;
-      transition: 0.5s;
-    }
+  
   }
+}
+.img__button {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  text-align: center;
+  margin-top: 66px;
+}
+.img__title {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  color: #fff;
+  text-align: center;
+  font-size: 2.4rem;
+font-weight: 800;
+text-transform: uppercase;
+margin-top: 95px;
 }

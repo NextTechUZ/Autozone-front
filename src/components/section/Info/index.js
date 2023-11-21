@@ -2,36 +2,54 @@ import React from 'react'
 import styles from './index.module.scss'
 import Title from '../../Title'
 import Button from '../../Button'
-const buttonData={
-    width:"168px",
-    color:"#fff",
-    backgroundColor:"transparent",
-    value:"УЗНАТЬ БОЛЬШЕ",
-    link:"/",
-  
-  }
-function Info() {
+
+function Info({text,button}) {
+   if (button) {
     return (
-        <section className={styles.info}>
-            <div className={styles.info__gradient}>
-               <div className='container'>
-               <div className={styles.info__container}>
-                <Title outline children={"о компании"} color={"white"}/>
-                <div className={styles.info__wrapper}>
-                    <div className={styles.info__img__wrapper}>
-                      {/* <img className={styles.info__img} width={"360"} height={"347"} src={require("../../../img/info-per.jpg")}></img> */}
-                    </div>
-                    <div className={styles.info__text__wrapper}>
-                        <p className={styles.info__text}>Машина плохо заводится? Аккумулятор вас подводит? Не проблема! Вам в 
-                      «PRO Auto»! Мы подберём хороший, надёжный, а главное недорогой аккумулятор именно для вашего авто! С 1997 года сеть магазинов «PRO Auto» занимается продажей автомобильных аккумуляторов, масел, расходных материалов, химией 
-                      и аксессуаров.</p>
-                      <div className={styles["info__button-wrapper"]}> <Button prop={buttonData} /></div>
-                    </div>
-                </div>
-               </div>
-               </div>
-            </div>
-        </section>
+      <section className={styles.info}>
+          <div className={styles.info__gradient}>
+             <div className='container'>
+             <div className={styles.info__container}>
+              <Title outline children={"о компании"} color={"white"}/>
+              <div className={styles.info__wrapper}>
+                  <div className={styles.info__img__wrapper}>
+                  </div>
+                  <div className={styles["info__text-wrapper"]}>
+                      <p className={styles.info__text}>{text}</p>
+                    <div className={styles["info__button-wrapper"]}> <Button color="#fff" value="УЗНАТЬ БОЛЬШЕ" /></div>
+                  </div>
+              </div>
+             </div>
+             </div>
+          </div>
+      </section>
+  )
+   }
+   return(
+ <section className={styles.info}>
+  <div className={styles.info__gradient}>
+    <div className='container'>
+    <div className={styles.info__container}>
+    <Title outline children={"о компании"} color={"white"}/>
+    <div className={styles.info__recwrapper}>
+    <div className={styles["info__text-wrapper"]}>
+                      <p className={styles.info__text}>{text}</p>
+     </div>
+     <ul className={styles.info__reclist}>
+      <li className={styles.info__item}>
+         <img className={styles["info__item-img"]} width={"84"} height={"112"} src={require("../../../img/inforec1.png")}></img>
+         <p className={styles["info__rectext"]}>Реквизиты</p>
+      </li>
+      <li className={styles.info__item}>
+         <img className={styles["info__item-img"]} width={"92"} height={"84"} src={require("../../../img/inforec2.png")}></img>
+         <p className={styles["info__rectext"]}>Задать вопрос</p>
+      </li>
+      </ul>            
+      </div>     
+    </div>
+    </div>
+    </div>
+ </section>
     )
 }
 

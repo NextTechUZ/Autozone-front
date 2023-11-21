@@ -37,9 +37,8 @@
     background-color: #0E0E0E;
     top: 100px;
     left: 0;
-    width: 60%;
+    width: 40%;
     height: 100vh;
-    padding-left: 5rem;
     z-index: 9;
     animation-name: hamburger;
     animation-duration: 800ms;
@@ -51,9 +50,9 @@
     left: -100%;
     width: 60%;
     height: 100vh;
-    padding-left: 5rem;
     animation-name: hamburger-close;
     animation-duration: 1000ms;
+    //display: none;
 }
 .hamburger__button , .hamburger__close-button{
     width: 30px;
@@ -71,11 +70,11 @@
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
+    padding-left: 4rem;
 }
 .hamburger__item{
     position: relative;
     margin: 30px;
-    width: 200px;
     margin-bottom: 0;
     display: flex;
 
@@ -89,7 +88,7 @@
     content: '';
     right: 10px;
     appearance: none;
-    background: url(../../img/dropaft.svg);
+    background: url(../../img/strelka.svg);
 }
 
 .hamburger__item-dropbutton:checked + .dropdown__list{
@@ -143,19 +142,28 @@
     left: 0;
 }
 .hamburger__button-wrapper{
-    margin-left: 35px;
+    text-align: center;
 }
-@media only screen and (max-width:1070px){
+@media only screen and (max-width:870px){
     .hamburger__wrapper{
         display: block;
     }
 }
-@media only screen and (max-width:470px){
+@media only screen and (max-width:710px){
+.hamburger{
+    width: 55%;
+}
+}
+@media only screen and (max-width:500px){
     .hamburger__item{
         margin: 20px;
         margin-bottom: 0;
     }
-    .hamburger{
-        padding-left: 1.3rem;
+    .hamburger__link{
+        font-size: 1.3rem;
     }
+    .hamburger__list{
+        padding-left:2rem ;
+    }
+   
 }

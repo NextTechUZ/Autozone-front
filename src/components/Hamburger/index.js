@@ -9,9 +9,7 @@ import {
   Link
 } from 'react-router-dom'
 import DropDown from '../DropDown';
-import {
-  buttonData
-} from '../../layouts/components/Navbar';
+
 import Button from '../Button';
 
 function Hamburger() {
@@ -59,7 +57,7 @@ function Hamburger() {
               )}
           </ul>
           <div className={styles["hamburger__button-wrapper"]}>
-          <Button prop={buttonData}/> 
+          <Button color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
           </div>
        </div>
       </div>

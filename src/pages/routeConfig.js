@@ -1,3 +1,4 @@
+import About from "./About";
 import AskQuestionPage from "./AskQuestionPage";
 import CategoryPage from "./CategoryPage";
 import HomePage from "./HomePage";
@@ -10,4 +11,5 @@ export const routes = [
   { id: 3, path: "/products", element: <ProductsPage /> },
   { id: 4, path: "*", element: <NotFoundPage /> },
   { id: 5, path: "/ask-question", element: <AskQuestionPage /> },
+  {id:6,path:"/about",element:<About/>}
 ];

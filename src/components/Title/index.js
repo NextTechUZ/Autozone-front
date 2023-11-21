@@ -3,36 +3,31 @@ import styles from "./index.module.scss";
 function Title({
   color = "var(--color-brand--2)",
   children,
+  text="",
+  textAlign="center",
   outline,
   size = "3.6rem",
-  textAlign = "center",
   margin = "0",
-  fontStyle = "normal",
   fontWeight = "400",
 }) {
   return (
-    <div
-      style={{
-        justifyContent:
-          (textAlign === "center" && "center") ||
-          (textAlign === "left" && "left") ||
-          (textAlign === "right" && "right"),
-      }}
-      className={styles.title}
-    >
+    <div style={{
+      textAlign:textAlign,
+      margin: margin,
+      color: color
+      }} className={styles.title__wrapper}>
       <h1
         style={{
           fontSize: size,
-          color: color,
           borderBottom: outline ? "4px solid var(--color-brand--1)" : "",
-          textAlign: textAlign,
-          margin: margin,
-          fontStyle: fontStyle,
+          fontStyle: "italic",
           fontWeight: fontWeight,
         }}
+        className={styles.title}
       >
         {children}
       </h1>
+      <p className={styles.title__text}>{text}</p>
     </div>
   );
 }

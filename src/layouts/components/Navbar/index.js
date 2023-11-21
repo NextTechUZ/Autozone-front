@@ -11,14 +11,7 @@ import Search from "../../../components/Search";
 import { Link } from "react-router-dom";
 import Button from "../../../components/Button";
 import Hamburger from "../../../components/Hamburger";
-export const buttonData={
-  width:"168px",
-  color:"#fff",
-  backgroundColor:"transparent",
-  value:"ЗАКАЗАТЬ ЗВОНОК",
-  link:"/",
 
-}
 const Navbar = () => {
   const [focus, setFocus] = useState(false);
   const [search,setSearch] =useState(false)
@@ -56,11 +49,11 @@ function handleOpen() {
                 {dropData.map(el=>
                 <li key={el.id}  className={styles.header__item}>
                    <Link to={el.to} onMouseEnter ={()=>handleFocus(el.id)}  className={styles.header__item__link} children={el.title}/>
-                  <DropDown hover={true} id={el.id}/>
+                  {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
                 </li>)}
                
               </ul>
-              <Button prop={buttonData}/>
+              <Button color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
             </nav>
             
            <Search />
@@ -68,7 +61,7 @@ function handleOpen() {
               <button onClick={handleOpen} className={styles.header__search__button}></button>
              
               <a href="/">
-                <img
+                <img  
                   width="40"
                   height="40"
                   src={require("../../../img/user.png")}

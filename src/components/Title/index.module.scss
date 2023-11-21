@@ -1,12 +1,11 @@
 .title {
-  display: flex;
-
-  h1 {
-    color: var(--color-brand--2);
-
     line-height: normal;
     text-transform: uppercase;
-    width: max-content;
+    display: inline-block;
     padding: 10px;
-  }
+}
+.title__text{
+font-size: 2.4rem;
+font-weight: 800;
+margin-top: 32px;
 }

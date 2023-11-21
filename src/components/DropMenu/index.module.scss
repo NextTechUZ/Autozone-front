@@ -1,0 +1,26 @@
+.drop__list{
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 10px 0px;
+    min-width: 200px;
+  
+}
+.drop__item{
+    display: block;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    &:hover {
+        border-bottom: 3px solid #C53720;
+
+    }
+}
+.drop__link{
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+    padding: 1.8rem 0.8rem;
+}

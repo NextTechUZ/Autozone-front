@@ -8,15 +8,6 @@ import Button from  '../../Button'
 import styles from "./index.module.scss";
 import Subtitle from "../../Subtitle";
 
-const buttonData={
-  width:"168px",
-  color:"#fff",
-  backgroundColor:"transparent",
-  value:"ПЕРЕЙТИ В КАТАЛОГ",
-  link:"/",
-
-}
-
 function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
   return (
     <div>
@@ -58,7 +49,7 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
                   {subtitle}
                 </Subtitle>
               )}
-              <Button prop={buttonData}/>
+               <div className={styles.showcase__button}><Button color="#fff" value="ПЕРЕЙТИ В КАТАЛОГ" /></div>
             </div>
           </SwiperSlide>
         ))}

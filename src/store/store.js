@@ -21,7 +21,8 @@ export const newsData = [{
     link: "/"
   }
 ]
-export let dropData = [{
+export let dropData = [
+  {
     id: 1,
     title: "КОМПАНИЯ",
     focus: false,
@@ -35,7 +36,7 @@ export let dropData = [{
       {
         id: 2,
         text: "О КОМПАНИИ",
-        to: '/'
+        to: '/about'
       },
       {
         id: 3,
@@ -45,7 +46,7 @@ export let dropData = [{
       {
         id: 4,
         text: "ПАРТНЕРЫ",
-        to: '/'
+        to: '/about#partners'
       },
       {
         id: 5,
@@ -69,26 +70,79 @@ export let dropData = [{
     title: "КАТАЛОГ",
     focus: false,
     to: '/category',
-    data: [{
+    data: [
+      {
         id: 1,
-        text: "АККУМУЛЯТОРЫ",
-        to: "/"
+        text: "страна",
+        to: "/",
+        focus: false,
+        drop:[
+          {
+            id:1,
+            name:"узбекистан"
+          },
+          {
+            id:2,
+            name:"Турция"
+          },
+          {
+            id:3,
+            name:"Россия"
+          },
+          {
+            id:4,
+            name:"Казахстан"
+          },
+        ]
       },
       {
         id: 2,
-        text: "АВТОМАСЛА",
-        to: '/'
+        text: "машина",
+        to: '/',
+        focus: false,
+        drop:[
+          {
+            id:1,
+            name:"Cobalt"
+          },
+          {
+            id:2,
+            name:"Lacetti"
+          },
+          {
+            id:3,
+            name:"Spark"
+          },
+          {
+            id:4,
+            name:"Chevrolet Monza"
+          },
+        ]
       },
       {
         id: 3,
-        text: "АКСЕССУАРЫ",
-        to: '/'
+        text: "категория",
+        to: '/',
+        focus: false,
+        drop:[
+          {
+            id:1,
+            name:"АККУМУЛЯТОРЫ"
+          },
+          {
+            id:2,
+            name:"АВТОМАСЛА"
+          },
+          {
+            id:3,
+            name:"АКСЕССУАРЫ"
+          },
+          {
+            id:4,
+            name:"АВТОХИМИЯ"
+          },
+        ]
       },
-      {
-        id: 4,
-        text: "АВТОХИМИЯ",
-        to: '/'
-      }
     ]
   },
   {
@@ -96,17 +150,17 @@ export let dropData = [{
     title: "УСЛУГИ",
     focus: false,
     to: "/service",
-    data: [{
-        id: 1,
-        text: "ДИАГНОСТИКА АККУМУЛЯТОРА",
-        to: '/'
-      },
-      {
-        id: 2,
-        text: "ПРИЕМ АККУМУЛЯТОРОВ",
-        to: '/'
-      }
-    ]
+    // data: [{
+    //     id: 1,
+    //     text: "ДИАГНОСТИКА АККУМУЛЯТОРА",
+    //     to: '/'
+    //   },
+    //   {
+    //     id: 2,
+    //     text: "ПРИЕМ АККУМУЛЯТОРОВ",
+    //     to: '/'
+    //   }
+    // ]
   },
   {
     id: 4,
@@ -129,18 +183,7 @@ export let dropData = [{
     id: 5,
     title: "КОНТАКТЫ",
     focus: false,
-    to: "/",
-    data: [{
-        id: 1,
-        text: "НОВОСТИ",
-        to: '/'
-      },
-      {
-        id: 2,
-        text: "F.A.Q",
-        to: '/ask-question'
-      }
-    ]
+    to: "/contacts",
   }
 ]
 

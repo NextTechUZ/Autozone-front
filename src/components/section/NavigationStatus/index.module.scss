@@ -1,0 +1,38 @@
+.navigation-status{
+    padding: 16px 50px;
+}
+.navigation-status__list{
+    display: flex;
+
+}
+.navigation-status__item{
+    margin-right: 1.6rem;
+    padding-right: 26px;
+    position: relative;
+    &::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        right: 0;
+        top: -3px;
+        background: url(../../../img/strelka.svg);
+       
+    }
+    &:first-child{
+        .navigation-status__link{
+            color: #C53720;
+        }
+    }
+    &:last-child{
+        &::after{
+            display: none;
+        }
+    }
+}
+.navigation-status__link{
+    font-size: 1.2rem;
+    color: rgba(29, 29, 29, 1);
+    font-weight: 800;
+    word-wrap: break-word;
+}

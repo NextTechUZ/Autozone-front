@@ -18,7 +18,7 @@ export default function CatalogMain() {
                         </div>
                     </div>
                     <div className={styles.btn_sector}>
-                        <Button value="ПОДРОБНЕЕ"/>
+                        {/* <Button value="ПОДРОБНЕЕ"/> */}
                     </div>
                 </div>
             </div>)

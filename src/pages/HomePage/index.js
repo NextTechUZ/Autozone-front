@@ -25,7 +25,7 @@ import part3 from "../../img/partne3.png"
 import part4 from "../../img/partne4.png"
 import part5 from "../../img/partne5.png"
 
-const showcaseData = [{
+export const showcaseData = [{
     id: 1,
     bgImg: ShowcaseImg1,
     title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
@@ -45,7 +45,8 @@ const showcaseData = [{
     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
   },
 ];
-const partnersData = [{
+const partnersData = [
+  {
     id: 1,
     img: part1,
     width: "166",
@@ -126,9 +127,9 @@ function HomePage() {
     <Directory data={data} title="Автотовары: аксессуары, 
     расходники и многое другое" subtitle="PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей. "/>
     <Services/>
-    <Info/>
+    <Info button={true} text={"Машина плохо заводится? Аккумулятор вас подводит? Не проблема! Вам в «PRO Auto»! Мы подберём хороший, надёжный, а главное недорогой аккумулятор именно для вашего авто! С 1997 года сеть магазинов «PRO Auto» занимается продажей автомобильных аккумуляторов, масел, расходных материалов, химией и аксессуаров."}/>
     <News data={newsData}/>
-    <Partners autoPlay={true} toShow={toShow} elemets={partnersData} />
+    <Partners autoPlay={true} toShow={toShow} elements={partnersData} />
     </>
   )
 }

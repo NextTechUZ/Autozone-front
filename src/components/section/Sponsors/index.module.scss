@@ -1,0 +1,43 @@
+.sponsors {
+   background-color: rgba(29, 29, 29,0.9);
+    max-width: 1640px;
+    margin: 0 auto;
+}
+.sponsors__gradient{
+    padding: 88px 0px;
+    background: url(../../../img/spnbg.png) no-repeat center center;
+    background-size: cover;
+}
+.sponsors__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 32px auto;
+    max-width: 1128px;
+    justify-content: space-evenly;
+}
+
+.sponsors__item {
+    flex-shrink: 0;
+    background-color: white;
+    margin-bottom: 24px;
+    width: 264px;
+    margin-right: 10px;
+    
+}
+.sponsors__item-img{
+    display: block;
+    margin: 0 auto;
+}
+
+.sponsors__item-text {
+    color: white;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+    background-color: #1D1D1D;
+    padding: 2rem 1.2rem 1.6rem 1.2rem ;
+}
+.sponsors__button{
+    text-align: center;
+}

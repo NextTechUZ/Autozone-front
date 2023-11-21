@@ -3,7 +3,6 @@ import styles from './index.module.scss'
 import Title from '../../Title'
 import Subtitle from '../../Subtitle'
 import Button from '../../Button'
-import { buttonData } from '../../../layouts/components/Navbar'
 
 
 function Services() {
@@ -30,7 +29,7 @@ function Services() {
                 <p className={styles.services__item__text}>Приезжайте к нам и мы бесплатно проведём диагностику вашего аккумулятора!</p>
             </li>
           </ul>
-         <div className={styles["services__button-wrapper"]}> <Button prop={buttonData} /></div>
+         <div className={styles["services__button-wrapper"]}> <Button color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" /></div>
         </div>
         </div>     
         </div>

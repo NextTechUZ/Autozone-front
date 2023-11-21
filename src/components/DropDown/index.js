@@ -6,9 +6,12 @@ import {
 import {
     dropData
 } from '../../store/store'
+import DropMenu from '../DropMenu'
 
 function DropDown({id,hover,style}) {
-    const [display,setDisplay]=useState(false)
+    const [display,setDisplay]=useState(false);
+    const [focus, setFocus] = useState(false);
+ 
     const data = dropData.find((el) => el.id == id)
     
      function handleClose(id) {
@@ -16,23 +19,35 @@ function DropDown({id,hover,style}) {
             dropData.forEach(element => {
                 if (element.id == id) {
                   element.focus = !element.focus
-                  console.log(element.focus);
                   setDisplay(!display)
                 }
               }); 
-        } else {
-           
-        }
-        
+              data.data.forEach((element)=>{
+                  element.focus = false
+            })
+        } 
      }
+     function handleFocus(id) {
+      data.data.forEach(element => {
+        if (element.id == id) {
+          element.focus = !element.focus
+        } else {
+          element.focus = false
+        } 
+      });
+      setFocus(!focus)
+    }
+  
    if (hover) {
     return (
         <>
         <ul onMouseLeave={()=>handleClose(data.id)} style={data.focus?{display:'block'}:{display:'none'}} className={styles.dropdown__list}>
             {data.data.map(data=>
             <li key={data .id} className={styles.dropdown__item}>
-              {<Link  className={styles.dropdown__link} to={data.to} children={data.text}/>}
-            </li>)}
+              <Link onMouseEnter={()=>handleFocus(data.id)} className={styles.dropdown__link} to={data.to} children={data.text}/>
+              {data.drop?<DropMenu id={id} dataId={data.id}/>:""}
+            </li>
+            )}
         </ul>
         </>
     )
@@ -40,10 +55,10 @@ function DropDown({id,hover,style}) {
     return (
         <>
         <ul className={style}>
-            {data.data.map(data=>
+            {data.data?data.data.map(data=>
             <li key={data.id} className={styles.dropdown__item}>
-              {<Link  className={styles.dropdown__link} to={data.to} children={data.text}/>}
-            </li>)}
+              <Link  className={styles.dropdown__link} to={data.to} children={data.text}/>
+            </li>):<div></div>}
         </ul>
         </>
     )
