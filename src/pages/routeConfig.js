@@ -1,4 +1,4 @@
-import About from "./About";
+import About from "./AboutPage";
 import AskQuestionPage from "./AskQuestionPage";
 import CategoryPage from "./CategoryPage";
 import HomePage from "./HomePage";

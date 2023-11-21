@@ -12,7 +12,7 @@ export default function Navigation() {
                 <p className={style.pathname +" "+ style.item} style={index == 0? {color:"var(--color-brand--1) "} : {}}>{item}</p>
                 {
                   index != newUrl.length-1 ? <svg className={style.item} width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 4L12 10L8 16" stroke="var(--color-brand--1)" stroke-width="4"/>
+                  <path d="M8 4L12 10L8 16" stroke="var(--color-brand--1)" strokeWidth="4"/>
                   </svg>
                    : ""
                 }
