@@ -1,14 +1,10 @@
-import React, { createRef } from 'react'
-import styles from './index.module.scss'
-import {
-    showcaseData
-} from '../HomePage'
 import Showcase from '../../components/section/Showcase'
 import Info from '../../components/section/Info'
 import NavigationStatus from '../../components/section/NavigationStatus'
 import Licenses from '../../components/section/Licenses'
 import Sponsors from '../../components/section/Sponsors'
 import Reviews from '../../components/section/ReviewsSection'
+import { showcaseData } from '../../store/store'
 
 const navData = [{
         id: 1,
@@ -101,9 +97,9 @@ function About() {
                 <Showcase data={showcaseData}/>
                 <NavigationStatus data={navData}/>
                 <Info button={false}  text={"Мы рады приветствовать вас на нашем сайте.Компания «PROавто» - это надежные, качественные аккумуляторы в широком ассортименте, разнообразные в по форме и характеристикам, а также качественные масла и автохимия именитых брендов.Сеть магазинов «PROавто» более 20-и лет занимается продажей автомобильных аккумуляторов, масел, расходных материалов, химией и аксессуаров. Мы зарекомендовали себя как надежная компания, специалисты которой всегда готовы проконсультировать по любому вопросу: от подбора автощёток, до рекомендаций по подбору аккумулятора для Вашего автомобиля. Мы дорожим своей репутацией и даём гарантию на весь ассортимент продукции, представленной на нашем сайте!Убедитесь в этом сами!"}/>
-             <Licenses data={licensesData}/>
-             <Sponsors data={spData}/>
-             <Reviews/>
+                <Licenses data={licensesData}/>
+                <Sponsors data={spData}/>
+                 <Reviews/>
                 </>
     )
 }

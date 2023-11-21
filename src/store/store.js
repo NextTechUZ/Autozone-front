@@ -1,26 +1,46 @@
-import img from "../img/news1.jpg"
 export const newsData = [{
     id: 1,
-    img: img,
+    img: require("../img/news1.jpg"),
     date: "2 февраля 2020 года",
     text: "У НАС НОВЫЙ ЛОГОТИП И НОВЫЙ САЙТ!",
     link: "/"
   },
   {
     id: 2,
-    img: img,
+    img:require("../img/news2.jpg"),
     date: "10 февраля 2020 года",
     text: "ОБНОВЛЕНИЕ ЛИНЕЙКИ АККУМУЛЯТОРОВ VARTRA ",
     link: "/"
   },
   {
     id: 3,
-    img: img,
+    img: require("../img/news3.jpg"),
     date: "5 февраля 2020 года",
     text: "БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА ТЕПЕРЬ В РЕЖИМЕ ONLINE ",
     link: "/"
   }
 ]
+export const showcaseData = [
+  {
+  id: 1,
+  bgImg: require("../img/showcaseBg1.png"),
+  title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
+  buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+  subtitle: "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
+},
+{
+  id: 2,
+  bgImg: require("../img/showcaseBg2.png"),
+  title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
+  buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+},
+{
+  id: 3,
+  bgImg: require("../img/showcaseBg3.png"),
+  title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+  buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+},
+];
 export let dropData = [
   {
     id: 1,

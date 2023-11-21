@@ -13,78 +13,52 @@ import {
   data
 } from '../CategoryPage'
 import {
-  newsData
+  newsData, showcaseData
 } from '../../store/store'
 import Showcase from '../../components/section/Showcase'
-import ShowcaseImg1 from "../../img/showcaseBg1.png";
-import ShowcaseImg2 from "../../img/showcaseBg2.png";
-import ShowcaseImg3 from "../../img/showcaseBg3.png";
-import part1 from "../../img/partne1.png";
-import part2 from "../../img/partne2.png"
-import part3 from "../../img/partne3.png"
-import part4 from "../../img/partne4.png"
-import part5 from "../../img/partne5.png"
+import Title from '../../components/Title'
 
-export const showcaseData = [{
-    id: 1,
-    bgImg: ShowcaseImg1,
-    title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-    subtitle: "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
-  },
-  {
-    id: 2,
-    bgImg: ShowcaseImg2,
-    title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-  {
-    id: 3,
-    bgImg: ShowcaseImg3,
-    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
-    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  },
-];
+
 const partnersData = [
   {
     id: 1,
-    img: part1,
+    img: require("../../img/partne1.png"),
     width: "166",
     height: "52"
   },
   {
     id: 2,
-    img: part2,
+    img: require("../../img/partne2.png"),
     width: "166",
     height: "48"
   },
   {
     id: 3,
-    img: part3,
+    img: require("../../img/partne3.png"),
     width: "166",
     height: "25"
   },
   {
     id: 4,
-    img: part4,
+    img: require("../../img/partne4.png"),
     width: "165",
     height: "45"
   },
   {
     id: 5,
-    img: part5,
+    img: require("../../img/partne5.png"),
     width: "105",
     height: "90"
   },
   {
     id: 6,
-    img: part4,
+    img: require("../../img/partne4.png"),
     width: "165",
     height: "45"
   },
   {
     id: 7,
-    img: part5,
+    img: require("../../img/partne5.png"),
     width: "105",
     height: "90"
   }
@@ -128,7 +102,11 @@ function HomePage() {
     расходники и многое другое" subtitle="PROAuto - это специализированный интернет магазин востребованных товаров для автомобилей. "/>
     <Services/>
     <Info button={true} text={"Машина плохо заводится? Аккумулятор вас подводит? Не проблема! Вам в «PRO Auto»! Мы подберём хороший, надёжный, а главное недорогой аккумулятор именно для вашего авто! С 1997 года сеть магазинов «PRO Auto» занимается продажей автомобильных аккумуляторов, масел, расходных материалов, химией и аксессуаров."}/>
+    <section className="container">
+    <Title outline color={"black"} children={"новости"}/>
     <News data={newsData}/>
+    </section>
+    
     <Partners autoPlay={true} toShow={toShow} elements={partnersData} />
     </>
   )

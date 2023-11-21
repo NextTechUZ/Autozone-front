@@ -6,7 +6,7 @@
 
 .news__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 50px;
     margin-top: 30px;
@@ -23,7 +23,6 @@
     background: #1D1D1D;
     color: #fff;
     position: relative;
-   &:hover{
     &::before{
         width: 360px;
         height: 284px;
@@ -31,6 +30,7 @@
         content: '';
         background: url(../../../img/newsrec.png);
         top: 0;
+       opacity: 0;
     }
     &::after{
         width: 168px;
@@ -40,6 +40,20 @@
         background: url(../../../img/logo.png) no-repeat center center;
         top: 100px;
         left: 100px;
+        opacity: 0;
+    }
+   &:hover{
+    &::before{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    &::after{
+        opacity: 1;
+        transition: 0.5s;
+    }
+    .news__button{
+        background: url(../../../img//news-btn-orange.svg);
+        transition: 0.5s;
     }
    }
 }
@@ -62,10 +76,13 @@
     margin-bottom: 40px;
 }
 .news__button{
-    background: transparent;
+    display: block;
+    width: 51px;
+    height: 20px;
+    background: url(../../../img/news-btn-white.svg);
     border: none;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     right: 10px;
     cursor: pointer;
 }
