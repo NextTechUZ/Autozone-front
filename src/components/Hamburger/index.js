@@ -57,7 +57,7 @@ function Hamburger() {
               )}
           </ul>
           <div className={styles["hamburger__button-wrapper"]}>
-          <Button color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
+          <Button to='/ask-question' color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
           </div>
        </div>
       </div>

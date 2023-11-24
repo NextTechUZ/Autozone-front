@@ -1,0 +1,66 @@
+.contact__wrapper{
+    margin-top: 36px;
+    display: flex ;
+    margin-bottom: 88px;
+}
+.contact__text-wrapper{
+    width: 50%;
+    padding: 82px 62px;
+   color: #fff;
+   background-color: rgba(29, 29, 29, 1);
+   font-size: 1.6rem;
+}
+.contact__iframe{
+    width: 50%;
+}
+.contact__info-title{
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+.contact__info-tel, .contact__info-tel , .contact__info-loc, .contact__info-date, .contact__info-email{
+    margin-bottom: 16px;
+    padding-left: 36px;
+    position: relative;
+    &::after{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        content: '';
+        left: 0;
+    }
+}
+.contact__info-tel{
+    &::after{
+        background: url(../../img/tel.svg);
+    }
+}
+.contact__info-email{
+    &::after{
+        background: url(../../img/sms.svg) no-repeat;
+    }
+}
+.contact__info-date{
+    &::after{
+        background: url(../../img/date.svg) no-repeat;
+    }
+}
+.contact__info-loc{
+    &::after{
+        background: url(../../img/addres.svg) no-repeat;
+    }
+}
+.contact__info-loc{
+    margin-bottom: 30px;
+}
+.ask{
+    background: url(../../img/ak-bg.jpg);
+   
+}
+.ask__gradient{
+    background: url(../../img/ask-gr.png);
+    padding-top: 88px;
+}
+.ask__form-wrapper{
+    max-width: 648px;
+    margin: 0 auto;
+}

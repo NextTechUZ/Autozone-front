@@ -1,0 +1,27 @@
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.input{
+    margin-bottom: 16px;
+    border-radius: 0px;
+    border: 4px solid black;
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    font-family: 'Inter';
+    max-width: 100%;
+    min-width: 100%;
+    background-color: white;
+    max-height: 120px;
+    &:focus{
+        outline: none;
+        border: 4px solid rgba(197, 55, 32, 1) !important;
+       
+    }
+}

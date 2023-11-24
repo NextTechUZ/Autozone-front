@@ -53,7 +53,7 @@ function handleOpen() {
                 </li>)}
                
               </ul>
-              <Button color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
+              <Button to='/ask-question' color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
             </nav>
             
            <Search />

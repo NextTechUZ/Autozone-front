@@ -1,117 +1,30 @@
-.wrapper {
-  display: grid;
-  place-content: center;
-  padding: 15rem 0;
-
-  .wrapper--form {
-    width: 875px;
-    .wrapper--form__top {
-      background-color: var(--color-brand--2);
-      padding: 2rem 0;
-    }
-  }
-
-  .form {
-    padding: 2.4rem 4rem;
-
-    .form--bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 4rem;
-      p {
-        color: var(--color-brand--1, #c53720);
-        text-align: right;
-        font-family: Abhaya Libre;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: normal;
-      }
-    }
-  }
-
-  .input-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 1.6rem;
-
-    label {
-      color: var(--color-brand--2, #1d1d1d);
-      font-family: Abhaya Libre ExtraBold;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 800;
-      line-height: normal;
-    }
-    input,
-    textarea {
-      border: 4px solid var(--color-brand--2, #1d1d1d);
-      background: #fff;
-      padding: 1rem;
-      font-family: Abhaya Libre ExtraBold;
-      font-size: 1.6rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-    textarea {
-      resize: none;
-      width: 100%;
-      height: 14rem;
-    }
-  }
-
-  .checkbox-wrapper {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    input[type="checkbox"] {
-      box-shadow: 0 0 0 3px hotpink;
-      border-radius: 0;
-    }
-  }
+.ask{
+  max-width: 876px;
+  margin: 160px auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
-
-.squaredOne {
-  width: 28px;
-  height: 28px;
+.ask__header{
+  background-color: black;
+  border-top: 4px solid rgba(197, 55, 32, 1);
+  padding: 34px 20px 20px 20px;
   position: relative;
-  margin: 20px auto;
-  background: #fcfff4;
-  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-  label {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    cursor: pointer;
-    background: linear-gradient(top, #222 0%, #45484d 100%);
-    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5),
-      0px 1px 0px rgba(255, 255, 255, 1);
-    &:after {
-      content: "";
-      width: 16px;
-      height: 16px;
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      background: rgb(73, 73, 85);
-      background: linear-gradient(top, rgba(80, 62, 62, 0.489) 0%, red 100%);
-      box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
-      opacity: 0;
-    }
-    &:hover::after {
-      opacity: 0.3;
-    }
+  &::before{
+   width: 100px;
+   height: 96px;
+   content: '';
+   position: absolute;
+   background: url(../../img/ask-before.png) no-repeat center center;
+   bottom: 0;
+   left: 0;
   }
-  input[type="checkbox"] {
-    visibility: hidden;
-    &:checked + label:after {
-      opacity: 1;
-    }
+  &::after{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    content: '';
+    background: url(../../img//ask-after.png) no-repeat center center;
+    background-size: cover;
+    top: 55px;
+    left: 40px;
   }
 }

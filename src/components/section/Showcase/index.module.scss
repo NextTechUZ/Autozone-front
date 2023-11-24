@@ -1,14 +1,26 @@
 .showcase-item {
-  height: 100vh;
   background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  max-width: 500px;
-
   img {
     width: 26rem;
   }
+}
+.showcase__wrapper{
+ padding-top: 225px;
+ padding-bottom: 190px;
+  background: url(../../../img/showcase-gr.png);
+
+  &::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    content: '';
+   
+  }
+ 
 }

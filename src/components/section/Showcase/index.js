@@ -6,7 +6,6 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import Button from  '../../Button'
 import styles from "./index.module.scss";
-import Subtitle from "../../Subtitle";
 
 function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
   return (
@@ -14,7 +13,7 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
       <Swiper
         spaceBetween={30}
         pagination={{
-          clickable: true,
+        clickable: true,
         }}
         modules={[Pagination, EffectFade, Autoplay]}
         className="mySwiper"
@@ -25,32 +24,18 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
         effect="fade"
       >
         {data.map(({ id, title, buttonTitle, bgImg }) => (
-          <SwiperSlide
-            style={{
-              padding: "0 250px",
-              backgroundImage: `url(${bgImg})`,
-            }}
-            key={id}
-          >
-            <div className={styles["showcase-item"]}>
+          <SwiperSlide style={{backgroundImage: `url(${bgImg})`, position:"relative"}}
+            key={id}>
+              <div className={styles.showcase__wrapper}>
+                <div className="container">
+                <div className={styles["showcase-item"]}>
               <img src={notFoundImg} alt="" />
-              <Title
-                fontStyle="italic"
-                maxWidth="550px"
-                size="4.8rem"
-                margin={titleMargin}
-                textAlign="left"
-                color="#fff"
-              >
-                {title}
-              </Title>
-              {subtitle && (
-                <Subtitle maxWidth="60rem" textAlign="left" color="#fff">
-                  {subtitle}
-                </Subtitle>
-              )}
-               <div className={styles.showcase__button}><Button color="#fff" value="ПЕРЕЙТИ В КАТАЛОГ" /></div>
+              <Title fontStyle="italic" maxWidth="586px" size="4.8rem" text={subtitle} margin={titleMargin} textAlign="left" color="#fff" children={title} /> 
+               <div className={styles.showcase__button}><Button color="#fff" value="ПЕРЕЙТИ В КАТАЛОГ" />
+               </div>
+                </div>
             </div>
+              </div>
           </SwiperSlide>
         ))}
       </Swiper>
