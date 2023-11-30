@@ -1,3 +1,15 @@
+import axios from "axios";
+
+export async function fetchDataUnits(fetch,array){
+const data = (await axios.get(`https://api.autozoneshop.uz/api/${fetch}`)).data.data[array];
+return data.map((element)=>({
+  ...element,
+  active:false,
+  value:fetch,
+  to:"/products"
+ }))
+}
+
 export const newsData = [{
     id: 1,
     img: require("../img/news1.jpg"),
@@ -92,76 +104,31 @@ export let dropData = [
     to: '/category',
     data: [
       {
-        id: 1,
+        id: "ddfdf",
         text: "страна",
-        to: "/",
+        value:"country",
+        to: "/products",
+        active:false,
         focus: false,
-        drop:[
-          {
-            id:1,
-            name:"узбекистан"
-          },
-          {
-            id:2,
-            name:"Турция"
-          },
-          {
-            id:3,
-            name:"Россия"
-          },
-          {
-            id:4,
-            name:"Казахстан"
-          },
-        ]
+        drop:await fetchDataUnits("country","countries")
       },
       {
-        id: 2,
+        id: "aderr",
         text: "машина",
-        to: '/',
+        value:"car",
+        active:false,
+        to: '/products',
         focus: false,
-        drop:[
-          {
-            id:1,
-            name:"Cobalt"
-          },
-          {
-            id:2,
-            name:"Lacetti"
-          },
-          {
-            id:3,
-            name:"Spark"
-          },
-          {
-            id:4,
-            name:"Chevrolet Monza"
-          },
-        ]
+        drop:await fetchDataUnits("car","cars")
       },
       {
-        id: 3,
+        id: "dshj",
         text: "категория",
-        to: '/',
+        value:"category",
+        active:false,
+        to: '/products',
         focus: false,
-        drop:[
-          {
-            id:1,
-            name:"АККУМУЛЯТОРЫ"
-          },
-          {
-            id:2,
-            name:"АВТОМАСЛА"
-          },
-          {
-            id:3,
-            name:"АКСЕССУАРЫ"
-          },
-          {
-            id:4,
-            name:"АВТОХИМИЯ"
-          },
-        ]
+        drop:await fetchDataUnits("category","categories")
       },
     ]
   },

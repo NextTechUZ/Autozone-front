@@ -6,6 +6,7 @@ import Sponsors from '../../components/section/Sponsors'
 import Reviews from '../../components/section/ReviewsSection'
 import { showcaseData } from '../../store/store'
 
+
 const navData = [{
         id: 1,
         name: "ГЛАВНАЯ",

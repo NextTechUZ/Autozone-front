@@ -4,6 +4,8 @@ import styles from "./index.module.scss";
 import ShowcaseImg1 from "../../img/notfound.png";
 import notfound from "../../img/404.svg";
 
+
+
 const data = [
   {
     id: 1,

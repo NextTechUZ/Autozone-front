@@ -1,11 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import styles from './index.module.scss'
-import {
-    Link
-} from 'react-router-dom'
-import {
-    dropData
-} from '../../store/store'
+import { Link} from 'react-router-dom'
+import {dropData} from '../../store/store'
 import DropMenu from '../DropMenu'
 
 function DropDown({id,hover,style}) {
@@ -13,7 +9,17 @@ function DropDown({id,hover,style}) {
     const [focus, setFocus] = useState(false);
  
     const data = dropData.find((el) => el.id == id)
+
+    function handleActives(id) {
+      dropData[1].data.forEach(el=>{
+        if (el.id==id) {
+          el.active=true
+        }
+        else  el.active=false
+      })
     
+    }
+   
      function handleClose(id) {
         if (hover) {
             dropData.forEach(element => {
@@ -44,7 +50,7 @@ function DropDown({id,hover,style}) {
         <ul onMouseLeave={()=>handleClose(data.id)} style={data.focus?{display:'block'}:{display:'none'}} className={styles.dropdown__list}>
             {data.data.map(data=>
             <li key={data .id} className={styles.dropdown__item}>
-              <Link onMouseEnter={()=>handleFocus(data.id)} className={styles.dropdown__link} to={data.to} children={data.text}/>
+              <Link onClick={()=>handleActives(data.id)} onMouseEnter={()=>handleFocus(data.id)} className={styles.dropdown__link} to={data.to} children={data.text}/>
               {data.drop?<DropMenu id={id} dataId={data.id}/>:""}
             </li>
             )}

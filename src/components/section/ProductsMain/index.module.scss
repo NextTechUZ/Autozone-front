@@ -1,0 +1,28 @@
+.product__list{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.product__item{
+    border: 1px solid rgba(29, 29, 29, 0.5);
+    max-width: 264px;
+}
+.product__text-wrapper{
+    padding:19px 11px ;
+    background-color: rgba(29, 29, 29, 1);
+    color: #fff;
+}
+.product__item-text{
+font-size: 1.6rem;
+font-style: italic;
+font-weight: 400;
+word-wrap: break-word;
+text-transform: uppercase;
+margin-bottom: 12px;
+}
+.product__item-date{
+    font-size: 1.2rem;
+font-weight: 800;
+margin-bottom: 24px;
+}
