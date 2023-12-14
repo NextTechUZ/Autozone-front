@@ -1,14 +1,16 @@
 import axios from "axios";
 
-export async function fetchDataUnits(fetch,array){
-const data = (await axios.get(`https://api.autozoneshop.uz/api/${fetch}`)).data.data[array];
-return data.map((element)=>({
-  ...element,
-  active:false,
-  value:fetch,
-  to:"/products"
- }))
+export async function fetchDataUnits(fetch, array) {
+  const data = (await axios.get(`https://api.autozoneshop.uz/api/${fetch}`)).data.data[array];
+  return data.map((element) => ({
+    ...element,
+    active: false,
+    value: fetch,
+    to: `/products?${fetch}=${element._id}`
+  }))
 }
+
+
 
 export const newsData = [{
     id: 1,
@@ -19,7 +21,7 @@ export const newsData = [{
   },
   {
     id: 2,
-    img:require("../img/news2.jpg"),
+    img: require("../img/news2.jpg"),
     date: "10 февраля 2020 года",
     text: "ОБНОВЛЕНИЕ ЛИНЕЙКИ АККУМУЛЯТОРОВ VARTRA ",
     link: "/"
@@ -32,35 +34,32 @@ export const newsData = [{
     link: "/"
   }
 ]
-export const showcaseData = [
+export const showcaseData = [{
+    id: 1,
+    bgImg: require("../img/showcaseBg1.png"),
+    title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
+    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+    subtitle: "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
+  },
   {
-  id: 1,
-  bgImg: require("../img/showcaseBg1.png"),
-  title: "КОМАНДА ВЫСОКОКЛАССНЫХ СПЕЦИАЛИСТОВ",
-  buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-  subtitle: "Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.",
-},
-{
-  id: 2,
-  bgImg: require("../img/showcaseBg2.png"),
-  title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
-  buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-},
-{
-  id: 3,
-  bgImg: require("../img/showcaseBg3.png"),
-  title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
-  buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
-},
+    id: 2,
+    bgImg: require("../img/showcaseBg2.png"),
+    title: "ЗАБОТЛИВЫЙ СЕРВИС И СВОЕВРЕВЕННАЯ ИНФОРМАЦИЯ",
+    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+  },
+  {
+    id: 3,
+    bgImg: require("../img/showcaseBg3.png"),
+    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+    buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
+  },
 ];
-export let dropData = [
-  {
+export let dropData = [{
     id: 1,
     title: "КОМПАНИЯ",
     focus: false,
     to: "/about",
-    data: [
-      {
+    data: [{
         id: 1,
         text: "продукты",
         to: '/products'
@@ -102,33 +101,34 @@ export let dropData = [
     title: "КАТАЛОГ",
     focus: false,
     to: '/category',
-    data: [
-      {
+    data: [{
         id: "ddfdf",
         text: "страна",
-        value:"country",
-        to: "/products",
-        active:false,
+        value: "country",
+        to: "/products?country",
+        active: false,
         focus: false,
-        drop:await fetchDataUnits("country","countries")
+        drop: await fetchDataUnits("country", "countries"),
+
       },
       {
         id: "aderr",
         text: "машина",
-        value:"car",
-        active:false,
-        to: '/products',
+        value: "car",
+        active: false,
+        to: '/products?car',
         focus: false,
-        drop:await fetchDataUnits("car","cars")
+        drop: await fetchDataUnits("car", "cars"),
       },
       {
         id: "dshj",
         text: "категория",
-        value:"category",
-        active:false,
-        to: '/products',
+        value: "category",
+        active: false,
+        to: '/products?category',
         focus: false,
-        drop:await fetchDataUnits("category","categories")
+        drop: await fetchDataUnits("category", "categories"),
+
       },
     ]
   },
@@ -137,17 +137,7 @@ export let dropData = [
     title: "УСЛУГИ",
     focus: false,
     to: "/service",
-    // data: [{
-    //     id: 1,
-    //     text: "ДИАГНОСТИКА АККУМУЛЯТОРА",
-    //     to: '/'
-    //   },
-    //   {
-    //     id: 2,
-    //     text: "ПРИЕМ АККУМУЛЯТОРОВ",
-    //     to: '/'
-    //   }
-    // ]
+    
   },
   {
     id: 4,

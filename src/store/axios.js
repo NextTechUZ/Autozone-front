@@ -7,4 +7,5 @@ import axios from "axios";
     category:"/category",
     one_product:(productID)=>`${productID}`
  }
+ 
  export {api,PRODUCT}

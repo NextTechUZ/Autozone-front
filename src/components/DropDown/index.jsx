@@ -50,7 +50,7 @@ function DropDown({id,hover,style}) {
         <ul onMouseLeave={()=>handleClose(data.id)} style={data.focus?{display:'block'}:{display:'none'}} className={styles.dropdown__list}>
             {data.data.map(data=>
             <li key={data .id} className={styles.dropdown__item}>
-              <Link onClick={()=>handleActives(data.id)} onMouseEnter={()=>handleFocus(data.id)} className={styles.dropdown__link} to={data.to} children={data.text}/>
+              <Link onMouseEnter={()=>handleFocus(data.id)}  className={styles.dropdown__link} to={data.to} children={data.text}/>
               {data.drop?<DropMenu id={id} dataId={data.id}/>:""}
             </li>
             )}
@@ -63,7 +63,7 @@ function DropDown({id,hover,style}) {
         <ul className={style}>
             {data.data?data.data.map(data=>
             <li key={data.id} className={styles.dropdown__item}>
-              <Link  className={styles.dropdown__link} to={data.to} children={data.text}/>
+              <Link onClick={()=>handleActives(data.id)}  className={styles.dropdown__link} to={data.to} children={data.text}/>
             </li>):<div></div>}
         </ul>
         </>

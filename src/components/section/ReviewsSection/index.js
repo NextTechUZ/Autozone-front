@@ -31,7 +31,7 @@ function Reviews() {
                 <Title  outline text="Для нас ценно любое Ваше мнение." children={"ОТЗЫВЫ"}/>
                 <Partners elements={partnersData} autoPlay={false} toShow={1}/>
                <div className={styles["reviews__button-wrapper"]}>
-               <Button color= "#C53720" value="ОСТАВИТЬ СВОЙ ОТЗЫВ"/>
+               <Button   style={{color:"#C53720"}} value="ОСТАВИТЬ СВОЙ ОТЗЫВ"/>
                </div>
             </div>
         </section>

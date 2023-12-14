@@ -19,7 +19,7 @@ function Sponsors({data}) {
                     </li>)}
                 </ul>            
                    <div className={styles.sponsors__button}>
-                   <Button  color="#fff" value="СТАТЬ ПАРТНЕРОМ" to="/" />
+                   <Button  style={{color:"#fff"}} value="СТАТЬ ПАРТНЕРОМ" to="/" />
                    </div>
             </div>
         </div>

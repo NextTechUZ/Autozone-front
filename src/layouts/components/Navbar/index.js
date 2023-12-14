@@ -26,7 +26,17 @@ const Navbar = () => {
     });
     setFocus(!focus)
   }
- 
+  function handleClose(id) {
+
+        dropData.forEach(element => {
+            if (element.id == id) {
+              element.focus = !element.focus
+              setFocus(!focus)
+            }
+          }); 
+          
+    
+ }
 function handleOpen() {
   setSearch(!search)
   handleSearchOpen()
@@ -44,16 +54,16 @@ function handleOpen() {
                 src={require("../../../img/logo.png")}
               ></img>
             </a>
-            <nav className={styles.header__nav}>
+            <nav  className={styles.header__nav}>
               <ul className={styles.header__list}>
                 {dropData.map(el=>
-                <li key={el.id}  className={styles.header__item}>
-                   <Link to={el.to} onMouseEnter ={()=>handleFocus(el.id)}  className={styles.header__item__link} children={el.title}/>
+                <li    key={el.id}   className={styles.header__item}>
+                   <Link  onMouseOver ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles.header__item__link} children={el.title}/>
                   {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
                 </li>)}
                
               </ul>
-              <Button to='/ask-question' color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" />
+              <Button to='/ask-question' style={{color:"#fff"}}  value="ЗАКАЗАТЬ ЗВОНОК" />
             </nav>
             
            <Search />

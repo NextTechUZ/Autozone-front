@@ -16,7 +16,7 @@ function Info({text,button}) {
                   </div>
                   <div className={styles["info__text-wrapper"]}>
                       <p className={styles.info__text}>{text}</p>
-                    <div className={styles["info__button-wrapper"]}> <Button color="#fff" value="УЗНАТЬ БОЛЬШЕ" /></div>
+                    <div className={styles["info__button-wrapper"]}> <Button  style={{color:"#fff"}} value="УЗНАТЬ БОЛЬШЕ" /></div>
                   </div>
               </div>
              </div>

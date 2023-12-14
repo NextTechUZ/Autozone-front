@@ -39,7 +39,7 @@
 .header__item {
     margin-right: 28px;
     position: relative;
-   @include hover-effect
+    @include hover-effect
 }
 
 .header__item__link {
@@ -50,7 +50,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-
+   
 }
 
 

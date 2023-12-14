@@ -87,7 +87,7 @@ function Form({color}) {
 
           <div className={styles["form__bottom"]}>
             <p className={styles.form__text}>* Обязательное поле</p>
-            <Button type="submit"  value="ОТПРАВИТЬ" color="#C53720"/>
+            <Button buttonType="submit"  value="ОТПРАВИТЬ"   style={{color:"#C53720"}}/>
           </div>
         </form>
     )

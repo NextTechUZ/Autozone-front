@@ -1,0 +1,80 @@
+.range {
+  padding: 0px;
+
+  .bar {
+    border-radius: 0px;
+
+    .bar-inner {
+      box-shadow: none;
+      border: none;
+    }
+
+    .bar-right,
+    .bar-left {
+      border-radius: 0px;
+      box-shadow: none;
+      max-height: 8px;
+    }
+
+    .bar-inner-left,
+    .bar-inner-right {
+      box-shadow: none;
+      min-height: 8px;
+    }
+
+    .thumb-right {
+      margin-right: 3px;
+      padding-left: 12px;
+
+      &::before {
+        width: 16px;
+        height: 28px;
+        border-radius: 0px;
+        background: url(../../img/range-slider.png) no-repeat center center;
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    .thumb-left {
+      margin-left: 12px;
+
+      &::before {
+        width: 16px;
+        height: 28px;
+        border-radius: 0px;
+        background: url(../../img/range-slider.png) no-repeat center center;
+        box-shadow: none;
+        border: none;
+      }
+    }
+
+    .caption {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+}
+
+.multi-range-slider {
+  padding: 0px;
+  width: 100%;
+}
+
+.range-wrapper {
+  padding: 0 8px;
+
+
+}
+
+.range-status-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.range-status {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}

@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom"
 import styles from "./index.module.scss"
 
-function Button({to,color,value,click,type}){
+function Button({to,style,value,click,buttonType}){
    if (to) {
     return(
-        <Link style={{color:color}} className={styles.button}  to={to}>
+        <Link style={style} className={styles.button}  to={to}>
                 {value}    
         </Link>
     )
    }
    return(
-    <button type={type} style={{color:color}} className={styles.button} onClick={click}>
+    <button type={buttonType} style={style} className={styles.button} onClick={click}>
         {value}
     </button>
    )

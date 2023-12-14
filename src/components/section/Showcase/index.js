@@ -18,7 +18,7 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
         modules={[Pagination, EffectFade, Autoplay]}
         className="mySwiper"
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         effect="fade"
@@ -31,7 +31,7 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
                 <div className={styles["showcase-item"]}>
               <img src={notFoundImg} alt="" />
               <Title fontStyle="italic" maxWidth="586px" size="4.8rem" text={subtitle} margin={titleMargin} textAlign="left" color="#fff" children={title} /> 
-               <div className={styles.showcase__button}><Button color="#fff" value="ПЕРЕЙТИ В КАТАЛОГ" />
+               <div className={styles.showcase__button}><Button style={{color:"#fff"}} value="ПЕРЕЙТИ В КАТАЛОГ" />
                </div>
                 </div>
             </div>
