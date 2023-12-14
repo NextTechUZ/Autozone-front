@@ -7,7 +7,7 @@
     background: url(../../../img//newssection-bg.jpg) no-repeat;
     background-size: cover;
     position: relative;
-
+     
     &::after {
         position: absolute;
         width: 236px;
@@ -43,4 +43,27 @@
 .news__info-text {
     font-size: 1.6rem;
     margin-bottom: 24px;
+}
+@media only screen and (max-width:1000px){
+.news__info{
+    &::after{
+        left: 10%;
+    }
+}
+}
+@media only screen and (max-width:840px){
+    .news__info{
+        &::after{
+            width: 186px;
+            height: 84px;
+            left: 0%;
+        }
+    }
+}
+@media only screen and (max-width:730px){
+.news__info{
+&::after{
+    display: none;
+}
+}
 }

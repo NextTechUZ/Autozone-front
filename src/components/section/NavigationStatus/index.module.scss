@@ -12,11 +12,12 @@
     &::after{
         position: absolute;
         content: '';
-        width: 20px;
-        height: 20px;
-        right: 0;
-        top: -3px;
-        background: url(../../../img/strelka.svg);
+        width: 2rem;
+        height: 2rem;
+        right: 2px;
+        top: -2px;
+        background: url(../../../img/strelka.svg) no-repeat center center;
+        background-size: contain;
        
     }
     &:first-child{

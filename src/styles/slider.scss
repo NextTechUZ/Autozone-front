@@ -1,21 +1,11 @@
-.slick-next {
-  width: 52px;
-  height: 52px;
-  background: url(../img/partnext.png) !important;
-  
-  &:hover {
-    background: url(../img/partnext.png);
-  }
+.slick-next { 
+  right: 0;
 }
 .slick-prev {
-  width: 52px;
-  height: 52px;
-  background: url(../img/partnext.png) !important;
+  left: 0;
   transform: rotate(180deg);
   transform-origin: 43% 21%;
-  &:hover {
-    background: url(../img/partnext.png);
-  }
+  
 }
 .slick-next,
 .slick-prev {
@@ -24,8 +14,11 @@
   }
 }
 .slick-arrow {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
+  background: url(../img/partnext.png) no-repeat center center !important;
+  background-size: cover !important;
+  z-index: 80;
 }
 .slick-disabled {
   opacity: 0.5;
@@ -36,8 +29,9 @@
   align-items: center;
 }
 .slick-list {
-  max-width: 90%;
+  max-width: 88%;
   margin: 0 auto;
+  position: relative;
 }
 .slick-slider{
   display: flex;
@@ -75,13 +69,16 @@
   text-align: center;
  
 }
-@media only screen and (max-width:600px){
-.slick-next{
-  margin-right: 15px;
-  
+@media only screen and (max-width:700px){
+.slick-list{
+  width: 80%;
 }
-.slick-prev{
-  margin-left: 10px;
 }
-
+@media only screen and (max-width:500px){
+  .slick-list{
+    width: 75%;
+  }
+  .swiper-pagination-bullet{
+    width: 75px;
+  }
 }

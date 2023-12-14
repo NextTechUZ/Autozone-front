@@ -51,8 +51,8 @@ function Hamburger() {
               {dropData.map(el=>
                   <li className={styles.hamburger__item} key={el.id}>
                  <Link   to={el.to} className={styles.hamburger__link} children={el.title}/>
-                  <input type='radio' onClick={()=>onlyOne(el.id)} name="check" className={styles["hamburger__item-dropbutton"]} ></input>
-                 <DropDown style={styles["dropdown__list"]} hover={false} id={el.id}/>
+                  <input type='radio' onClick={()=>onlyOne(el.id)} name="check" className={el.data?styles["hamburger__item-dropbutton"]:styles["hamburger__item-dropbutton--disabled"]} ></input>
+                 {el.data?<DropDown style={styles["dropdown__list"]} hover={false} id={el.id}/>:""}
                   </li> 
               )}
           </ul>

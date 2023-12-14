@@ -1,35 +1,36 @@
 import React from 'react'
 import "./styles.scss";
 import { useState } from "react";
-import MultiRangeSlider, { ChangeResult } from "multi-range-slider-react";
+import MultiRangeSlider from "multi-range-slider-react";
+import { price } from '../../store/store';
 
-function Range() {
-  const [minValue, setMinValue] = useState(0);
-  const [maxValue, setMaxValue] = useState(1000);
+function Range({min,max,changeMin,changeMax}) {
+  // const [minValue, setMinValue] = useState(min);
+  // const [maxValue, setMaxValue] = useState(max);
 
   function handleChangeRange(e){
-    setMaxValue(e.maxValue)
-    setMinValue(e.minValue)
+    changeMin(e.minValue)
+    changeMax(e.maxValue)
   }
-  function handleChangeInput(e) {
-    e.preventDefault()
-    setMinValue(e.minValue)
-  }
+  // function handleChangeInput(e) {
+  //   e.preventDefault()
+  //   setMinValue(e.minValue)
+  // }
     return (
         <div className="range-wrapper">
           <div className="range-status-wrapper">
-            <p className="range-status">{minValue}</p>
-            <p className="range-status">{maxValue}</p>
+            <p className="range-status">{min}</p>
+            <p className="range-status">{max}</p>
           </div>
           <MultiRangeSlider
-          min={0}
-          max={1000}
-          minValue={minValue}
-          maxValue={maxValue}
+          min={price.min}
+          max={price.max}
+          minValue={min}
+          maxValue={max}
           canMinMaxValueSame={false}
           label={false}
           ruler={false}
-          onInput={(e)=>handleChangeRange(e)}
+          onChange={(e)=>handleChangeRange(e)}
           style={{ border: "none", boxShadow: "none", borderRadius:"0", padding:"16px 0px 34px 0px"}}
           className='range'
           barLeftColor="green"

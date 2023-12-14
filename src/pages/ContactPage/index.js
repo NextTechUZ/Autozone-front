@@ -34,12 +34,17 @@ function Contact() {
             <Title size='3.6rem' children="КОНТАКТЫ" outline text='Аккумуляторы и автомасла в Перми' />
             <div className={styles.contact__wrapper}>
                 <div className={styles["contact__text-wrapper"]}>
-                    <h3 className={styles["contact__info-title"]}>Как с нами связаться</h3>
+                <div className={styles.contact__column}>
+                <h3 className={styles["contact__info-title"]}>Как с нами связаться</h3>
                     <p className={styles["contact__info-tel"]}>+7 (342) 279-36-13</p>
                     <p className={styles["contact__info-email"]}>proauto59@yandex.ru</p>
                     <p className={styles["contact__info-loc"]}>г. Пермь, Леонова 82 Б</p>
+                </div>
+                    <div className={styles.contact__column}>
                     <h3 className={styles["contact__info-title"]}>Режим работы</h3>
                     <p className={styles["contact__info-date"]}>Пн. – Вс.: с 9:00 до 18:00</p>
+                    </div>
+                
                 </div>
                 <iframe className={styles.contact__iframe} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.0587187570727!2d69.18349277522621!3d41.28582650228993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae89ade0861433%3A0xa6470d048143a930!2sIT%20HOUSE!5e0!3m2!1sru!2sde!4v1700752451116!5m2!1sru!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>

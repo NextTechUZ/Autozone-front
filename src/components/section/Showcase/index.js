@@ -31,7 +31,8 @@ function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
                 <div className={styles["showcase-item"]}>
               <img src={notFoundImg} alt="" />
               <Title fontStyle="italic" maxWidth="586px" size="4.8rem" text={subtitle} margin={titleMargin} textAlign="left" color="#fff" children={title} /> 
-               <div className={styles.showcase__button}><Button style={{color:"#fff"}} value="ПЕРЕЙТИ В КАТАЛОГ" />
+               <div className={styles.showcase__button}>
+                <Button style={{color:"#fff"}} value="ПЕРЕЙТИ В КАТАЛОГ" />
                </div>
                 </div>
             </div>

@@ -16,17 +16,19 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
 }
 
 html {
   font-size: 62.5%;
-  
+
 }
 
 body {
   font-family: "Inter", sans-serif;
   max-width: 1640px;
   margin: 0 auto;
+  
 }
 
 .container {
@@ -34,31 +36,6 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 
-  
-
-  // XX-Large devices (larger desktops, 1400px and up)
-  // @media (max-width: 1400px) {
-  //   padding: 0 10rem;
-  // }
-
-  // // X-Large devices (large desktops, 1200px and up)
-  // @media (max-width: 1200px) {
-  //   padding: 0 6rem;
-  // }
-
-  // // Large devices (desktops, 992px and up)
-  // @media (max-width: 992px) {
-  //   padding: 0 5rem;
-  // }
-
-  // // Medium devices (tablets, 768px and up)
-  // @media (max-width: 768px) {
-  //   padding: 0 4rem;
-  // }
-
-  // @media (max-width: 576px) {
-  //   padding: 0 2rem;
-  // }
 }
 
 @mixin hover-effect {
@@ -94,4 +71,14 @@ ol {
 
 a {
   text-decoration: none;
+}
+@media only screen and (max-width:800px){
+  html{
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width:500px){
+  html{
+    font-size: 40%;
+  }
 }

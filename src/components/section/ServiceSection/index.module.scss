@@ -101,7 +101,7 @@
 
 }
 
-@media only screen and (max-width:670px) {
+@media only screen and (max-width:800px) {
     .services__item {
         padding: 2rem;
         padding-left: 20rem;
@@ -128,28 +128,28 @@
         width: auto;
     }
 }
-@media only screen and (max-width:555px){
+@media only screen and (max-width:800px){
 
     .services__item {
         padding: 1.5rem;
-        padding-left: 13rem;
+        padding-left: 18rem;
 
         &::after {
-            width: 94px;
-            height: 87px;
+            width: 84px;
+            height: 77px;
             background-size: contain;
             background-repeat: no-repeat;
             left: 20px;
-            top: 30px;
+            top: 10px;
         }
 
         &::before {
-            width: 74px;
-            height: 60px;
+            width: 64px;
+            height: 50px;
             background-size: contain;
             background-repeat: no-repeat;
             left: 35px;
-            top: 40px;
+            top: 20px;
         }
     }
 

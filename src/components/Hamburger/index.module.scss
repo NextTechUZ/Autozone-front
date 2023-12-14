@@ -34,8 +34,8 @@
 .hamburger{
     display: block;
     position: fixed;
-    background-color: #0E0E0E;
-    top: 100px;
+    background-color: rgb(14, 14, 14,0.75);
+    top: 82px;
     left: 0;
     width: 40%;
     height: 100vh;
@@ -45,10 +45,10 @@
 }
 .hamburger--close{
     position: fixed;
-    background-color: #0E0E0E;
-    top: 100px;
+    background-color: rgb(14, 14, 14,0.75);
+    top: 82px;
     left: -100%;
-    width: 60%;
+    width: 40%;
     height: 100vh;
     animation-name: hamburger-close;
     animation-duration: 1000ms;
@@ -90,7 +90,16 @@
     appearance: none;
     background: url(../../img/strelka.svg);
 }
-
+.hamburger__item-dropbutton--disabled{
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    display: block;
+    height: 20px;
+    content: '';
+    right: 10px;
+    appearance: none;
+}
 .hamburger__item-dropbutton:checked + .dropdown__list{
     display: block;
 }
@@ -104,7 +113,7 @@
     display: none;
     top: 30px;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.85);
     min-width: 288px;
     padding: 10px 0px;
     animation-name: dropdown;
@@ -137,8 +146,9 @@
     width: 100%;
     height: 100vh;
     position: fixed;
-    background-color: #0E0E0E;
-    opacity: 0.5;
+    top: 82px;
+    background-color: rgb(14, 14, 14);
+    opacity: 0.4;
     left: 0;
 }
 .hamburger__button-wrapper{

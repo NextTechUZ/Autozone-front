@@ -12,7 +12,8 @@ function Title({
   fontWeight = "400",
   textWeight="",
   maxWidth="",
-  marginTop=""
+  marginTop="",
+  fontStyle="italic"
 }) {
   return (
     <div style={{
@@ -25,7 +26,7 @@ function Title({
         style={{
           fontSize: size,
           borderBottom: outline ? "4px solid var(--color-brand--1)" : "",
-          fontStyle: "italic",
+          fontStyle:fontStyle,
           fontWeight: fontWeight,
         }}
         className={styles.title}

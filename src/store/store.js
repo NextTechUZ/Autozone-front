@@ -9,7 +9,10 @@ export async function fetchDataUnits(fetch, array) {
     to: `/products?${fetch}=${element._id}`
   }))
 }
-
+ export const price={
+  min:0,
+  max:1000
+ }
 
 
 export const newsData = [{

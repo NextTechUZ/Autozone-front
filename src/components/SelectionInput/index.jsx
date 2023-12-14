@@ -1,10 +1,21 @@
 import React from 'react'
 import styles from './index.module.scss'
-function SelectionInput({min,max}) {
+import { price } from '../../store/store';
+function SelectionInput({min,max,changeMin,changeMax}) {
+    function handleChangeMin(evt) {
+        if (+evt.target.value < max) {
+            changeMin(+evt.target.value)
+        }
+    }
+    function handleChangeMax(evt) {
+        if (+evt.target.value > min && +evt.target.value < price.max) {
+            changeMax(+evt.target.value)
+        }   
+    }
     return (
         <div className={styles.selection}>
-            <input className={styles.selection__input}  type="text" defaultValue={min} />
-            <input className={styles.selection__input} type="text"  defaultValue={max}/>
+            <input onChange={handleChangeMin} className={styles.selection__input} type="number" defaultValue={min} />
+            <input  onChange={handleChangeMax}  className={styles.selection__input} type="number"  defaultValue={max}/>
         </div>
     )
 }

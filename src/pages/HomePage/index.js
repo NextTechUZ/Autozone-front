@@ -106,7 +106,7 @@ function HomePage() {
     <Title outline color={"black"} children={"новости"}/>
     <News data={newsData}/>
     </section>
-    
+  
     <Partners autoPlay={true} toShow={toShow} elements={partnersData} />
     </>
   )

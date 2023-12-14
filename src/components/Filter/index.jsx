@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from './style.module.scss'
-import FilterDrop from '../FilterDrop'
-import Range from '../RangeInput'
 import FilterCategory from '../FilterCategory'
 import FilterSelection from '../FilterSelection'
 
@@ -24,7 +22,7 @@ function Filter({dropdata,onClick,queryObject}) {
     return (
         <section className={styles.filter}>
             <FilterCategory queryObject={queryObject} onClick={onClick} dropdata={dropdata}/>
-             <FilterSelection/>
+             <FilterSelection queryObject={queryObject} onClick={onClick}  />
         </section>
     )
 }

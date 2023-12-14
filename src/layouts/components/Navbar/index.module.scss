@@ -12,7 +12,7 @@
 
 .header {
     background-color: #0e0e0ebf;
-    padding: 20px 0px;
+    padding: 20px 0;
     color: #fff;
     position: fixed;
     top: 0;
@@ -105,5 +105,10 @@
     .header__manage {
         width: 150px;
         justify-content: space-between;
+    }
+    .header__logo{
+        width:100px;
+
+        height: 40px;
     }
 }

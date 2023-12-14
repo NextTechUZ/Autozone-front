@@ -44,6 +44,7 @@
   border-top: 3px solid rgba(197, 55, 32, 1);
   padding-bottom: 24px;
   margin-bottom: 8px;
+  width: 100%;
 }
 .filter__category-item{
   position: relative;
@@ -51,6 +52,7 @@
 }
 
 .filter__category-button {
+  display: block;
   @include filter-button()
 }
 
@@ -100,7 +102,7 @@
   background: #1D1D1D;
   opacity: 0.8;
 }
-.filter__selection-wrapper{
+.filter__selection{
   background: #000000;
 }
 .filter__selection-title{
@@ -113,6 +115,7 @@ padding-top: 12px;
 padding-bottom: 12px;
 }
 .filter__selection-label{
+  display: block;
   @include filter-button()
 }
 .filter__selection-item-wrapper {
@@ -143,4 +146,35 @@ background-color: #C53720;
   display: flex;
   padding: 28px 12px;
   justify-content: space-between;
+}
+@media only screen and (max-width:645px){
+  .filter{
+    max-width: 100%;
+    min-width: 95%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .filter__category-list{
+    width: 220px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  .filter__selection{
+    width: 220px;
+    flex-shrink: 0;
+  }
+}
+@media only screen and (max-width:477px){
+  .filter__category-list{
+    width: 100%;
+    margin-right: 0px;
+   
+  }
+  .filter__selection{
+    width: 100%;
+    
+  }
 }

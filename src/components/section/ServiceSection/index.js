@@ -29,7 +29,7 @@ function Services() {
                 <p className={styles.services__item__text}>Приезжайте к нам и мы бесплатно проведём диагностику вашего аккумулятора!</p>
             </li>
           </ul>
-         <div className={styles["services__button-wrapper"]}> <Button color="#fff" value="ЗАКАЗАТЬ ЗВОНОК" /></div>
+         <div className={styles["services__button-wrapper"]}> <Button style={{color:"#fff"}} value="ЗАКАЗАТЬ ЗВОНОК" /></div>
         </div>
         </div>     
         </div>

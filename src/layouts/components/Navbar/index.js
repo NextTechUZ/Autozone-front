@@ -49,8 +49,9 @@ function handleOpen() {
           <div className={styles.header__container}>
             <a href="/">
               <img
-                width="132"
-                height="58"
+                 width="132"
+                 height="58"
+              className={styles.header__logo}
                 src={require("../../../img/logo.png")}
               ></img>
             </a>
