@@ -2,7 +2,19 @@ import ImgCard from "../../ImgCard";
 import Subtitle from "../../Subtitle";
 import Title from "../../Title";
 import styles from "./index.module.scss";
-function Directory({ data, title, subtitle }) {
+import {getData} from "../../../services/useApi"
+import { PRODUCT } from "../../../store/axios";
+import { useQuery } from "react-query";
+import Loader from "../../Loader";
+
+function Directory({ title, subtitle }) {
+  async function category(){ 
+    const data = await getData(PRODUCT.category)
+    return await data.data.categories
+     }
+
+   const {isLoading,data}=useQuery("data",category)
+
   return (
     <div className={styles.wrapper}>
       <Title textAlign="center" outline>
@@ -10,7 +22,8 @@ function Directory({ data, title, subtitle }) {
       </Title>
       <Subtitle uppercase={true}>{subtitle}</Subtitle>
       <div className={styles.directory}>
-        {data?.map(({ _id, image, title }) => (
+        {isLoading?<Loader/>:
+        data?.map(({ _id, image, title }) => (
           <ImgCard key={_id} imgUrl={image} title={title} />
         ))}
       </div>
