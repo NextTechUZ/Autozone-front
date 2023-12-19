@@ -2,7 +2,7 @@ import React, {
   useEffect,
   useState
 } from 'react'
-import styles from "./style.module.scss"
+import styles from "./index.module.scss"
 import Title from '../../components/Title'
 import Showcase from '../../components/section/Showcase'
 import {
@@ -13,10 +13,6 @@ import {
 import NavigationStatus from '../../components/section/NavigationStatus'
 import ProductsMain from '../../components/section/ProductsMain'
 import {
-  getData
-} from '../../services/useApi'
-import {
-  PRODUCT,
   api
 } from '../../store/axios'
 import {
@@ -70,7 +66,7 @@ function ProductsPage() {
   }
 
   let {isLoading,data} = useQuery(["products", query], () => getQuery(query));
-
+console.log(isLoading);
   return (
     <div>
       <Showcase data={showcaseData} />

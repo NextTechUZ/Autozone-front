@@ -20,7 +20,6 @@ const Navbar = () => {
   function handleFocus(id) {
     dropData.forEach(element => {
       if ((element.id == id) && (element.data!==undefined)){
-        console.log(element.data);
         element.focus = true
       } else {
         element.focus = false

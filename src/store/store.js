@@ -112,7 +112,7 @@ export let dropData = [{
     ]
   },
   {
-    id: 1,
+    id: 3,
     title: "О НАС",
     focus: false,
     to: "/service",

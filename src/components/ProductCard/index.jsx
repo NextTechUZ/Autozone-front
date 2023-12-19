@@ -3,7 +3,7 @@ import Button from '../Button'
 import styles from './index.module.scss'
 
 function ProductCard({image,title,created,categoryTitle,carTitle,countryTitle}) {
-console.log(image);
+
     const getDateFromString = str => {
         const tzoffset = (new Date()).getTimezoneOffset() * 60000;
         const d = new Date(str)
