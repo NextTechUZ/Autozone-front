@@ -34,8 +34,8 @@
 .hamburger{
     display: block;
     position: fixed;
-    background-color: rgb(14, 14, 14,0.75);
-    top: 82px;
+    background-color: rgb(14, 14, 14,0.85);
+    top: 100px;
     left: 0;
     width: 40%;
     height: 100vh;
@@ -45,9 +45,9 @@
 }
 .hamburger--close{
     position: fixed;
-    background-color: rgb(14, 14, 14,0.75);
-    top: 82px;
-    left: -100%;
+    background-color: rgb(14, 14, 14,0.85);
+    top: 100px;
+    left: -120%;
     width: 40%;
     height: 100vh;
     animation-name: hamburger-close;
@@ -113,8 +113,8 @@
     display: none;
     top: 30px;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.85);
-    min-width: 288px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
     padding: 10px 0px;
     animation-name: dropdown;
     animation-duration: 400ms;
@@ -146,7 +146,7 @@
     width: 100%;
     height: 100vh;
     position: fixed;
-    top: 82px;
+    top: 100px;
     background-color: rgb(14, 14, 14);
     opacity: 0.4;
     left: 0;
@@ -158,13 +158,35 @@
     .hamburger__wrapper{
         display: block;
     }
+   
+}
+@media only screen and (max-width:800px){
+.hamburger{
+    top: 88px;
+}
+.hamburger__gradient{
+    top: 88px;
+}
+.hamburger--close{
+    top: 88px;
+}
 }
 @media only screen and (max-width:710px){
 .hamburger{
     width: 55%;
 }
+
 }
 @media only screen and (max-width:500px){
+    .hamburger{
+        top: 79px;
+    }
+    .hamburger__gradient{
+        top: 79px;
+    }
+    .hamburger--close{
+        top: 79px;
+    }
     .hamburger__item{
         margin: 20px;
         margin-bottom: 0;

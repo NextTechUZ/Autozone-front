@@ -1,11 +1,16 @@
 import React from "react";
 
 import Directory from "../../components/section/Directory";
+import Loader from "../../components/Loader" 
 import NavigationStatus from "../../components/section/NavigationStatus";
 import Showcase from "../../components/section/Showcase";
 import ShowcaseImg1 from "../../img/showcaseBg1.png";
 import ShowcaseImg2 from "../../img/showcaseBg2.png";
 import ShowcaseImg3 from "../../img/showcaseBg3.png";
+import { getData } from "../../services/useApi";
+import { PRODUCT, api } from "../../store/axios";
+import { useQuery } from "react-query";
+import styles from './index.module.scss'
 
 const navData = [{
   id: 1,
@@ -40,17 +45,28 @@ const showcaseDAta = [
     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
   },
 ];
+
 function CategoryPage() {
+
+  async function category(){ 
+    const data = await getData(PRODUCT.category)
+    return await data.data.categories
+     }
+
+   const {isLoading,data}=useQuery("data",category)
+   console.log(isLoading);
   return (
-    <div className="">
+    <>
       <Showcase titleMargin="0 0 3rem" data={showcaseDAta} />
       <NavigationStatus  data={navData}/>
+      {isLoading?<Loader/>:
       <Directory
         subtitle="Мы предлагаем лучшие цены на продукцию!"
         title="КАТАЛОГ"
         data={data}
       />
-    </div>
+  }
+    </>
   );
 }
 

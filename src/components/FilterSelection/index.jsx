@@ -11,14 +11,30 @@ import { useEffect } from 'react'
 function FilterSelection({queryObject,onClick}) {
     const [min,setMin] =useState(price.min);
     const [max,setMax]=useState(price.max);
-   
+    const debounce = (mainFunction, delay) => {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          mainFunction(...args);
+        }, delay);
+      };
+    };
     function handleChange() {
-       onClick(`minPrice=${min}&maxPrice=${max}`)
+       onClick({...queryObject,minPrice:min,maxPrice:max})
     }
+    const debouncedSearchData = debounce(handleChange, 2000);
     useEffect (()=>{
-       handleChange()
+      debouncedSearchData()
+      price.minValue=min;
+      price.maxValue=max
     },[max,min])
-
+     
+    function resetInputs() {
+      setMin(price.min);
+      setMax(price.max)
+    }
+    
     return (
         <div className={styles["filter__selection"]}>
             <h3 className={styles["filter__selection-title"]}>ПОДБОР ПАРАМЕТРОВ</h3>
@@ -38,8 +54,7 @@ function FilterSelection({queryObject,onClick}) {
                 </div>
              </div>
              <div className={styles["filter__selection-buttons"]}>
-                <Button  style={{padding:"8px 16px" , color:"#fff"}}  value="ПОКАЗАТЬ" />
-                <Button style={{padding:"8px 16px" , color:"#fff"}} value="СБРОСИТЬ" />
+                <Button click={resetInputs} style={{padding:"8px 16px" , color:"#fff",margin:" 0 auto"}} value="СБРОСИТЬ" />
              </div>
              <p className={styles["filter__selection-info"]}>Подберём аккумулятор и масло конкретно на ваш автомобиль. Цель нашего магазина - предложение широкого ассортимента товаров.</p>
         </div>

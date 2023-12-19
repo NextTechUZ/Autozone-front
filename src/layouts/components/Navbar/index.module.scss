@@ -11,7 +11,7 @@
 }
 
 .header {
-    background-color: #0e0e0ebf;
+    background-color: rgba(14, 14, 14, 0.749);
     padding: 20px 0;
     color: #fff;
     position: fixed;
@@ -26,7 +26,10 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.header__logo{
+    width: 13.2rem;
+    height:5.8rem ;
+}
 .header__nav {
     display: flex;
     align-items: center;
@@ -54,12 +57,11 @@
 }
 
 
-.header__search__button {
-    width: 40px;
-    height: 40px;
+.header__search-button {
+    width: 4rem;
+    height: 4rem;
     background-color: transparent;
     border: none;
-    margin-right: 20px;
     cursor: pointer;
     background: url(../../../img/lupa.svg) no-repeat center center;
 
@@ -70,14 +72,6 @@
     align-items: center;
 }
 
-.header__shop__button {
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-}
 
 @media only screen and (max-width:1155px) {
     .header__item {
@@ -101,14 +95,9 @@
     .header__nav {
         display: none;
     }
-
-    .header__manage {
-        width: 150px;
-        justify-content: space-between;
-    }
-    .header__logo{
-        width:100px;
-
-        height: 40px;
-    }
+   .header__search-button{
+    margin-right: 20px;
+   }
+    
+   
 }

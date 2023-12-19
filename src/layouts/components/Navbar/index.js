@@ -62,22 +62,13 @@ function handleOpen() {
                    <Link  onMouseOver ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles.header__item__link} children={el.title}/>
                   {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
                 </li>)}
-               
               </ul>
               <Button to='/ask-question' style={{color:"#fff"}}  value="ЗАКАЗАТЬ ЗВОНОК" />
             </nav>
             
            <Search />
             <div className={styles.header__manage}>
-              <button onClick={handleOpen} className={styles.header__search__button}></button>
-             
-              <a href="/">
-                <img  
-                  width="40"
-                  height="40"
-                  src={require("../../../img/user.png")}
-                ></img>
-              </a>
+              <button onClick={handleOpen} className={styles["header__search-button"]}></button>
               <Hamburger />
             </div>
            

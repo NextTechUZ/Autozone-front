@@ -9,9 +9,11 @@ export async function fetchDataUnits(fetch, array) {
     to: `/products?${fetch}=${element._id}`
   }))
 }
- export const price={
+ export let price={
   min:0,
-  max:1000
+  max:1000000,
+  minValue:0,
+  maxValue:1000000
  }
 
 
@@ -74,28 +76,8 @@ export let dropData = [{
       },
       {
         id: 3,
-        text: "ЛИЦЕНЗИИ",
-        to: '/'
-      },
-      {
-        id: 4,
         text: "ПАРТНЕРЫ",
         to: '/about#partners'
-      },
-      {
-        id: 5,
-        text: "ОТЗЫВЫ КЛИЕНТОВ",
-        to: '/'
-      },
-      {
-        id: 6,
-        text: "РЕКВИЗИТЫ",
-        to: '/'
-      },
-      {
-        id: 7,
-        text: "ВАКАНСИИ",
-        to: '/'
       },
     ]
   },
@@ -109,8 +91,6 @@ export let dropData = [{
         text: "страна",
         value: "country",
         to: "/products?country",
-        active: false,
-        focus: false,
         drop: await fetchDataUnits("country", "countries"),
 
       },
@@ -118,18 +98,14 @@ export let dropData = [{
         id: "aderr",
         text: "машина",
         value: "car",
-        active: false,
         to: '/products?car',
-        focus: false,
         drop: await fetchDataUnits("car", "cars"),
       },
       {
         id: "dshj",
         text: "категория",
         value: "category",
-        active: false,
         to: '/products?category',
-        focus: false,
         drop: await fetchDataUnits("category", "categories"),
 
       },
@@ -140,7 +116,6 @@ export let dropData = [{
     title: "УСЛУГИ",
     focus: false,
     to: "/service",
-    
   },
   {
     id: 4,

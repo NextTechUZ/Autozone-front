@@ -3,7 +3,7 @@
     background-size: cover;
     color: #fff;
     background-attachment: fixed;
-   margin-bottom: 88px;
+    margin-bottom: 88px;
 }
 
 .info__gradient {
@@ -17,7 +17,7 @@
     //justify-content: space-between;
     align-items: flex-start;
     margin-top: 100px;
-    
+
 }
 
 .info__img__wrapper {
@@ -28,15 +28,16 @@
     flex-shrink: 0;
     position: relative;
     clip-path: polygon(0 26.3%,
-    25.7% 0,
-    100% 0,
-    100% 100%,
-    100% 73%,
-    74% 100%,
-    10% 100%,
-    0% 100%,
-    0% 0%);
+            25.9% 0,
+            100% 0,
+            100% 100%,
+            100% 73.5%,
+            74.5% 100%,
+            10% 100%,
+            0% 100%,
+            0% 0%);
     z-index: 3;
+
     &::after {
         position: absolute;
         width: 100%;
@@ -48,8 +49,8 @@
 }
 
 .info__text-wrapper {
-   background: rgba(29, 29, 29, 0.6);
-   border: 4px #C53720 solid;
+    background: rgba(29, 29, 29, 0.6);
+    border: 4px #C53720 solid;
 }
 
 .info__text {
@@ -64,25 +65,30 @@
     margin-left: 30px;
     padding-bottom: 3rem;
 }
-.info__recwrapper{
+
+.info__recwrapper {
     margin-top: 24px;
     display: flex;
 
 }
-.info__reclist{
+
+.info__reclist {
     flex-shrink: 0;
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
 }
-.info__rectext{
+
+.info__rectext {
     font-size: 1.6rem;
     text-align: center;
 }
-.info__item{
+
+.info__item {
     text-align: center;
     margin-bottom: 36px;
-    &:nth-child(2){
+
+    &:nth-child(2) {
         color: #C53720;
     }
 }
@@ -92,7 +98,7 @@
         flex-direction: column;
         align-items: center;
     }
-    
+
     .info__img__wrapper {
         margin: 0 auto;
         margin-bottom: 20px;
@@ -106,17 +112,40 @@
         text-align: center;
     }
 }
-@media only screen and (max-width:650px){
-    .info__recwrapper{
+
+@media only screen and (max-width:650px) {
+    .info__recwrapper {
         flex-direction: column;
     }
-    .info__reclist{
+
+    .info__reclist {
         flex-direction: row;
         margin: 20px auto;
         align-items: center;
     }
-    .info__item{
+
+    .info__item {
         margin-left: 24px;
-        
+
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .info__img__wrapper {
+        width: 250px;
+        height: 237px;
+        background-size: cover;
+        clip-path: polygon(0 26.6%,
+        25.9% 0,
+        100% 0,
+        100% 100%,
+        100% 74.5%,
+        76% 100%,
+        10% 100%,
+        0% 100%,
+        0% 0%);
+        &::after {
+            background-size: cover;
+        }
     }
 }

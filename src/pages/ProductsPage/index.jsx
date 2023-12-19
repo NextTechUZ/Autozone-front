@@ -7,6 +7,7 @@ import Title from '../../components/Title'
 import Showcase from '../../components/section/Showcase'
 import {
   dropData,
+  price,
   showcaseData
 } from '../../store/store'
 import NavigationStatus from '../../components/section/NavigationStatus'
@@ -75,7 +76,7 @@ function ProductsPage() {
       <Showcase data={showcaseData} />
       <NavigationStatus data={navData} />
       <div className='container'>
-        <Title children="MAGNUM - каталог АКБ от 60 до 230Ah" textAlign='left' margin='89px 0px 49px 0px' />
+        <Title children={`каталог от ${price.minValue} до ${price.maxValue}`} textAlign='left' margin='89px 0px 49px 0px' />
         <div className={styles.product__container}>
             <Filter queryObject={queryObject} onClick={setSearchParams} dropdata={dropData[1].data} />
           {isLoading ? <Loader /> : <ProductsMain data={data} />}

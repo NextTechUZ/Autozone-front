@@ -3,7 +3,7 @@ import Button from '../Button'
 import styles from './index.module.scss'
 
 function ProductCard({image,title,created,categoryTitle,carTitle,countryTitle}) {
-
+console.log(image);
     const getDateFromString = str => {
         const tzoffset = (new Date()).getTimezoneOffset() * 60000;
         const d = new Date(str)
@@ -12,7 +12,7 @@ function ProductCard({image,title,created,categoryTitle,carTitle,countryTitle}) 
   
     return (
         <li  className={styles.product__item}>
-               <img width="264" height="174" src={image ? `https://api.autozoneshop.uz/images/z${image}` : "https://picsum.photos/id/264/174"} className={styles["product__item-img"]}></img>
+               <img width="264" height="174" src={image ? `https://api.autozoneshop.uz/images/${image}` : "https://picsum.photos/id/264/174"} className={styles["product__item-img"]}></img>
                <div className={styles["product__text-wrapper"]}>
                   <p className={styles["product__item-text"]}>{title}</p>
                   <p className={styles["product__item-status"]}>{countryTitle}</p>
