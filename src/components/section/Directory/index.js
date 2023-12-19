@@ -24,7 +24,7 @@ function Directory({ title, subtitle }) {
       <div className={styles.directory}>
         {isLoading?<Loader/>:
         data?.map(({ _id, image, title }) => (
-          <ImgCard key={_id} imgUrl={image} title={title} />
+          <ImgCard key={_id} imgUrl={image} title={title}  />
         ))}
       </div>
     </div>
