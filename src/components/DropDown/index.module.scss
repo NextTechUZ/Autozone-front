@@ -1,22 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/ramabhadra');
- @keyframes dropdown{
-    0%{
-        top: 0px;
-    }
-    100%{
-        top: 40px;
-    }
- }
 
 .dropdown__list {
     position: absolute;
-    top: 40px;
+    top: 25px;
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.9);
     min-width: 288px;
     padding: 1rem 0px;
-    animation-name: dropdown;
-    animation-duration: 400ms;
     &::after {
         position: absolute;
         width: 94px;

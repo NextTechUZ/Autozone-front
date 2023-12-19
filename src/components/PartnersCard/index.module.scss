@@ -1,0 +1,19 @@
+.news__item {
+  margin-top: 4rem;
+  background: #1d1d1d;
+  color: #fff;
+  position: relative;
+  list-style: none;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.news__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 0em;
+  margin: 2rem;
+  margin-bottom: 4rem;
+}

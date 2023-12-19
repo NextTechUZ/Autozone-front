@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from '../section/News/index.module.scss'
+import React from "react";
+import styles from "../section/News/index.module.scss";
 
 function NewsCard({date,img,text,to}) {
     return (
@@ -12,4 +12,4 @@ function NewsCard({date,img,text,to}) {
     )
 }
 
-export default NewsCard
+export default NewsCard;

@@ -15,4 +15,4 @@ function Button({to,style,value,click,buttonType}){
     </button>
    )
 }
-export default Button
+export default Button;

@@ -1,0 +1,13 @@
+
+
+.news{
+  @import url(../../../styles/slider.scss);  
+  .slick-prev {
+     rotate: 180deg;
+     transform: translate(0);
+   }
+   .slick-next {
+    transform: translate(0);
+  }
+ }
+ 

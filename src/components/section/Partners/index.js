@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './index.module.scss'
 function Partners({elements,autoPlay,toShow}) {
@@ -31,9 +31,8 @@ function Partners({elements,autoPlay,toShow}) {
             </div>:<img className={styles['partners__item-img']}  src={el.img} width={el.width} height={el.height}></img>}
           </div>)}
         </Slider>
-        </div>
-      </section>
-    );
-  
+      </div>
+    </section>
+  );
 }
-export default Partners
+export default Partners;

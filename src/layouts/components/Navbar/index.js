@@ -5,6 +5,7 @@ import React, {
 import styles from "./index.module.scss";
 import DropDown from "../../../components/DropDown";
 import {
+  Caa,
   dropData, handleSearchOpen, searchControl
 } from "../../../store/store";
 import Search from "../../../components/Search";
@@ -18,8 +19,9 @@ const Navbar = () => {
 
   function handleFocus(id) {
     dropData.forEach(element => {
-      if (element.id == id) {
-        element.focus = !element.focus
+      if ((element.id == id) && (element.data!==undefined)){
+        console.log(element.data);
+        element.focus = true
       } else {
         element.focus = false
       }
@@ -44,7 +46,7 @@ function handleOpen() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={styles.header} >
         <div className="container">
           <div className={styles.header__container}>
             <a href="/">
@@ -58,15 +60,15 @@ function handleOpen() {
             <nav  className={styles.header__nav}>
               <ul className={styles.header__list}>
                 {dropData.map(el=>
-                <li    key={el.id}   className={styles.header__item}>
-                   <Link  onMouseOver ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles.header__item__link} children={el.title}/>
+                <li  key={el.id}   className={styles.header__item}>
+                   <Link  onMouseEnter ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles["header__item-link"]} children={el.title}/>
                   {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
                 </li>)}
               </ul>
               <Button to='/ask-question' style={{color:"#fff"}}  value="ЗАКАЗАТЬ ЗВОНОК" />
             </nav>
             
-           <Search />
+              <Search/>
             <div className={styles.header__manage}>
               <button onClick={handleOpen} className={styles["header__search-button"]}></button>
               <Hamburger />

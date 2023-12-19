@@ -2,7 +2,10 @@
   padding: 4rem;
   background: url(../../../img/directory-bg.png);
 }
-
+.title_sector{
+  width: 60%;
+  margin: auto;
+}
 .directory {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

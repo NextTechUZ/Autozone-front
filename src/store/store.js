@@ -22,14 +22,14 @@ export const newsData = [{
     img: require("../img/news1.jpg"),
     date: "2 февраля 2020 года",
     text: "У НАС НОВЫЙ ЛОГОТИП И НОВЫЙ САЙТ!",
-    link: "/"
+    link: "/",
   },
   {
     id: 2,
     img: require("../img/news2.jpg"),
     date: "10 февраля 2020 года",
     text: "ОБНОВЛЕНИЕ ЛИНЕЙКИ АККУМУЛЯТОРОВ VARTRA ",
-    link: "/"
+    link: "/",
   },
   {
     id: 3,
@@ -112,86 +112,84 @@ export let dropData = [{
     ]
   },
   {
-    id: 3,
-    title: "УСЛУГИ",
+    id: 1,
+    title: "О НАС",
     focus: false,
     to: "/service",
   },
   {
     id: 4,
-    title: "ИНФОРМАЦИЯ",
+    title: "НОВОСТИ",
     focus: false,
-    to: "/info",
-    data: [{
-        id: 1,
-        text: "НОВОСТИ",
-        to: '/'
-      },
-      {
-        id: 2,
-        text: "F.A.Q",
-        to: '/ask-question'
-      }
-    ]
+    to: "/news",
   },
   {
     id: 5,
     title: "КОНТАКТЫ",
     focus: false,
     to: "/contacts",
-  }
+    data: [
+      {
+        id: 2,
+        text: "F.A.Q",
+        to: "/faq",
+      }
+    ],
+  },
 ]
 
-export let searchControl = false
+export let searchControl = false;
 export function handleSearchOpen() {
-  searchControl = true
+  searchControl = true;
 }
 export function handleSearchClose() {
-  searchControl = false
+  searchControl = false;
 }
-export const products = [{
+export const products = [
+  {
     id: 1,
-    name: 'Гелиевые Аккумуляторы OPTIMA',
-    to: "/"
+    name: "Гелиевые Аккумуляторы OPTIMA",
+    to: "/",
   },
   {
     id: 2,
-    name: 'Оригинальные Аккумуляторы',
-    to: "/"
+    name: "Оригинальные Аккумуляторы",
+    to: "/",
   },
   {
     id: 3,
-    name: 'АКБ MAGNUM',
-    to: "/"
+    name: "АКБ MAGNUM",
+    to: "/",
   },
   {
     id: 4,
     name: "АКБ EDCON",
-    to: '/'
+    to: "/",
   },
   {
     id: 5,
     name: "АКБ AFA",
-    to: '/'
+    to: "/",
   },
   {
     id: 6,
     name: "АКБ BOSCH",
-    to: '/'
+    to: "/",
   },
   {
     id: 7,
     name: "АКБ MUTLU",
-    to: '/'
+    to: "/",
   },
   {
     id: 8,
     name: "ОРИГИНАЛЬНЫЕ АКБ",
-    to: '/'
+    to: "/",
   },
   {
     id: 9,
     name: "ГЕЛИЕВЫЕ АКБ OPTIMA",
-    to: '/'
-  }
-]
+    to: "/",
+  },
+];
+

@@ -7,7 +7,7 @@ import "swiper/css/effect-fade";
 import Button from  '../../Button'
 import styles from "./index.module.scss";
 
-function Showcase({ subtitle, notFoundImg, data, titleMargin }) {
+function Showcase({ subtitle, notFoundImg, data, titleMargin = "0 0 3rem" }) {
   return (
     <div>
       <Swiper

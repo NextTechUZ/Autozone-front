@@ -28,13 +28,15 @@
         z-index: -1;
     }
 }
-
+.title_sector{
+    width: 60%;
+    margin: auto;
+}
 .services__item {
     padding: 4rem;
     padding-left: 20rem;
     position: relative;
-
-    &:first-child {
+    &:hover{
         background: url(../../../img/servitem.png) no-repeat;
     }
 

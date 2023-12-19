@@ -4,7 +4,7 @@ function Subtitle({
   textAlign = "center",
   children,
   color = "var(--color-brand--2)",
-  size = "2.6rem",
+  size = "2.4rem",
   margin = "0",
   maxWidth = "",
 }) {

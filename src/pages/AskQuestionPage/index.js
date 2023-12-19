@@ -3,8 +3,11 @@ import Subtitle from "../../components/Subtitle";
 import Title from "../../components/Title";
 import Form from "../../components/section/FormSection";
 import styles from "./index.module.scss";
+import { useMutation } from "react-query";
+import axios from "axios";
 
 function AskQuestionPage() {
+  
   return (
     <div className={styles.ask}>
         <div className={styles.ask__header}>

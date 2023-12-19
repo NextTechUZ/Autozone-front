@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './index.module.scss'
+import "./index.scss"
 import Title from '../../Title'
 import NewsCard from '../../newsCard'
 import Button from '../../Button'
+import Slider from 'react-slick'
 
 function News({data}) {
+  let [isopen,SetIsOpen]=useState(true)
     return (
         <>
             <ul className={styles.news__list}>
                 {
-                    data.map((el)=>
-                    <NewsCard key={el.id}to={el.link} date={el.date} img={el.img} text={el.text}/>
+                    data?.news?.map((el)=>(
+                    <div className={styles.news_wrapper} key={el.id}>
+                      <img src={el.image}/>
+                      <div className={styles.news_wrapper_date}>{el.created}</div>
+                      <div className={styles.news_wrapper_desc}>{el.description}</div>
+                    </div>)
                     )
                 }
             </ul>
