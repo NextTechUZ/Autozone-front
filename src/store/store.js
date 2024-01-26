@@ -1,14 +1,5 @@
-import axios from "axios";
+import { fetchDataUnits } from "../services/useApi";
 
-export async function fetchDataUnits(fetch, array) {
-  const data = (await axios.get(`https://api.autozoneshop.uz/api/${fetch}`)).data.data[array];
-  return data.map((element) => ({
-    ...element,
-    active: false,
-    value: fetch,
-    to: `/products?${fetch}=${element._id}`
-  }))
-}
  export let price={
   min:0,
   max:1000000,
@@ -63,7 +54,7 @@ export let dropData = [{
     id: 1,
     title: "КОМПАНИЯ",
     focus: false,
-    to: "/about",
+    to: "/",
     data: [{
         id: 1,
         text: "продукты",

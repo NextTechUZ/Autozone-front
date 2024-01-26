@@ -9,9 +9,7 @@ import Info from '../../components/section/Info'
 import News from '../../components/section/News'
 import Partners from '../../components/section/Partners'
 import Directory from '../../components/section/Directory'
-import {
-  data
-} from '../CategoryPage'
+
 import {
   newsData, showcaseData
 } from '../../store/store'

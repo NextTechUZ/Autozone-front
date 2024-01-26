@@ -21,14 +21,24 @@ function DropMenu({id,dataId}) {
   //      else element.active=false
   //     })
   //  }
+  if (findData?.drop.status) {
+    return(
+      <ul  style={findData.focus?{display:'block'}:{display:'none'}} className={styles.drop__list}>
+        <li className='error-text'>{findData?.drop.status}</li>
+      </ul>
+      
+    )
+  }
     return (
        <div >
          <ul  style={findData.focus?{display:'block'}:{display:'none'}} className={styles.drop__list}>
-            {findData.drop?.map(el=>
-            <li className={styles.drop__item} key={el._id}>
-                <Link  to={el.to}  children={el.title}  className={styles.drop__link}/>
-                  {/* <input type="checkbox" id={el._id} /> */}
-            </li>)}
+            {
+              findData.drop?.map(el=>
+                <li className={styles.drop__item} key={el._id}>
+                    <Link  to={el.to}  children={el.title}  className={styles.drop__link}/>
+                      {/* <input type="checkbox" id={el._id} /> */}
+                </li>)
+            }
         </ul>
        </div>
     )

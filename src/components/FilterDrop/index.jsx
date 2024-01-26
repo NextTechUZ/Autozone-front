@@ -2,7 +2,13 @@ import React from 'react';
 import styles from '../Filter/style.module.scss'
 
 function FilterDrop({data,onClick,queryObject}) {
-
+    if (data.status) {
+      return(
+        <ul className={styles["filter__drop-list"]}>
+          <li>{data.status}</li>
+        </ul>
+      )
+    }
     return (
         <ul className={styles["filter__drop-list"]}>
                     {data?.map(elem =>
