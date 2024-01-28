@@ -64,7 +64,7 @@ function handleOpen() {
                   {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
                 </li>)}
               </ul>
-              <Button to='/ask-question' style={{color:"#fff"}}  value="ЗАКАЗАТЬ ЗВОНОК" />
+             
             </nav>
             
               <Search/>

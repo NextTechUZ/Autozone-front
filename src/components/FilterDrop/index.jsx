@@ -5,7 +5,7 @@ function FilterDrop({data,onClick,queryObject}) {
     if (data.status) {
       return(
         <ul className={styles["filter__drop-list"]}>
-          <li>{data.status}</li>
+          <li className='error-text'>{data.status}</li>
         </ul>
       )
     }

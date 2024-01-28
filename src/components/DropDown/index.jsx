@@ -3,14 +3,17 @@ import styles from './index.module.scss'
 import { Link} from 'react-router-dom'
 import {dropData} from '../../store/store'
 import DropMenu from '../DropMenu'
+import { useDispatch } from 'react-redux'
+import { changer } from '../../features/hamburgerSlice'
 
 function DropDown({id,hover,style}) {
     const [display,setDisplay]=useState(false);
     const [focus, setFocus] = useState(false);
- 
+    const dispatch = useDispatch();
     const data = dropData.find((el) => el.id == id)
 
     function handleActives(id) {
+dispatch(changer())
       dropData[1].data.forEach(el=>{
         if (el.id==id) {
           el.active=true
@@ -50,7 +53,7 @@ function DropDown({id,hover,style}) {
         <ul onMouseLeave={()=>handleClose(data.id)} style={data.focus?{display:'block'}:{display:'none'}} className={styles.dropdown__list}>
             {data.data.map(data=>
             <li key={data .id} className={styles.dropdown__item}>
-              <Link onMouseEnter={()=>handleFocus(data.id)}  className={styles.dropdown__link} to={data.to} children={data.text}/>
+              <Link onMouseEnter={()=>handleFocus(data.id)}  className={styles.dropdown__link}to={data.to} children={data.text}/>
               {data.drop?<DropMenu id={id} dataId={data.id}/>:""}
             </li>
             )}

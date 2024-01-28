@@ -11,19 +11,20 @@
   display: block;
   width: 100%;
   text-align: left;
-  padding: 12px;
+  padding: 1.2rem;
   position: relative;
   border-bottom: 1px solid rgb(29, 29, 29);
   &:hover{
       background-color: rgb(212, 75, 54);
   }
   &::after{
-      width: 20px;
-      height: 20px;
+      width: 2rem;
+      height: 2rem;
       position: absolute;
       content: '';
       background: url(../../img/str-right.svg) no-repeat center center;
-      right: 12px;
+      right: 1.2rem;
+      top: 1.2rem;
   }
 }
 @mixin filter-button-active{

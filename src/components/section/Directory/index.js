@@ -13,7 +13,7 @@ function Directory({ title, subtitle }) {
     return await data.data.categories
      }
 
-   const {isLoading,data}=useQuery("data",category)
+   const {isLoading,data,error}=useQuery("data",category)
 
   return (
     <div className={styles.wrapper}>
@@ -23,12 +23,15 @@ function Directory({ title, subtitle }) {
         </Title>
         <Subtitle uppercase={true}>{subtitle}</Subtitle>
       </div>
-      <div className={styles.directory}>
+       {
+        error?<h2 className="error-text">Network Error!</h2>:
+        <div className={styles.directory}>
         {isLoading?<Loader/>:
         data?.map(({ _id, image, title }) => (
           <ImgCard key={_id} imgUrl={image} title={title} />
         ))}
       </div>
+       }
     </div>
   );
 }
