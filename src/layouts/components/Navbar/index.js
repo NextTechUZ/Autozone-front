@@ -50,10 +50,10 @@ function handleOpen() {
           <div className={styles.header__container}>
             <a href="/">
               <img
-                 width="132"
+                 width="58"
                  height="58"
               className={styles.header__logo}
-                src={require("../../../img/logo.png")}
+                src={require("../../../img/logo.jpg")}
               ></img>
             </a>
             <nav  className={styles.header__nav}>

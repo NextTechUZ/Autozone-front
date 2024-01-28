@@ -7,7 +7,7 @@ function ProductsMain({ data }) {
 
 if (data.status) {
    return(
-      <h2 className='error-text'>{data.status}</h2>
+      <h2 className='error-text'>Network Error</h2>
    )
 }
    return (

@@ -14,7 +14,7 @@ function Footer() {
         <div className={styles.footer__container}>
          <div className={styles["footer__logo-column"]}>
           <a href='/'>
-            <img className={styles.footer__logo} width="168" height="74" src={require('../../../img/logo.png')}></img>
+            <img className={styles.footer__logo} width="74" height="74" src={require('../../../img/logo.jpg')}></img>
           </a>
           <p className={styles.footer__info}>© 2023 PRO Auto. 
           Все права защищены.</p>

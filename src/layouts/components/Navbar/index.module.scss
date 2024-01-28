@@ -26,10 +26,7 @@
     align-items: center;
     justify-content: space-between;
 }
-.header__logo{
-    width: 13.2rem;
-    height:5.8rem ;
-}
+
 .header__nav {
     display: flex;
     align-items: center;
@@ -88,6 +85,9 @@
 }
 
 @media only screen and (max-width:870px) {
+    .header{
+        padding: 1rem 0;
+    }
     .header__item {
         margin-right: 18px;
     }

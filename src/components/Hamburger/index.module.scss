@@ -35,7 +35,7 @@
     display: block;
     position: fixed;
     background-color: rgb(14, 14, 14,0.85);
-    top: 100px;
+    top: 90px;
     left: 0;
     width: 40%;
     height: 100vh;
@@ -46,7 +46,7 @@
 .hamburger--close{
     position: fixed;
     background-color: rgb(14, 14, 14,0.85);
-    top: 100px;
+    top: 90px;
     left: -120%;
     width: 40%;
     height: 100vh;
@@ -162,13 +162,13 @@
 }
 @media only screen and (max-width:800px){
 .hamburger{
-    top: 88px;
+    top: 76px;
 }
 .hamburger__gradient{
-    top: 88px;
+    top: 76px;
 }
 .hamburger--close{
-    top: 88px;
+    top: 76px;
 }
 }
 @media only screen and (max-width:710px){
@@ -179,13 +179,13 @@
 }
 @media only screen and (max-width:500px){
     .hamburger{
-        top: 79px;
+        top: 73px;
     }
     .hamburger__gradient{
-        top: 79px;
+        top: 73px;
     }
     .hamburger--close{
-        top: 79px;
+        top: 73px;
     }
     .hamburger__item{
         margin: 20px;
