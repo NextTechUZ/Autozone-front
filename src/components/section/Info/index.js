@@ -12,8 +12,6 @@ function Info({text,button}) {
              <div className={styles.info__container}>
               <Title outline children={"о компании"} color={"white"}/>
               <div className={styles.info__wrapper}>
-                  <div className={styles.info__img__wrapper}>
-                  </div>
                   <div className={styles["info__text-wrapper"]}>
                       <p className={styles.info__text}>{text}</p>
                     <div className={styles["info__button-wrapper"]}> <Button  style={{color:"#fff"}} value="УЗНАТЬ БОЛЬШЕ" /></div>

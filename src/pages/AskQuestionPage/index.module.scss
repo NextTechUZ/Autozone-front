@@ -9,22 +9,30 @@
   padding: 34px 20px 20px 20px;
   position: relative;
   &::before{
-   width: 100px;
-   height: 96px;
+   width: 10rem;
+   height: 9.6rem;
    content: '';
    position: absolute;
    background: url(../../img/ask-before.png) no-repeat center center;
+   background-size: contain;
    bottom: 0;
    left: 0;
   }
   &::after{
     position: absolute;
-    width: 42px;
-    height: 42px;
+    width: 4.2rem;
+    height: 4.2rem;
     content: '';
     background: url(../../img//ask-after.png) no-repeat center center;
-    background-size: cover;
-    top: 55px;
-    left: 40px;
+    background-size: contain;
+    top: 7.5rem;
+    left: 3.5rem;
+  }
+}
+@media only screen and (max-width:800px){
+  .ask__header{
+    &::after{
+      top: 8.5rem;
+    }
   }
 }

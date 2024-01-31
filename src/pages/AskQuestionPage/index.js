@@ -11,8 +11,8 @@ function AskQuestionPage() {
   return (
     <div className={styles.ask}>
         <div className={styles.ask__header}>
-          <Title size="2.4rem" textSize="1.2rem" textWeight="800" color="white" maxWidth="296px" textAlign="left" margin=" 0 auto" marginTop="0px" children="Зaдать вопрос" text="Менеджеры компании с радостью ответят на ваши вопросы и помогут с
-            выбором продукции. " />
+          <Title size="2.4rem" textSize="1.2rem" textWeight="800" color="white" maxWidth="256px" textAlign="center" margin=" 0 auto" marginTop="0px" children="Зaдать вопрос" text="Менеджеры компании с радостью ответят на ваши вопросы и помогут с
+            выбором продукции." />
         </div>
         <Form color="black"/>
       

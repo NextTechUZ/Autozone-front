@@ -1,22 +1,35 @@
 import React, {
-  useEffect,
   useState
 } from "react";
 import styles from "./index.module.scss";
 import DropDown from "../../../components/DropDown";
 import {
-  Caa,
-  dropData, handleSearchOpen, searchControl
+  dropData, handleSearchOpen
 } from "../../../store/store";
 import Search from "../../../components/Search";
 import { Link } from "react-router-dom";
-import Button from "../../../components/Button";
 import Hamburger from "../../../components/Hamburger";
+import ProgressBar from "../../../components/ProgressBar";
+import Logo from "../../../components/Logo";
+
 
 const Navbar = () => {
   const [focus, setFocus] = useState(false);
-  const [search,setSearch] =useState(false)
+  const [search,setSearch] =useState(false);
+  const [value, setValue] = useState(0);
+  const animateValue = async () => {
+    // Increase value from 0 to 100 in 1 second
+    for (let i = 0; i <= 100; i++) {
+      await new Promise(resolve => setTimeout(resolve, 10)); // Adjust the delay if needed
+      setValue(i);
+    }
 
+    // Wait for 1 second
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    // Set the value back to 0
+    setValue(0);
+  };
   function handleFocus(id) {
     dropData.forEach(element => {
       if ((element.id == id) && (element.data!==undefined)){
@@ -28,15 +41,12 @@ const Navbar = () => {
     setFocus(!focus)
   }
   function handleClose(id) {
-
         dropData.forEach(element => {
             if (element.id == id) {
               element.focus = !element.focus
               setFocus(!focus)
             }
           }); 
-          
-    
  }
 function handleOpen() {
   setSearch(!search)
@@ -49,32 +59,33 @@ function handleOpen() {
         <div className="container">
           <div className={styles.header__container}>
             <a href="/">
-              <img
+              {/* <img
                  width="58"
                  height="58"
               className={styles.header__logo}
                 src={require("../../../img/logo.jpg")}
-              ></img>
+              ></img> */}
+              <Logo/>
             </a>
             <nav  className={styles.header__nav}>
               <ul className={styles.header__list}>
                 {dropData.map(el=>
                 <li  key={el.id}   className={styles.header__item}>
-                   <Link  onMouseEnter ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles["header__item-link"]} children={el.title}/>
+                   <Link onClick={animateValue} onMouseEnter ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles["header__item-link"]} children={el.title}/>
                   {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
                 </li>)}
               </ul>
              
             </nav>
-            
               <Search/>
             <div className={styles.header__manage}>
               <button onClick={handleOpen} className={styles["header__search-button"]}></button>
-              <Hamburger />
+              <Hamburger animateValue={animateValue} />
             </div>
            
           </div>
         </div>
+        <ProgressBar progress={value}/>
       </header>
     </>
   );

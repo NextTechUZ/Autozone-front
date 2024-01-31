@@ -6,11 +6,11 @@ import { Provider } from 'react-redux';
 const queryClient = new QueryClient()
 function App() {
   return (
-  <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
- <AppLayout />
-    </QueryClientProvider>
-  </Provider>
+           <Provider store={store}>
+              <QueryClientProvider client={queryClient}>
+                  <AppLayout />
+              </QueryClientProvider>
+            </Provider>
   );
 }
 

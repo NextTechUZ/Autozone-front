@@ -1,0 +1,10 @@
+.progress-bar{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: -5px;
+}
+.progress-bar__item{
+    height: 5px;
+    background-color: #c53720;
+}

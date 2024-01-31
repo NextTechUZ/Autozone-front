@@ -104,13 +104,13 @@ export let dropData = [{
   },
  
   {
-    id: 4,
+    id: 3,
     title: "ИНФОРМАЦИЯ",
     focus: false,
     to: "/info",
   },
   {
-    id: 5,
+    id: 4,
     title: "КОНТАКТЫ",
     focus: false,
     to: "/contacts",
@@ -118,7 +118,7 @@ export let dropData = [{
       {
         id: 2,
         text: "F.A.Q",
-        to: "/faq",
+        to: "/ask-question",
       }
     ],
   },

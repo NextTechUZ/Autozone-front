@@ -8,7 +8,6 @@ function ImgCard({ imgUrl, title }) {
       <div className={styles.intro}>
             <h3 className={styles.img__title}>{title}</h3>
          <div className={styles.img__button}>
-         <Button style={{color:"#fff"}} value="СДЕЛАТЬ ЗАКАЗ" />
          </div>
       </div>
     </div>

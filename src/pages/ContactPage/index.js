@@ -36,9 +36,8 @@ function Contact() {
                 <div className={styles["contact__text-wrapper"]}>
                 <div className={styles.contact__column}>
                 <h3 className={styles["contact__info-title"]}>Как с нами связаться</h3>
-                    <p className={styles["contact__info-tel"]}>+7 (342) 279-36-13</p>
-                    <p className={styles["contact__info-email"]}>proauto59@yandex.ru</p>
-                    <p className={styles["contact__info-loc"]}>г. Пермь, Леонова 82 Б</p>
+                    <a className={styles["contact__info-tel"]} href='tel:+998-99-633-60-15'>+998-99-633-60-15</a>
+                    
                 </div>
                     <div className={styles.contact__column}>
                     <h3 className={styles["contact__info-title"]}>Режим работы</h3>

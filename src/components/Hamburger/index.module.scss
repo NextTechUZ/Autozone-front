@@ -41,7 +41,7 @@
     height: 100vh;
     z-index: 9;
     animation-name: hamburger;
-    animation-duration: 800ms;
+    animation-duration: 500ms;
 }
 .hamburger--close{
     position: fixed;
@@ -51,7 +51,7 @@
     width: 40%;
     height: 100vh;
     animation-name: hamburger-close;
-    animation-duration: 1000ms;
+    animation-duration: 900ms;
     //display: none;
 }
 .hamburger__button , .hamburger__close-button{
