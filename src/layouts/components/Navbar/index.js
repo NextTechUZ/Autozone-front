@@ -52,27 +52,21 @@ function handleOpen() {
   setSearch(!search)
   handleSearchOpen()
 }
-
+//onMouseEnter ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}
   return (
     <>
       <header className={styles.header} >
         <div className="container">
           <div className={styles.header__container}>
             <a href="/">
-              {/* <img
-                 width="58"
-                 height="58"
-              className={styles.header__logo}
-                src={require("../../../img/logo.jpg")}
-              ></img> */}
               <Logo/>
             </a>
             <nav  className={styles.header__nav}>
               <ul className={styles.header__list}>
                 {dropData.map(el=>
                 <li  key={el.id}   className={styles.header__item}>
-                   <Link onClick={animateValue} onMouseEnter ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}  to={el.to}   className={styles["header__item-link"]} children={el.title}/>
-                  {el.data?<DropDown hover={true} id={el.id}/> :<div></div>}
+                   <Link onClick={animateValue}   to={el.to}   className={styles["header__item-link"]} children={el.title}/>
+                  {el.data?<DropDown className={styles.header__dropdown} hover={true} id={el.id}/> :<div></div>}
                 </li>)}
               </ul>
              

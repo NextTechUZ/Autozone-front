@@ -42,7 +42,9 @@
     margin-right: 5rem;
     min-width: 8rem;
     position: relative;
-    @include hover-effect
+    padding-bottom: 0.5rem;
+    
+    
 }
 
 .header__item-link {
@@ -53,7 +55,8 @@
     background: transparent;
     border: none;
     cursor: pointer;
-   
+    @include hover-effect;
+  
 }
 .header__item-link:hover + .header__dropdown{
     display: block;
@@ -73,7 +76,15 @@
     display: flex;
     align-items: center;
 }
-
+.header__dropdown{
+    display: none;
+}
+.header__item:hover{
+     .header__dropdown{
+    display: block;
+    position: absolute;
+     }
+}
 
 @media only screen and (max-width:1155px) {
     .header__item {

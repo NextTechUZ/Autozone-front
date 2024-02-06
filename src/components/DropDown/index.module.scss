@@ -1,9 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/ramabhadra');
 
-.dropdown__list {
+.dropdown {
     position: absolute;
-    top: 25px;
+    padding-top: 1rem;
     z-index: 99;
+  
+}
+.dropdown__list{
     background-color: rgba(0, 0, 0, 0.9);
     min-width: 288px;
     padding: 1rem 0px;
@@ -14,7 +17,7 @@
         left: 0;
         background: #C53720;
         content: '';
-        top: -5px;
+        top: 5px;
     }
 }
 

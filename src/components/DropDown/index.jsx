@@ -6,14 +6,13 @@ import DropMenu from '../DropMenu'
 import { useDispatch } from 'react-redux'
 import { changer } from '../../features/hamburgerSlice'
 
-function DropDown({id,hover,style}) {
-    const [display,setDisplay]=useState(false);
+function DropDown({id,hover,style,className}) {
     const [focus, setFocus] = useState(false);
     const dispatch = useDispatch();
     const data = dropData.find((el) => el.id == id)
 
     function handleActives(id) {
-dispatch(changer())
+   dispatch(changer())
       dropData[1].data.forEach(el=>{
         if (el.id==id) {
           el.active=true
@@ -21,21 +20,7 @@ dispatch(changer())
         else  el.active=false
       })
     
-    }
-   
-     function handleClose(id) {
-        if (hover) {
-            dropData.forEach(element => {
-                if (element.id == id) {
-                  element.focus = !element.focus
-                  setDisplay(!display)
-                }
-              }); 
-              data.data.forEach((element)=>{
-                  element.focus = false
-            })
-        } 
-     }
+    }  
      function handleFocus(id) {
       data.data.forEach(element => {
         if (element.id == id) {
@@ -46,11 +31,11 @@ dispatch(changer())
       });
       setFocus(!focus)
     }
-  
+    
    if (hover) {
     return (
-        <>
-        <ul onMouseLeave={()=>handleClose(data.id)} style={data.focus?{display:'block'}:{display:'none'}} className={styles.dropdown__list}>
+       <div className={`${className} ${styles.dropdown}`}>
+        <ul  className={styles.dropdown__list}>
             {data.data.map(data=>
             <li key={data .id} className={styles.dropdown__item}>
               <Link onMouseEnter={()=>handleFocus(data.id)}  className={styles.dropdown__link}to={data.to} children={data.text}/>
@@ -58,7 +43,7 @@ dispatch(changer())
             </li>
             )}
         </ul>
-        </>
+       </div>
     )
    } 
     return (
