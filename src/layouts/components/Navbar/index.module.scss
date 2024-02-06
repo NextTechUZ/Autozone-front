@@ -9,6 +9,14 @@
         width: 100%
     }
 }
+@keyframes dropdown{
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 20px;
+    }
+ }
 
 .header {
     background-color: rgba(14, 14, 14, 0.749);
@@ -58,9 +66,7 @@
     @include hover-effect;
   
 }
-.header__item-link:hover + .header__dropdown{
-    display: block;
-}
+
 
 .header__search-button {
     width: 4rem;
@@ -83,6 +89,8 @@
      .header__dropdown{
     display: block;
     position: absolute;
+    animation-name: dropdown;
+    animation-duration: 400ms;
      }
 }
 

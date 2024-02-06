@@ -14,7 +14,6 @@ import Logo from "../../../components/Logo";
 
 
 const Navbar = () => {
-  const [focus, setFocus] = useState(false);
   const [search,setSearch] =useState(false);
   const [value, setValue] = useState(0);
   const animateValue = async () => {
@@ -30,29 +29,12 @@ const Navbar = () => {
     // Set the value back to 0
     setValue(0);
   };
-  function handleFocus(id) {
-    dropData.forEach(element => {
-      if ((element.id == id) && (element.data!==undefined)){
-        element.focus = true
-      } else {
-        element.focus = false
-      }
-    });
-    setFocus(!focus)
-  }
-  function handleClose(id) {
-        dropData.forEach(element => {
-            if (element.id == id) {
-              element.focus = !element.focus
-              setFocus(!focus)
-            }
-          }); 
- }
+
 function handleOpen() {
   setSearch(!search)
   handleSearchOpen()
 }
-//onMouseEnter ={()=>handleFocus(el.id)} onMouseOut={()=>handleClose(el.id)}
+
   return (
     <>
       <header className={styles.header} >
