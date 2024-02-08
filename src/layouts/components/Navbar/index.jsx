@@ -58,9 +58,10 @@ function handleOpen() {
               <button onClick={handleOpen} className={styles["header__search-button"]}></button>
               <Hamburger animateValue={animateValue} />
             </div>
-           
+              
           </div>
         </div>
+          <div className={styles.header__blur}></div>
         <ProgressBar progress={value}/>
       </header>
     </>
