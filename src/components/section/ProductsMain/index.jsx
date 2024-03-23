@@ -3,9 +3,9 @@ import styles from './index.module.scss'
 import ProductCard from '../../ProductCard'
 import ProductNotFound from '../ProductNotFound';
 
-function ProductsMain({ data }) {
+function ProductsMain({ data ,error}) {
 
-if (data.status) {
+if (error) {
    return(
       <h2 className='error-text'>Network Error</h2>
    )

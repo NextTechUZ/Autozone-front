@@ -63,7 +63,7 @@ function ProductsPage() {
   }
 
   let {isLoading,data,error} = useQuery(["products", query], () => getQuery(query));
-
+console.log(data);
   return (
     <div>
       <Showcase data={showcaseData} />
@@ -72,7 +72,7 @@ function ProductsPage() {
         <Title children={`каталог от ${price.minValue} до ${price.maxValue}`} textAlign='left' margin='89px 0px 49px 0px' />
         <div className={styles.product__container}>
             <Filter queryObject={queryObject} onClick={setSearchParams} dropdata={dropData[1].data} />
-          {isLoading ? <Loader /> : <ProductsMain data={error?{status:error.message}:data} />}
+          {isLoading ? <Loader /> : <ProductsMain data={data} error={error} />}
         </div>
       </div>
     </div>
