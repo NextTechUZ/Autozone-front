@@ -5,6 +5,7 @@ import CategoryPage from "./CategoryPage";
 import Contact from "./ContactPage";
 import HomePage from "./HomePage";
 import InformationPage from "./InformationPage";
+import NewsPage from "./NewsPage";
 import NotFoundPage from "./NotFoundPage";
 import ProductsPage from "./ProductsPage";
 
@@ -18,5 +19,5 @@ export const routes = [
   {id:6,path:"/about",element:<About/>,name:"О КОМПАНИИ"},
   {id:7,path:"/info" ,element:<InformationPage/>,name:"ИНФОРМАЦИЯ"},
   {id:8,path:"/contacts", element:<Contact/> ,name:"КОНТАКТЫ"},
-
+  {id:9,path:"/news",element:<NewsPage/>,name:"НОВОСТИ"}
 ];

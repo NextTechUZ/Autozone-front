@@ -47,12 +47,12 @@ function FilterSelection({queryObject,onClick}) {
                 </div>
              </div>
              <input type="checkbox" id='status__checkbox' className={styles["filter__selection-checkbox"]} />
-             <div className={styles["filter__selection-wrapper"]}>
+             {/* <div className={styles["filter__selection-wrapper"]}>
              <label htmlFor='status__checkbox' className={styles["filter__selection-label"]}>СТАТУС</label>
                 <div className={styles["filter__selection-item-wrapper"]}>
-                    <StatusCheckbox/>
+                    <StatusCheckbox/>z
                 </div>
-             </div>
+             </div> */}
              <div className={styles["filter__selection-buttons"]}>
                 <Button click={resetInputs} style={{padding:"8px 16px" , color:"#fff",margin:" 0 auto"}} value="СБРОСИТЬ" />
              </div>

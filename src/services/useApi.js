@@ -27,8 +27,8 @@ export async function fetchDataUnits(url, array) {
   return data.map((element) => ({
     ...element,
     active: false,
-    value: fetch,
-    to: `/products?${fetch}=${element._id}`
+    value: url,
+    to: `/products?${element._id}`
   }))
   } catch (error) {
     return {

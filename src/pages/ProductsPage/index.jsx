@@ -63,7 +63,7 @@ function ProductsPage() {
   }
 
   let {isLoading,data,error} = useQuery(["products", query], () => getQuery(query));
-console.log(data);
+
   return (
     <div>
       <Showcase data={showcaseData} />

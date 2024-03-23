@@ -55,7 +55,7 @@ function handleOpen() {
             </nav>
               <Search/>
             <div className={styles.header__manage}>
-              <button onClick={handleOpen} className={styles["header__search-button"]}></button>
+              {/* <button onClick={handleOpen} className={styles["header__search-button"]}></button> */}
               <Hamburger animateValue={animateValue} />
             </div>
               

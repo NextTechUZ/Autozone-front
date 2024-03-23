@@ -122,6 +122,13 @@ export let dropData = [{
       }
     ],
   },
+  {
+    id:5,
+    title:"НОВОСТИ",
+    focus:false,
+    to:"/news",
+    
+  }
 ]
 
 export let searchControl = false;
