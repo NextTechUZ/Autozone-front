@@ -12,8 +12,8 @@ if (error) {
 }
    return (
       <ul className={styles.product__list}>
-         {data.data.data.result?data?.data?.data?.products.map(({_id,image,title,created,category,car,country})=>
-            <ProductCard key={_id} image={image} title={title} created={created} carTitle={car.title} countryTitle={country.title} categoryTitle={category.title}/>
+         {data.data.data.result?data?.data?.data?.products.map(({_id,image,title,created,category,car,country,price})=>
+            <ProductCard key={_id} image={image} title={title} created={created} carTitle={car.title} countryTitle={country.title} price={price} categoryTitle={category.title}/>
          ):<ProductNotFound/>}
       </ul>
    )

@@ -110,7 +110,14 @@ export let dropData = [{
     to: "/info",
   },
   {
-    id: 4,
+    id:4,
+    title:"НОВОСТИ",
+    focus:false,
+    to:"/news",
+    
+  },
+  {
+    id: 5,
     title: "КОНТАКТЫ",
     focus: false,
     to: "/contacts",
@@ -122,13 +129,7 @@ export let dropData = [{
       }
     ],
   },
-  {
-    id:5,
-    title:"НОВОСТИ",
-    focus:false,
-    to:"/news",
-    
-  }
+ 
 ]
 
 export let searchControl = false;

@@ -9,8 +9,11 @@ function NewsSection() {
     return (
         <section className={styles.news}>
          <div className='container'>
-           <Title color='black' outline children="НОВОСТИ" text='Следите за новостями Pro auto'/>
-            <div className={styles.news__info}>
+           <Title color='black' outline children="НОВОСТИ" text='Следите за новостями AutoZone Shop'/>
+           <div className={styles['news__body']}>
+           <div className={styles['news__intro']}>
+          </div>
+           <div className={styles.news__info}>
                 <div className={styles["news__info-text-wrapper"]}>
                     <p className={styles["news__info-date"]}>24 февраля 2020 года</p>
                     <h3 className={styles["news__info-title"]}>МЫ ОБНОВИЛИСЬ. ТЕПЕРЬ У НАС НОВЫЙ ЛОГОТИП И ОБНОВЛЕННЫЙ САЙТ.</h3>
@@ -18,6 +21,7 @@ function NewsSection() {
                     <Button  style={{color:"#fff"}}  value="ЧИТАТЬ ПОДРОБНЕЕ"/>
                 </div>
             </div>
+           </div>
             <News data={newsData}/>
          </div>
         </section>
