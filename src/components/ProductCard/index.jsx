@@ -31,11 +31,11 @@ function ProductCard({
                 className={styles["product__item-img"]}></img>
             <div className={styles["product__text-wrapper"]}>
                 <p className={styles["product__item-text"]}>{title}</p>
-                <p className={styles["product__item-status"]}>{countryTitle}</p>
-                <p className={styles["product__item-status"]}>{categoryTitle}</p>
-                <p className={styles["product__item-status"]}>{carTitle}</p>
+                <p className={styles["product__item-status"]}><span className={styles['product__item-span']}>страна:</span>{countryTitle}</p>
+                <p className={styles["product__item-status"]}><span className={styles['product__item-span']}>категория:</span>{categoryTitle}</p>
+                <p className={styles["product__item-status"]}><span className={styles['product__item-span']}>машина:</span>{carTitle}</p>
                 <div className={styles["product__item-status-wrapper"]}>
-                    <p className={styles["product__item-price"]}>{price}</p>
+                    <p className={styles["product__item-date"]}><span className={styles['product__item-span']}>цена:</span>{price}</p>
                     <p className={styles["product__item-date"]}>{getDateFromString(created)}</p>
                 </div>
                 <Button
