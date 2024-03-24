@@ -45,7 +45,7 @@ function Contact() {
                     </div>
                 
                 </div>
-                <iframe className={styles.contact__iframe} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.0587187570727!2d69.18349277522621!3d41.28582650228993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae89ade0861433%3A0xa6470d048143a930!2sIT%20HOUSE!5e0!3m2!1sru!2sde!4v1700752451116!5m2!1sru!2sde" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className={styles.contact__iframe} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.3045219469427!2d69.214451!3d41.3457343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8d8f7a00e49b%3A0x76c30336a2e41c84!2sAutoZone%20shop!5e0!3m2!1sru!2snl!4v1711283979424!5m2!1sru!2snl" width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
        </section>
