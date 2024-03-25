@@ -10,7 +10,7 @@ function Contact() {
         {
             id: 1,
             bgImg: require("../../img/contact-bg.jpg"),
-            title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+            title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ AUTOZONE SHOP",
             buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
         }
     ]

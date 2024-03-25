@@ -46,7 +46,7 @@ export const showcaseData = [{
   {
     id: 3,
     bgImg: require("../img/showcaseBg3.png"),
-    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ AUTOZONE SHOP",
     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
   },
 ];

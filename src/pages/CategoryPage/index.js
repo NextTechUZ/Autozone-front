@@ -38,7 +38,7 @@ const showcaseDAta = [
   {
     id: 3,
     bgImg: ShowcaseImg3,
-    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ PRO AUTO",
+    title: "БУДЬТЕ НА СВЯЗИ С КОМАНДОЙ AUTOZONE SHOP",
     buttonTitle: "ПЕРЕЙТИ В КАТАЛОГ",
   },
 ];
