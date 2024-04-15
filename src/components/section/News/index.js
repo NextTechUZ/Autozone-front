@@ -22,7 +22,7 @@ function News({data}) {
                 }
             </ul>
             <div className={styles["news__button-wrapper"]}> 
-            <Button  style={{color:"rgba(197, 55, 32, 1)"}}  value="ЧИТАТЬ ВСЕ НОВОСТИ" />
+            <Button  style={{color:"rgba(197, 55, 32, 1)"}}  to='/ask-question' value="ЧИТАТЬ ВСЕ НОВОСТИ" />
             </div>
           </>
     )

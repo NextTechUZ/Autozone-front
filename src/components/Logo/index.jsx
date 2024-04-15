@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.scss'
 
-function Logo() {
+function Logo({width="75",height="75"}) {
     return (
-        <img className='logo'  width="58"
-        height="58" src={require('../../img/autozone-logo.png')} alt="logo" />
+        <img className='logo'  width={width}
+        height={height} src={require('../../img/autozone-logo.png')} alt="logo" />
     )
 }
 
