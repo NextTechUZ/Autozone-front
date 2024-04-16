@@ -7,14 +7,14 @@ const Input=forwardRef(function(props,ref) {
         return(
         <div className={styles["input-wrapper"]}>
             <label style={{color:props.color}} className={styles["input-label"]} htmlFor={props.id}>{props.info}</label>
-             <textarea   ref={ref}  className={styles["input"]} style={{minHeight:"88px",border:border}} id={props.id} type={props.type} placeholder={props.placeholder} />
+             <textarea required={props.required}  ref={ref}  className={styles["input"]} style={{minHeight:"88px",border:border}} id={props.id} type={props.type} placeholder={props.placeholder} />
          </div>
         )
     }
     return (
         <div className={styles["input-wrapper"]}>
            <label style={{color:props.color}} className={styles["input-label"]} htmlFor={props.id}>{props.info}</label>
-            <input style={{border:border}} ref={ref} className={styles.input} id={props.id} type={props.type} placeholder={props.placeholder} />
+            <input required={props.required} style={{border:border}} ref={ref} className={styles.input} id={props.id} type={props.type} placeholder={props.placeholder} />
         </div>
     )
 })

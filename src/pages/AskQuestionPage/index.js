@@ -14,7 +14,7 @@ function AskQuestionPage() {
           <Title size="2.4rem" textSize="1.2rem" textWeight="800" color="white" maxWidth="256px" textAlign="center" margin=" 0 auto" marginTop="0px" children="Зaдать вопрос" text="Менеджеры компании с радостью ответят на ваши вопросы и помогут с
             выбором продукции." />
         </div>
-        <Form color="black"/>
+        <Form color="black" background="#fff"/>
       
     </div>
   );
