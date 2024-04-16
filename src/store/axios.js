@@ -5,7 +5,8 @@ import axios from "axios";
     country:"/country",
     car:"/car",
     category:"/category",
-    one_product:(productID)=>`${productID}`
+    product:"/product",
+    one_product:(productID)=>`/product/${productID}`
  }
  
  export {api,PRODUCT}
