@@ -9,7 +9,8 @@ function ProductCard({
     categoryTitle,
     carTitle,
     countryTitle,
-    price
+    price,
+    description
 }) {
 
     const getDateFromString = str => {
@@ -22,12 +23,10 @@ function ProductCard({
 
     return (
         <li className={styles.product__item}>
-            <img
+            {/* <img
                 width="260"
                 height="174"
-                src={image
-                ? `https://api.autozoneshop.uz/images/${image}`
-                : "https://picsum.photos/id/264/174"}
+                src={image? `https://api.autozoneshop.uz/images/${image}`: "https://picsum.photos/id/264/174"}
                 className={styles["product__item-img"]}></img>
             <div className={styles["product__text-wrapper"]}>
                 <p className={styles["product__item-text"]}>{title}</p>
@@ -43,7 +42,27 @@ function ProductCard({
                     style={{
                     color: "#fff"
                 }}/>
-            </div>
+            </div> */}
+            <img
+                width="264"
+                height="174"
+                src={image? `https://api.autozoneshop.uz/images/${image}`: "https://picsum.photos/id/264/174"}
+                className={styles["product__item-img"]}></img>
+                <div className={styles["product__text-wrapper"]}>
+                    <ul className={styles["product__category__list"]}>
+                      <li className={styles["product__category-list-item"]}>{countryTitle}</li>
+                      <li className={styles["product__category-list-item"]}>{categoryTitle}</li>
+                      <li className={styles["product__category-list-item"]}>{carTitle}</li>
+                    </ul>
+                    <p className={styles["product__item-text"]}>{title}</p>
+                    <p className={styles["product__item-description"]}>{description}</p>
+                    <p className={styles["product__item-price"]}>{price} сум</p>
+                    <Button
+                    value="ПОДРОБНЕЕ"
+                    style={{
+                    color: "#fff"
+                }}/>
+                </div>
         </li>
     )
 }
